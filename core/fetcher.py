@@ -3,8 +3,10 @@ import json
 import logging
 import requests
 from requests.exceptions import Timeout, ConnectionError, HTTPError
-from typing import List, Dict
+from typing import Dict
 import pandas as pd
+
+pd.set_option("display.max_rows", 1000)
 
 from core.config import TIMEOUT, HEADERS, RAW_DATA_DIR, LOG_PATH, LOG_FORMAT, URLS
 
@@ -24,7 +26,6 @@ def fetch(url, params=None) -> Dict:
         response.raise_for_status()
 
         content_type = response.headers.get("Content-Type", "").split(";")[0].lower()
-
         if "application/json" in content_type:
             try:
                 payload = response.json()
@@ -73,25 +74,46 @@ def standardize_product(obj: dict, source: str) -> Dict:
         "published_at": obj.get("created_t"),
     }
 
-def fetch_to_dataframe(url: str, api_name: str) -> pd.DataFrame:
-    resp = fetch(url)
-    save_response(f"{api_name}_raw", resp)
 
-    products = []
-    if resp.get("payload") and "products" in resp["payload"]:
-        products = [standardize_product(p, api_name) for p in resp["payload"]["products"]]
+def fetch_all_pages(url: str, api_name: str, max_products: int = 1000) -> pd.DataFrame:
+    page = 1
+    all_products = []
 
-    df = pd.DataFrame(products)
+    while len(all_products) < max_products:
+        params = {"page_size": 100, "page": page} 
+        resp = fetch(url, params=params)
+
+        if resp.get("status") == "error" or not resp.get("payload"):
+            print(f"Erreur ou fin des produits à la page {page} pour {api_name}")
+            break
+
+        products = resp["payload"].get("products", [])
+        if not products:
+            break
+
+        all_products.extend([standardize_product(p, api_name) for p in products])
+        print(f"Page {page} récupérée ({len(products)} produits)")
+
+        if len(all_products) >= max_products:
+            all_products = all_products[:max_products]
+            break
+
+        page += 1
+        time.sleep(0.5) 
+
+    df = pd.DataFrame(all_products)
+    save_response(f"{api_name}_all", {"total_products": len(all_products)})
     return df
 
 def fetch_openfoodfacts() -> pd.DataFrame:
-    return fetch_to_dataframe(URLS[0], "openfoodfacts")
+    return fetch_all_pages(URLS[0], "openfoodfacts")
 
 def fetch_openbeautyfacts() -> pd.DataFrame:
-    return fetch_to_dataframe(URLS[1], "openbeautyfacts")
+    return fetch_all_pages(URLS[1], "openbeautyfacts")
 
-def fetch_openproductfacts() -> pd.DataFrame:
-    return fetch_to_dataframe(URLS[2], "openproductfacts")
+def fetch_openpetfoodfacts() -> pd.DataFrame:
+    return fetch_all_pages(URLS[2], "openpetfoodfacts")
+
 
 def fetch_all() -> Dict[str, pd.DataFrame]:
     logger.info("Fetching OpenFoodFacts...")
@@ -100,21 +122,20 @@ def fetch_all() -> Dict[str, pd.DataFrame]:
     logger.info("Fetching OpenBeautyFacts...")
     df_beauty = fetch_openbeautyfacts()
 
-    logger.info("Fetching OpenProductFacts...")
-    df_product = fetch_openproductfacts()
+    logger.info("Fetching OpenPetFoodFacts...")
+    df_pet = fetch_openpetfoodfacts()
 
-    logger.info(f"Total produits récupérés : {len(df_food) + len(df_beauty) + len(df_product)}")
+    logger.info(f"Total produits récupérés : {len(df_food) + len(df_beauty) + len(df_pet)}")
 
     return {
         "openfoodfacts": df_food,
         "openbeautyfacts": df_beauty,
-        "openproductfacts": df_product
+        "openpetfoodfacts": df_pet
     }
 
 if __name__ == "__main__":
     print("Test fetcher des trois APIs...")
     all_dfs = fetch_all()
-
     for name, df in all_dfs.items():
         print(f"\n{name} ({len(df)} produits)")
-        print(df.head())
+        print(df.head(1000))

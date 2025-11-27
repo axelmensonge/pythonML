@@ -13,7 +13,7 @@ HEADERS = {
 URLS = [
     "https://world.openfoodfacts.org/api/v2/search",
     "https://world.openbeautyfacts.org/api/v2/search",
-    "https://world.openproductfacts.org/api/v2/search"
+    "https://world.openpetfoodfacts.org/api/v2/search"
 ]
 
 MAX_WORKERS = 5
