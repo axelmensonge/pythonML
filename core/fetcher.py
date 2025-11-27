@@ -7,14 +7,9 @@ from typing import Dict
 import pandas as pd
 
 from core.config import TIMEOUT, HEADERS, RAW_DATA_DIR, LOG_PATH, LOG_FORMAT, URLS
+from core.logger import get_logger
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-if not logger.handlers:
-    fh = logging.FileHandler(LOG_PATH)
-    formatter = logging.Formatter(LOG_FORMAT)
-    fh.setFormatter(formatter)
-    logger.addHandler(fh)
+logger = get_logger(__name__)
 
 def fetch(url, params=None) -> Dict:
     start = time.perf_counter()
@@ -42,10 +37,10 @@ def fetch(url, params=None) -> Dict:
 
     except Timeout:
         return {"url": url, "status": "error", "error_type": "timeout", "elapsed": round(time.perf_counter()-start,3), "content_type": None, "payload": None}
-    
+
     except ConnectionError:
         return {"url": url, "status": "error", "error_type": "connection_error", "elapsed": round(time.perf_counter()-start,3), "content_type": None, "payload": None}
-   
+
     except HTTPError as e:
         return {"url": url, "status": e.response.status_code, "error_type": "http_error", "elapsed": round(time.perf_counter()-start,3), "content_type": e.response.headers.get("Content-Type", None), "payload": None}
 
@@ -70,7 +65,7 @@ def standardize_product(obj: dict, source: str) -> Dict:
 def fetch_all_pages(url: str, api_name: str, max_products: int = 1000) -> pd.DataFrame:
     all_products = []
     page = 1
-    page_size = 100 
+    page_size = 100
 
     while len(all_products) < max_products:
         params = {
