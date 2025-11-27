@@ -1,0 +1,8 @@
+{
+  "url": "https://world.openproductfacts.org/api/v2/search",
+  "status": "error",
+  "error_type": "connection_error",
+  "elapsed": 0.285,
+  "content_type": null,
+  "payload": null
+}
