@@ -1,0 +1,12 @@
+requests
+pandas
+numpy
+
+nltk
+
+scikit-learn
+
+matplotlib
+seaborn
+
+python-dateutil
