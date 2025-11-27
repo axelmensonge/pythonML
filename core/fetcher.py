@@ -40,7 +40,6 @@ def fetch(url, params=None) -> Dict:
             "payload": payload
         }
 
-
     except Timeout:
         return {"url": url, "status": "error", "error_type": "timeout", "elapsed": round(time.perf_counter()-start,3), "content_type": None, "payload": None}
     
@@ -49,7 +48,6 @@ def fetch(url, params=None) -> Dict:
    
     except HTTPError as e:
         return {"url": url, "status": e.response.status_code, "error_type": "http_error", "elapsed": round(time.perf_counter()-start,3), "content_type": e.response.headers.get("Content-Type", None), "payload": None}
-
 
 
 def save_response(api_name: str, data: Dict):
@@ -66,7 +64,6 @@ def standardize_product(obj: dict, source: str) -> Dict:
         "text": ((obj.get("ingredients_text") or "") + " " + (obj.get("labels") or "")).strip(),
         "category": obj.get("categories_tags", []),
         "source": source,
-        "published_at": obj.get("created_t"),
     }
 
 
@@ -76,7 +73,13 @@ def fetch_all_pages(url: str, api_name: str, max_products: int = 1000) -> pd.Dat
     page_size = 100 
 
     while len(all_products) < max_products:
-        params = {"page": page, "page_size": page_size}
+        params = {
+            "action": "process",
+            "json": "true",
+            "page": page,
+            "page_size": page_size
+        }
+
         resp = fetch(url, params=params)
 
         if resp.get("status") == "error" or not resp.get("payload"):
@@ -95,11 +98,12 @@ def fetch_all_pages(url: str, api_name: str, max_products: int = 1000) -> pd.Dat
 
         logger.info(f"{api_name}: Page {page} récupérée ({len(products)} produits)")
         page += 1
-        time.sleep(0.2) 
+        time.sleep(0.2)
 
     df = pd.DataFrame(all_products)
     save_response(f"{api_name}_all", {"total_products": len(all_products)})
     return df
+
 
 
 def fetch_openfoodfacts() -> pd.DataFrame:
