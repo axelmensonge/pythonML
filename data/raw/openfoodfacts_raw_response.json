@@ -1,0 +1,8 @@
+{
+  "url": "https://world.openfoodfacts.org/api/v2/search",
+  "status": "error",
+  "error_type": "timeout",
+  "elapsed": 10.26,
+  "content_type": null,
+  "payload": null
+}
