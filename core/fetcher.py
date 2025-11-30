@@ -127,12 +127,3 @@ def fetch_all() -> Dict[str, pd.DataFrame]:
         "openbeautyfacts": df_beauty,
         "openpetfoodfacts": df_pet
     }
-
-if __name__ == "__main__":
-    pd.set_option("display.max_rows", 1000)
-    print("Récupérations des produits pour les trois APIs")
-    all_dfs = fetch_all()
-
-    for name, df in all_dfs.items():
-        print(f"\n{name} ({len(df)} produits)")
-        print(df.head(1000))
