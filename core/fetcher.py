@@ -1,6 +1,5 @@
 import time
 import json
-import logging
 import requests
 from requests.exceptions import Timeout, ConnectionError, HTTPError
 from typing import Dict

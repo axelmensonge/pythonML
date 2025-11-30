@@ -22,6 +22,7 @@ REPORTS_DIR = BASE_DIR / "reports"
 DATA_DIR = BASE_DIR / "data"
 RAW_DATA_DIR = DATA_DIR / "raw"
 SUMMARY_FILE = REPORTS_DIR / "summary.json"
+MODELS_DIR = DATA_DIR / "models"
 
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
