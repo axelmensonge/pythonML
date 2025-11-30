@@ -3,17 +3,17 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, classification_report
 
-from core.config import MODELS_DIR
+from core.config import MODELS_DIR, TEST_SIZE, RANDOM_STATE
 from core.logger import get_logger
 
 logger = get_logger(__name__)
 MODELS_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def train_classification(X, y, random_state: int = 42, test_size: float = 0.25):
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state, stratify=y)
+def train_classification(X, y):
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=TEST_SIZE, random_state=RANDOM_STATE, stratify=y)
 
-    model = LogisticRegression(max_iter=1000, random_state=random_state)
+    model = LogisticRegression(max_iter=1000, random_state=RANDOM_STATE)
     model.fit(X_train, y_train)
 
     y_pred = model.predict(X_test)

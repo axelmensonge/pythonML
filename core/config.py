@@ -33,3 +33,6 @@ LOG_PATH = LOG_DIR / "fetcher.log"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
 LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+RANDOM_STATE = 42
+TEST_SIZE = 0.2
