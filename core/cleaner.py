@@ -2,14 +2,18 @@ import pandas as pd
 import spacy
 import nltk
 from nltk.corpus import stopwords
+from core.logger import get_logger
 
+logger = get_logger(__name__)
 nltk.download("stopwords")
+
 
 class Cleaner:
     def __init__(self):
         self.nlp = spacy.load("fr_core_news_sm")
         self.stop_fr = set(stopwords.words("french"))
         self.stop_en = set(stopwords.words("english"))
+        logger.info("Cleaner initialisé")
 
 
     @staticmethod
@@ -47,23 +51,21 @@ class Cleaner:
 
 
     def preprocess_dataframe(self, dfs):
+        logger.info("Process DataFrame")
         df = pd.concat(dfs.values(), ignore_index=True)
 
         df = df[df["id"].notna()]
+        logger.info(f"Nombre de lignes après suppression des id manquants: {len(df)}")
 
         df["title_clean"] = df["title"].apply(self.clean_basic)
-
         df["text_raw_clean"] = df["text"].apply(self.clean_basic)
-
         df["text_merged"] = df.apply(
             lambda row: row["text_raw_clean"] if row["text_raw_clean"] else row["title_clean"],
             axis=1
         )
-
         df["text_clean"] = df["text_merged"].apply(self.clean_text)
-
         df["category_clean"] = df["category"].apply(self.clean_category)
-
         df = df[df["text_clean"].str.strip() != ""]
+        logger.info(f"Nombre de lignes après process: {len(df)}")
 
         return df

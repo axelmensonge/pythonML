@@ -2,7 +2,6 @@ import pickle as pkl
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, classification_report
-
 from core.logger import get_logger
 
 logger = get_logger(__name__)
@@ -15,12 +14,18 @@ class Model:
         self.test_size = test_size
 
         self.model_dir.mkdir(parents=True, exist_ok=True)
+        logger.info("Model initialisé")
+
 
     def train_classification(self, X, y):
+        logger.info("Entraînement du modèle")
+
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=self.test_size, random_state=self.random_state, stratify=y)
+        logger.info(f"Split des données: X_train={X_train.shape}, X_test={X_test.shape}")
 
         model = LogisticRegression(max_iter=1000, random_state=self.random_state)
         model.fit(X_train, y_train)
+        logger.info("Entraînement terminé")
 
         y_pred = model.predict(X_test)
         acc = accuracy_score(y_test, y_pred)
@@ -30,9 +35,9 @@ class Model:
         model_path = self.model_dir / "model.pkl"
         with open(model_path, "wb") as f:
             pkl.dump(model, f)
-        logger.info(f"Model saved to {model_path}")
+        logger.info(f"Modèle sauvegarder dans {model_path}")
 
-        logger.info(f"Training done. acc={acc:.4f}, f1_macro={f1:.4f}")
+        logger.info(f"Métriques des modèles - Accuracy: {acc:.4f}, F1 macro: {f1:.4f}")
 
         return {
             "model_path": str(model_path),

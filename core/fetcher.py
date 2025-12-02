@@ -18,6 +18,7 @@ class Fetcher:
         self.page_size = page_size
         self.page = page
         self.raw_data_dir = raw_data_dir
+        logger.info("Fetcher initialisé")
 
 
     @staticmethod
