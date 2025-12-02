@@ -4,27 +4,20 @@ import requests
 from requests.exceptions import Timeout, ConnectionError, HTTPError
 from typing import Dict
 import pandas as pd
-
-from core.config import TIMEOUT, HEADERS, RAW_DATA_DIR, URLS, MAX_PRODUCTS, PAGE, PAGE_SIZE
 from core.logger import get_logger
 
 logger = get_logger(__name__)
 
-class Fetcher:
-    def __init__(self):
-        self.timeout = TIMEOUT
-        self.headers = HEADERS
-        self.urls = URLS
-        self.max_products = MAX_PRODUCTS
-        self.page_size = PAGE_SIZE
-        self.page = PAGE
 
-    @staticmethod
-    def save_response(api_name: str, data: Dict):
-        path = RAW_DATA_DIR / f"{api_name}_response.json"
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False, indent=2)
-        logger.info(f"Réponse sauvegardée: {path}")
+class Fetcher:
+    def __init__(self, timeout, max_products, page_size, page, headers, urls, raw_data_dir):
+        self.timeout = timeout
+        self.headers = headers
+        self.urls = urls
+        self.max_products = max_products
+        self.page_size = page_size
+        self.page = page
+        self.raw_data_dir = raw_data_dir
 
 
     @staticmethod
@@ -38,10 +31,17 @@ class Fetcher:
         }
 
 
+    def save_response(self, api_name: str, data: Dict):
+        path = self.raw_data_dir / f"{api_name}_response.json"
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        logger.info(f"Réponse sauvegardée: {path}")
+
+
     def fetch(self, url, params) -> Dict:
         start = time.perf_counter()
         try:
-            response = requests.get(url, timeout=self.timeout, headers=HEADERS, params=params)
+            response = requests.get(url, timeout=self.timeout, headers=self.headers, params=params)
             elapsed = round(time.perf_counter() - start, 3)
             response.raise_for_status()
 

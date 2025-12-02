@@ -27,7 +27,7 @@ RAW_DATA_DIR = DATA_DIR / "raw"
 SUMMARY_FILE = REPORTS_DIR / "summary.json"
 MODELS_DIR = DATA_DIR / "models"
 VECTORIZER_PATH = MODELS_DIR / "vectorizer.pkl"
-CATEGORY_ENCODER_PATH = MODELS_DIR / "category_encoder.pkl"
+ENCODER_PATH = MODELS_DIR / "encoder.pkl"
 FEATURES_PATH = DATA_DIR / "processed" / "features.npy"
 
 DATA_DIR.mkdir(parents=True, exist_ok=True)

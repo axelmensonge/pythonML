@@ -3,20 +3,20 @@ import pandas as pd
 import pickle
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import OneHotEncoder
-from core.config import MAX_FEATURES, VECTORIZER_PATH, CATEGORY_ENCODER_PATH, FEATURES_PATH
+
 from core.logger import get_logger
 
 logger = get_logger(__name__)
 
 
 class Features:
-    def __init__(self):
-        self.max_features = MAX_FEATURES
-        self.vectorizer = TfidfVectorizer(max_features=self.max_features)
+    def __init__(self, max_features, vectorizer_path, encoder_path, features_path):
+        self.max_features = max_features
+        self.vectorizer = TfidfVectorizer(max_features=max_features)
         self.encoder = OneHotEncoder(sparse=False, handle_unknown="ignore")
-        self.vectorizer_path = VECTORIZER_PATH
-        self.encoder_path = CATEGORY_ENCODER_PATH
-        self.features_path = FEATURES_PATH
+        self.vectorizer_path = vectorizer_path
+        self.encoder_path = encoder_path
+        self.features_path = features_path
 
         self.vectorizer_path.parent.mkdir(parents=True, exist_ok=True)
         self.encoder_path.parent.mkdir(parents=True, exist_ok=True)

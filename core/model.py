@@ -3,17 +3,16 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, classification_report
 
-from core.config import MODELS_DIR, TEST_SIZE, RANDOM_STATE
 from core.logger import get_logger
 
 logger = get_logger(__name__)
 
 
 class Model:
-    def __init__(self):
-        self.model_dir = MODELS_DIR
-        self.random_state = RANDOM_STATE
-        self.test_size = TEST_SIZE
+    def __init__(self, model_dir, random_state, test_size):
+        self.model_dir = model_dir
+        self.random_state = random_state
+        self.test_size = test_size
 
         self.model_dir.mkdir(parents=True, exist_ok=True)
 

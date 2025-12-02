@@ -1,9 +1,14 @@
 import os
 import json
 import pandas as pd
+
+from core.features import Features
+from core.fetcher import Fetcher
 from core.logger import get_logger
-from core.config import RAW_DATA_DIR, SUMMARY_FILE
+from core.config import RAW_DATA_DIR, SUMMARY_FILE, MAX_FEATURES, ENCODER_PATH, VECTORIZER_PATH, FEATURES_PATH, TIMEOUT, \
+    MAX_PRODUCTS, PAGE_SIZE, PAGE, HEADERS, URLS, MODELS_DIR, RANDOM_STATE, TEST_SIZE
 from core.analyzer import compute_text_length, get_top_words, kpi_by_source, save_top_words_csv, update_summary_json
+from core.model import Model
 
 logger = get_logger(__name__)
 
@@ -43,6 +48,29 @@ def load_all_products(folder: str) -> pd.DataFrame:
     return pd.DataFrame(all_rows)
     
 def main():
+    features = Features(
+        max_features=MAX_FEATURES,
+        vectorizer_path=VECTORIZER_PATH,
+        encoder_path=ENCODER_PATH,
+        features_path=FEATURES_PATH
+    )
+
+    fetcher = Fetcher(
+        timeout=TIMEOUT,
+        max_products=MAX_PRODUCTS,
+        page_size=PAGE_SIZE,
+        page=PAGE,
+        headers=HEADERS,
+        urls=URLS,
+        raw_data_dir=RAW_DATA_DIR
+    )
+
+    model = Model(
+        model_dir=MODELS_DIR,
+        random_state=RANDOM_STATE,
+        test_size=TEST_SIZE
+    )
+
     df = load_all_products(RAW_DATA_DIR)
 
     if df.empty:
