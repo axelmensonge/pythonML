@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import pickle
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.preprocessing import OneHotEncoder
 from core.config import DATA_DIR, MAX_FEATURES
 from core.logger import get_logger
 
@@ -10,7 +10,6 @@ logger = get_logger(__name__)
 
 VECTORIZER_PATH = DATA_DIR / "models" / "vectorizer.pkl"
 CATEGORY_ENCODER_PATH = DATA_DIR / "models" / "category_encoder.pkl"
-SCALER_PATH = DATA_DIR / "models" / "scaler.pkl"
 FEATURES_PATH = DATA_DIR / "processed" / "features.npy"
 
 
@@ -25,22 +24,18 @@ def build_category_encoder():
 def extract_features(df: pd.DataFrame):
     texts = df["text_clean"].fillna("").astype(str).tolist()
     text_vectorizer = build_text_vectorizer()
-    X_text = text_vectorizer.fit_transform(texts).toarray()  # numpy array
+    X_text = text_vectorizer.fit_transform(texts).toarray()
 
     categories = df["category_clean"].fillna("").astype(str).tolist()
     cat_encoder = build_category_encoder()
-    X_cat = cat_encoder.fit_transform(np.array(categories).reshape(-1, 1))  # numpy array
+    X_cat = cat_encoder.fit_transform(np.array(categories).reshape(-1, 1))
 
-    text_lengths = df["text_clean"].str.split().apply(len).values.reshape(-1, 1)
-    scaler = StandardScaler()
-    X_len = scaler.fit_transform(text_lengths)
+    X = np.hstack([X_text, X_cat])
 
-    X = np.hstack([X_text, X_cat, X_len])
-
-    return X, text_vectorizer, cat_encoder, scaler
+    return X, text_vectorizer, cat_encoder
 
 
-def save_features(X, text_vectorizer, cat_encoder, scaler):
+def save_features(X, text_vectorizer, cat_encoder):
     FEATURES_PATH.parent.mkdir(parents=True, exist_ok=True)
     VECTORIZER_PATH.parent.mkdir(parents=True, exist_ok=True)
 
@@ -48,13 +43,11 @@ def save_features(X, text_vectorizer, cat_encoder, scaler):
 
     pickle.dump(text_vectorizer, VECTORIZER_PATH)
     pickle.dump(cat_encoder, CATEGORY_ENCODER_PATH)
-    pickle.dump(scaler, SCALER_PATH)
 
 
 def load_features():
     X = np.load(FEATURES_PATH)
     text_vectorizer = pickle.load(VECTORIZER_PATH)
     cat_encoder = pickle.load(CATEGORY_ENCODER_PATH)
-    scaler = pickle.load(SCALER_PATH)
 
-    return X, text_vectorizer, cat_encoder, scaler
+    return X, text_vectorizer, cat_encoder
