@@ -3,51 +3,48 @@ import pandas as pd
 import pickle
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import OneHotEncoder
-from core.config import DATA_DIR, MAX_FEATURES
+from core.config import MAX_FEATURES, VECTORIZER_PATH, CATEGORY_ENCODER_PATH, FEATURES_PATH
 from core.logger import get_logger
 
 logger = get_logger(__name__)
 
-VECTORIZER_PATH = DATA_DIR / "models" / "vectorizer.pkl"
-CATEGORY_ENCODER_PATH = DATA_DIR / "models" / "category_encoder.pkl"
-FEATURES_PATH = DATA_DIR / "processed" / "features.npy"
+
+class Features:
+    def __init__(self):
+        self.max_features = MAX_FEATURES
+        self.vectorizer = TfidfVectorizer(max_features=self.max_features)
+        self.encoder = OneHotEncoder(sparse=False, handle_unknown="ignore")
+        self.vectorizer_path = VECTORIZER_PATH
+        self.encoder_path = CATEGORY_ENCODER_PATH
+        self.features_path = FEATURES_PATH
+
+        self.vectorizer_path.parent.mkdir(parents=True, exist_ok=True)
+        self.encoder_path.parent.mkdir(parents=True, exist_ok=True)
+        self.features_path.parent.mkdir(parents=True, exist_ok=True)
 
 
-def build_text_vectorizer():
-    return TfidfVectorizer(max_features=MAX_FEATURES)
+    def extract_features(self, df: pd.DataFrame):
+        texts = df["text_clean"].fillna("").astype(str).tolist()
+        X_text = self.vectorizer.fit_transform(texts).toarray()
+
+        categories = df["category_clean"].fillna("").astype(str).tolist()
+        X_cat = self.encoder.fit_transform(np.array(categories).reshape(-1, 1))
+
+        X = np.hstack([X_text, X_cat])
+
+        return X
 
 
-def build_category_encoder():
-    return OneHotEncoder(sparse=False, handle_unknown="ignore")
+    def save_features(self, X):
+        np.save(self.features_path, X)
+
+        pickle.dump(self.vectorizer, self.vectorizer_path)
+        pickle.dump(self.encoder, self.encoder_path)
 
 
-def extract_features(df: pd.DataFrame):
-    texts = df["text_clean"].fillna("").astype(str).tolist()
-    text_vectorizer = build_text_vectorizer()
-    X_text = text_vectorizer.fit_transform(texts).toarray()
+    def load_features(self):
+        X = np.load(self.features_path)
+        text_vectorizer = pickle.load(self.vectorizer_path)
+        cat_encoder = pickle.load(self.encoder_path)
 
-    categories = df["category_clean"].fillna("").astype(str).tolist()
-    cat_encoder = build_category_encoder()
-    X_cat = cat_encoder.fit_transform(np.array(categories).reshape(-1, 1))
-
-    X = np.hstack([X_text, X_cat])
-
-    return X, text_vectorizer, cat_encoder
-
-
-def save_features(X, text_vectorizer, cat_encoder):
-    FEATURES_PATH.parent.mkdir(parents=True, exist_ok=True)
-    VECTORIZER_PATH.parent.mkdir(parents=True, exist_ok=True)
-
-    np.save(FEATURES_PATH, X)
-
-    pickle.dump(text_vectorizer, VECTORIZER_PATH)
-    pickle.dump(cat_encoder, CATEGORY_ENCODER_PATH)
-
-
-def load_features():
-    X = np.load(FEATURES_PATH)
-    text_vectorizer = pickle.load(VECTORIZER_PATH)
-    cat_encoder = pickle.load(CATEGORY_ENCODER_PATH)
-
-    return X, text_vectorizer, cat_encoder
+        return X, text_vectorizer, cat_encoder
