@@ -11,14 +11,18 @@ logger = get_logger(__name__)
 
 class Fetcher:
     def __init__(self, timeout, max_products, page_size, page, headers, urls, raw_data_dir):
-        self.timeout = timeout
-        self.headers = headers
-        self.urls = urls
-        self.max_products = max_products
-        self.page_size = page_size
-        self.page = page
-        self.raw_data_dir = raw_data_dir
-        logger.info("Fetcher initialisé")
+        try:
+            self.timeout = timeout
+            self.headers = headers
+            self.urls = urls
+            self.max_products = max_products
+            self.page_size = page_size
+            self.page = page
+            self.raw_data_dir = raw_data_dir
+            logger.info("Fetcher initialisé")
+        except Exception as e:
+            logger.error(f"Erreur lors de l'initialisation du Features: {e}")
+            raise e
 
 
     @staticmethod
