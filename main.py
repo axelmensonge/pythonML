@@ -9,6 +9,7 @@ from core.config import RAW_DATA_DIR, SUMMARY_FILE, MAX_FEATURES, ENCODER_PATH, 
     MAX_PRODUCTS, PAGE_SIZE, PAGE, HEADERS, URLS, MODELS_DIR, RANDOM_STATE, TEST_SIZE
 from core.analyzer import compute_text_length, get_top_words, kpi_by_source, save_top_words_csv, update_summary_json
 from core.model import Model
+from core.viz import generate_visualizations
 
 logger = get_logger(__name__)
 
@@ -93,6 +94,14 @@ def main():
     update_summary_json(summary, source_kpis, path=SUMMARY_FILE)
 
     print("Génération de summary.json et keywords.csv")
+    
+    # Génération des visualisations
+    print("\nGénération des visualisations...")
+    viz_results = generate_visualizations()
+    print(f"✓ Visualisations générées: {len(viz_results)} fichiers créés")
+    for name, path in viz_results.items():
+        if path:
+            print(f"  • {name}: {path}")
 
 if __name__ == "__main__":
     main()
