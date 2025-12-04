@@ -10,6 +10,11 @@ import pandas as pd
 
 from core.config import TIMEOUT, HEADERS, RAW_DATA_DIR, LOG_PATH, LOG_FORMAT, URLS
 
+# --------------------------------------------------
+# CONFIGURATION DU LOGGER
+# --------------------------------------------------
+# Le logger sert à enregistrer toutes les actions dans fetcher.log
+
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 if not logger.handlers:
@@ -18,6 +23,12 @@ if not logger.handlers:
     fh.setFormatter(formatter)
     logger.addHandler(fh)
 
+
+# --------------------------------------------------
+# FONCTION : fetch()
+# Envoie une requête GET à une API, mesure le temps de réponse,
+# gère les erreurs réseau, et renvoie un dictionnaire standardisé.
+# --------------------------------------------------
 
 def fetch(url, params=None) -> Dict:
     start = time.perf_counter()
@@ -57,12 +68,23 @@ def fetch(url, params=None) -> Dict:
                 "content_type": e.response.headers.get("Content-Type", None), "payload": None}
 
 
+# --------------------------------------------------
+# FONCTION : save_response()
+# Sauvegarde brute des produits récupérés dans data/raw/
+# --------------------------------------------------
+
 def save_response(api_name: str, data: Dict):
     path = RAW_DATA_DIR / f"{api_name}_response.json"
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     logger.info(f"Réponse sauvegardée: {path}")
 
+
+# --------------------------------------------------
+# FONCTION : standardize_product()
+# Transforme un produit dans un format standard commun aux 3 APIs
+# (titre, texte, catégorie, id, source)
+# --------------------------------------------------
 
 def standardize_product(obj: dict, source: str) -> Dict:
     return {
@@ -74,6 +96,14 @@ def standardize_product(obj: dict, source: str) -> Dict:
     }
 
 
+# --------------------------------------------------
+# FONCTION : save_summary_entry()
+# Enregistre un résumé des performances de l’API :
+# - statut HTTP final
+# - temps total de réponse
+# - nombre de produits sauvegardés
+# Le tout dans reports/summary.json
+# --------------------------------------------------
 
 def save_summary_entry(api_name: str, status: int, elapsed: float, total_products: int):
     summary = {
@@ -100,6 +130,14 @@ def save_summary_entry(api_name: str, status: int, elapsed: float, total_product
     logger.info(f"Résumé mis à jour dans : {SUMMARY_FILE}")
 
 
+# --------------------------------------------------
+# FONCTION PRINCIPALE : fetch_all_pages()
+# Récupère autant de pages que nécessaire jusqu’à atteindre "max_products".
+# Boucle pagination → récupère produits → standardise → stocke.
+# Enregistre :
+# - les données brutes
+# - le résumé dans summary.json
+# --------------------------------------------------
 
 def fetch_all_pages(url: str, api_name: str, max_products: int = 1000) -> pd.DataFrame:
     all_products = []
@@ -137,17 +175,23 @@ def fetch_all_pages(url: str, api_name: str, max_products: int = 1000) -> pd.Dat
                 break
 
         page += 1
-        time.sleep(0.2)
+        time.sleep(0.2) 
 
     df = pd.DataFrame(all_products)
 
+    # Sauvegarde brute des produits
     save_response(f"{api_name}_all", {"products": all_products, "total": len(all_products)})
 
+    # Mise à jour du résumé dans reports/
     save_summary_entry(api_name, last_status, total_elapsed, len(all_products))
 
     return df
 
 
+# --------------------------------------------------
+# FONCTIONS WRAPPER PAR API
+# Permettent d’appeler facilement chaque source
+# --------------------------------------------------
 
 def fetch_openfoodfacts() -> pd.DataFrame:
     return fetch_all_pages(URLS[0], "openfoodfacts")
@@ -160,6 +204,12 @@ def fetch_openbeautyfacts() -> pd.DataFrame:
 def fetch_openpetfoodfacts() -> pd.DataFrame:
     return fetch_all_pages(URLS[2], "openpetfoodfacts")
 
+
+# --------------------------------------------------
+# FONCTION : fetch_all()
+# Lance l’extraction pour les 3 APIs
+# Retourne un dict contenant les 3 DataFrames
+# --------------------------------------------------
 
 def fetch_all() -> Dict[str, pd.DataFrame]:
     logger.info("Recheche pour OpenFoodFacts...")
@@ -179,13 +229,3 @@ def fetch_all() -> Dict[str, pd.DataFrame]:
         "openbeautyfacts": df_beauty,
         "openpetfoodfacts": df_pet
     }
-
-
-if __name__ == "__main__":
-    pd.set_option("display.max_rows", 1000)
-    print("Récupérations des produits pour les trois APIs")
-    all_dfs = fetch_all()
-
-    for name, df in all_dfs.items():
-        print(f"\n{name} ({len(df)} produits)")
-        print(df.head(1000))
