@@ -27,7 +27,7 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 LOG_DIR = BASE_DIR / "logs"
-LOG_PATH = LOG_DIR / "fetcher.log"
+LOG_PATH = LOG_DIR / "marketing.log"
 
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
