@@ -1,4 +1,6 @@
 import pickle as pkl
+import numpy as np
+import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score, confusion_matrix, classification_report
@@ -13,12 +15,39 @@ class Model:
             self.model_dir = model_dir
             self.random_state = random_state
             self.test_size = test_size
+            self.X = None
+            self.final_result = dict()
 
             self.model_dir.mkdir(parents=True, exist_ok=True)
             logger.info("Model initialisé")
         except Exception as e:
             logger.error(f"Erreur lors de l'initialisation du Features: {e}")
             raise e
+
+
+    def load_training_data(self, data_norm_clean):
+        try:
+            logger.info("Chargement des données d'entraînement...")
+
+            if not data_norm_clean.exists():
+                raise FileNotFoundError(f"Features manquantes : {data_norm_clean}")
+
+            X = np.load(data_norm_clean)
+            logger.info(f"Données d'entraînement chargées: {X.shape}")
+
+            self.X = X
+
+        except Exception as e:
+            logger.error(f"Erreur lors du chargement des données d'entraînement : {e}")
+            raise e
+
+
+    @staticmethod
+    def create_labels(df: pd.DataFrame):
+
+        if "source" not in df.columns:
+            raise ValueError("La colonne 'source' est manquante dans le DataFrame")
+        return df["source"].values
 
 
     def train_classification(self, X, y):
@@ -48,7 +77,7 @@ class Model:
             logger.info(f"Modèle sauvegarder dans {model_path}")
             logger.info(f"Métriques des modèles - Accuracy: {acc:.4f}, F1 macro: {f1:.4f}")
 
-            return {
+            self.final_result = {
                 "model_path": str(model_path),
                 "accuracy": float(acc),
                 "f1_macro": float(f1),
@@ -57,7 +86,7 @@ class Model:
                 "X_test": X_test,
                 "y_test": y_test,
                 "y_pred": y_pred
-            }
+        }
         except Exception as e:
             logger.error(f"Erreur lors de l'entraînement du modèle: {e}")
             raise e

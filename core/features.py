@@ -1,4 +1,5 @@
 import numpy as np
+import json
 import pandas as pd
 import pickle
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -13,10 +14,11 @@ class Features:
         try:
             self.max_features = max_features
             self.vectorizer = TfidfVectorizer(max_features=max_features)
-            self.encoder = OneHotEncoder(sparse=False, handle_unknown="ignore")
+            self.encoder = OneHotEncoder(handle_unknown="ignore")
             self.vectorizer_path = vectorizer_path
             self.encoder_path = encoder_path
             self.features_path = features_path
+            self.X = None
 
             self.vectorizer_path.parent.mkdir(parents=True, exist_ok=True)
             self.encoder_path.parent.mkdir(parents=True, exist_ok=True)
@@ -45,8 +47,8 @@ class Features:
 
             X = np.hstack([X_text, X_cat])
             logger.info(f"Feature matrix finale: {X.shape}")
+            self.X = X
 
-            return X
         except Exception as e:
             logger.error(f"Erreur lors de l'extraction des features: {e}")
             raise e
@@ -61,6 +63,14 @@ class Features:
             pickle.dump(self.encoder, self.encoder_path)
         except Exception as e:
             logger.warning(f"Erreur lors de la sauvegarde des features: {e}")
+
+
+    def save_full_clean_normalized_dataset(self, output_path):
+        try:
+            np.save(output_path, self.X)
+            logger.info(f"Full clean normalized dataset sauvegardé : {output_path}")
+        except Exception as e:
+            logger.error(f"Erreur lors de la sauvegarde du full clean normalized dataset : {e}")
 
 
     def load_features(self):
@@ -80,3 +90,25 @@ class Features:
         except Exception as e:
             logger.error(f"Erreur lors du chargement des features: {e}")
             raise e
+
+    @staticmethod
+    def load_clean_dataframe(json_path: str) -> pd.DataFrame:
+        try:
+            with open(json_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            logger.info(f"JSON chargé : {json_path}")
+        except Exception as e:
+            logger.error(f"Erreur lors de la lecture du JSON {json_path} : {e}")
+            return pd.DataFrame()
+
+        if not isinstance(data, list):
+            logger.error("Le JSON chargé n'est pas une liste de lignes ! Format invalide.")
+            return pd.DataFrame()
+
+        try:
+            df = pd.DataFrame(data)
+            logger.info(f"DataFrame clean chargé : {len(df)} lignes")
+            return df
+        except Exception as e:
+            logger.error(f"Erreur lors de la conversion JSON → DataFrame : {e}")
+            return pd.DataFrame()

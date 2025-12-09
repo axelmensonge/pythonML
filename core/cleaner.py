@@ -1,3 +1,4 @@
+import json
 import pandas as pd
 import spacy
 import nltk
@@ -65,6 +66,55 @@ class Cleaner:
         except Exception as e:
             logger.error(f"Erreur lors du clean de catégorie: {e}")
             raise e
+
+
+    @staticmethod
+    def json_to_dataframe(json_path):
+        try:
+            with open(json_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            logger.info(f"JSON chargé : {json_path}")
+        except Exception as e:
+            logger.error(f"Erreur lecture JSON : {e}")
+            return pd.DataFrame()
+
+        if "products" not in data or not isinstance(data["products"], list):
+            logger.error("Clé 'products' manquante ou invalide dans le JSON")
+            return pd.DataFrame()
+
+        rows = []
+        for item in data["products"]:
+            try:
+                rows.append({
+                    "id": item["id"],
+                    "title": item["title"],
+                    "text": item.get["text"],
+                    "category": item["category"],
+                    "source": item["source"],
+                })
+            except Exception as e:
+                logger.warning(f"Erreur lors de la lecture d’un produit : {e}")
+                continue
+
+        df = pd.DataFrame(rows)
+        logger.info(f"JSON converti en DataFrame : {len(df)} lignes")
+
+        return df
+
+
+    @staticmethod
+    def save_dataframe_to_json(df: pd.DataFrame, output_path: str) -> bool:
+        if df is None or df.empty:
+            logger.warning("Tentative d'enregistrer un DataFrame vide — sauvegarde annulée.")
+            return False
+
+        try:
+            df.to_json(output_path, orient="records", force_ascii=False, indent=4)
+            logger.info(f"DataFrame sauvegardé en JSON : {output_path}")
+            return True
+        except Exception as e:
+            logger.error(f"Erreur lors de la sauvegarde du DataFrame en JSON : {e}")
+            return False
 
 
     def preprocess_dataframe(self, dfs):
