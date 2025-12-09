@@ -1,32 +1,32 @@
 {
   "summary": {
-    "total_products": 3000,
-    "average_text_length": 157.2,
+    "total_products": 2998,
+    "average_text_length": 155.8,
     "sources": {
       "openbeautyfacts": 1000,
       "openfoodfacts": 1000,
-      "openpetfoodfacts": 1000
+      "openpetfoodfacts": 998
     },
     "text_statistics": {
       "min_length": 0,
       "max_length": 3222,
-      "median_length": 15.0,
-      "std_length": 267.6304287819783,
-      "total_chars": 471643
+      "median_length": 14.0,
+      "std_length": 266.4749903292034,
+      "total_chars": 467145
     }
   },
   "kpi_by_source": {
     "openbeautyfacts": {
       "total_products": 1000,
-      "avg_text_length": 126.19
+      "avg_text_length": 122.3
     },
     "openfoodfacts": {
       "total_products": 1000,
       "avg_text_length": 240.69
     },
     "openpetfoodfacts": {
-      "total_products": 1000,
-      "avg_text_length": 104.76
+      "total_products": 998,
+      "avg_text_length": 104.36
     }
   }
 }
