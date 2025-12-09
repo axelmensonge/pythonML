@@ -1,3 +1,4 @@
+import json
 import pickle as pkl
 import numpy as np
 import pandas as pd
@@ -39,6 +40,29 @@ class Model:
 
         except Exception as e:
             logger.error(f"Erreur lors du chargement des données d'entraînement : {e}")
+            raise e
+
+
+    def save_summary(self, summary_path=None):
+        try:
+            if summary_path is None:
+                summary_path = self.model_dir / "summary.json"
+
+            summary = {
+                "model_path": self.final_result.get("model_path"),
+                "accuracy": self.final_result.get("accuracy"),
+                "f1_macro": self.final_result.get("f1_macro"),
+                "confusion_matrix": self.final_result.get("confusion_matrix"),
+                "classification_report": self.final_result.get("classification_report")
+            }
+
+            with open(summary_path, "w") as f:
+                json.dump(summary, f, indent=4)
+
+            logger.info(f"Résumé sauvegardé dans {summary_path}")
+
+        except Exception as e:
+            logger.error(f"Erreur lors de l'enregistrement du résumé: {e}")
             raise e
 
 

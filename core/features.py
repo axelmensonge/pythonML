@@ -38,14 +38,32 @@ class Features:
                 raise ValueError("Les colonnes 'text_clean' ou 'category_clean' sont manquantes")
 
             texts = df["text_clean"].fillna("").astype(str).tolist()
-            X_text = self.vectorizer.fit_transform(texts).toarray()
+            X_text = self.vectorizer.fit_transform(texts)
             logger.info(f"Text features extraites: {X_text.shape}")
 
-            categories = df["category_clean"].fillna("").astype(str).tolist()
-            X_cat = self.encoder.fit_transform(np.array(categories).reshape(-1, 1))
+            categories = df["category_clean"].fillna('').astype(str).tolist()
+            X_cat = self.encoder.fit_transform(pd.Series(categories).values.reshape(-1, 1))
+            # Assurer que X_cat est une matrice dense 2D
+            if hasattr(X_cat, "toarray"):
+                X_cat = X_cat.toarray()
+            else:
+                X_cat = np.asarray(X_cat)
+
+            # Si X_text est sparse, densifier
+            if hasattr(X_text, "toarray"):
+                X_text_arr = X_text.toarray()
+            else:
+                X_text_arr = np.asarray(X_text)
+
+            # Vérifier dimensions
+            if X_text_arr.ndim != 2:
+                X_text_arr = X_text_arr.reshape(X_text_arr.shape[0], -1)
+            if X_cat.ndim != 2:
+                X_cat = X_cat.reshape(X_cat.shape[0], -1)
+
             logger.info(f"Category features extraites: {X_cat.shape}")
 
-            X = np.hstack([X_text, X_cat])
+            X = np.hstack([X_text_arr, X_cat])
             logger.info(f"Feature matrix finale: {X.shape}")
             self.X = X
 
@@ -59,8 +77,10 @@ class Features:
             logger.info("Sauvegarde des features")
 
             np.save(self.features_path, X)
-            pickle.dump(self.vectorizer, self.vectorizer_path)
-            pickle.dump(self.encoder, self.encoder_path)
+            with open(self.vectorizer_path, "wb") as f:
+                pickle.dump(self.vectorizer, f)
+            with open(self.encoder_path, "wb") as f:
+                pickle.dump(self.encoder, f)
         except Exception as e:
             logger.warning(f"Erreur lors de la sauvegarde des features: {e}")
 

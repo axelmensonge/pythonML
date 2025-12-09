@@ -4,7 +4,6 @@ BASE_DIR = Path(__file__).parent.parent
 
 TIMEOUT = 10
 MAX_PRODUCTS = 1000
-PAGE = 1
 PAGE_SIZE = 100
 
 HEADERS = {
