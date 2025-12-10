@@ -267,7 +267,44 @@ def do_pipeline(fetcher, cleaner, features, model, analyzer):
         print("\nGénération des visualisations...")
         try:
             clean_df = features.load_clean_dataframe()
-            viz_results = generate_visualizations(df=clean_df)
+            
+            # Charger les données ML du summary.json pour les figures ML
+            y_test = None
+            y_pred = None
+            classification_report_dict = None
+            
+            import json
+            from pathlib import Path
+            summary_file = Path(SUMMARY_FILE)
+            if summary_file.exists():
+                with open(summary_file, 'r', encoding='utf-8') as f:
+                    summary_data = json.load(f)
+                
+                ml_metrics = summary_data.get('ml_metrics', {})
+                if ml_metrics:
+                    # Extraire les données ML
+                    confusion_matrix_data = ml_metrics.get('confusion_matrix')
+                    classification_report_data = ml_metrics.get('classification_report')
+                    
+                    if confusion_matrix_data:
+                        # Pour la matrice de confusion, créer y_test et y_pred synthétiques
+                        # basés sur la matrice
+                        y_test = []
+                        y_pred = []
+                        for true_idx, row in enumerate(confusion_matrix_data):
+                            for pred_idx, count in enumerate(row):
+                                y_test.extend([true_idx] * count)
+                                y_pred.extend([pred_idx] * count)
+                    
+                    if classification_report_data:
+                        classification_report_dict = classification_report_data
+            
+            viz_results = generate_visualizations(
+                df=clean_df,
+                y_test=y_test,
+                y_pred=y_pred,
+                classification_report_dict=classification_report_dict
+            )
             successful = sum(1 for p in viz_results.values() if p)
             print(f"[OK] Visualisations générées: {successful} fichiers créés")
             for name, path in viz_results.items():

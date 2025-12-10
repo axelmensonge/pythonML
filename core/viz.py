@@ -130,41 +130,58 @@ class Visualizer:
         return str(output_path)
 
     def plot_latency_distribution(self) -> str:
-        """Figure 3: Distribution des longueurs de texte (box plot + histogram)"""
+        """Figure 3: Distribution de la latence HTTP (fetch_elapsed réelle)"""
         if self.df is None or self.df.empty:
             logger.warning("DataFrame vide pour Figure 3")
             return ""
         
-        # Calculer la longueur des textes
         df_temp = self.df.copy()
-        df_temp['text_length'] = df_temp['text'].fillna("").apply(len)
+        
+        # Vérifier si on a les colonnes fetch_elapsed réelles
+        if 'fetch_elapsed' not in df_temp.columns or df_temp['fetch_elapsed'].isna().all():
+            logger.warning("Colonne 'fetch_elapsed' vide ou absente, utilisation de proxy (text_length)")
+            # Fallback: utiliser la longueur du texte comme proxy
+            df_temp['latency'] = df_temp['text'].fillna("").apply(len)
+            latency_col = 'latency'
+            ylabel = 'Longueur du texte (caractères)'
+        else:
+            df_temp['latency'] = pd.to_numeric(df_temp['fetch_elapsed'], errors='coerce')
+            latency_col = 'latency'
+            ylabel = 'Latence HTTP (secondes)'
+        
+        # Nettoyer les NaN
+        df_temp = df_temp.dropna(subset=[latency_col])
+        
+        if df_temp.empty:
+            logger.warning("Aucune donnée de latence valide")
+            return ""
         
         fig, axes = plt.subplots(1, 2, figsize=(15, 6))
         
         # Grouper par source pour box plot
         sources = sorted(df_temp['source'].unique())
-        length_by_source = [df_temp[df_temp['source'] == src]['text_length'].values for src in sources]
+        latency_by_source = [df_temp[df_temp['source'] == src][latency_col].values for src in sources]
         
         # Box plot
-        bp = axes[0].boxplot(length_by_source, labels=sources, patch_artist=True)
+        bp = axes[0].boxplot(latency_by_source, labels=sources, patch_artist=True)
         
         colors = sns.color_palette("Set2", len(sources))
         for patch, color in zip(bp['boxes'], colors):
             patch.set_facecolor(color)
             patch.set_alpha(0.7)
         
-        axes[0].set_ylabel('Longueur du texte (caractères)', fontsize=12, fontweight='bold')
-        axes[0].set_title('Distribution des longueurs par source (Box Plot)', fontsize=13, fontweight='bold')
+        axes[0].set_ylabel(ylabel, fontsize=12, fontweight='bold')
+        axes[0].set_title('Distribution de la latence par source (Box Plot)', fontsize=13, fontweight='bold')
         axes[0].grid(axis='y', alpha=0.3)
         
         # Histogram global
         for source, color in zip(sources, colors):
-            data = df_temp[df_temp['source'] == source]['text_length']
+            data = df_temp[df_temp['source'] == source][latency_col]
             axes[1].hist(data, bins=30, alpha=0.6, label=source, color=color, edgecolor='black')
         
-        axes[1].set_xlabel('Longueur du texte (caractères)', fontsize=12, fontweight='bold')
+        axes[1].set_xlabel(ylabel, fontsize=12, fontweight='bold')
         axes[1].set_ylabel('Fréquence', fontsize=12, fontweight='bold')
-        axes[1].set_title('Distribution des longueurs (Histogramme)', fontsize=13, fontweight='bold')
+        axes[1].set_title('Distribution de la latence (Histogramme)', fontsize=13, fontweight='bold')
         axes[1].legend(fontsize=10)
         axes[1].grid(axis='y', alpha=0.3)
         
@@ -176,71 +193,65 @@ class Visualizer:
         return str(output_path)
 
     def plot_http_status_distribution(self) -> str:
-        """Figure 4: Distribution des catégories (top 15)"""
+        """Figure 4: Distribution des statuts HTTP (fetch_status réel)"""
         if self.df is None or self.df.empty:
-            logger.warning("Aucune donnée de catégories disponible")
+            logger.warning("DataFrame vide pour Figure 4")
             return ""
-        
-        # Utiliser category_clean s'il existe et qu'il contient des strings
-        cat_col = None
-        if 'category_clean' in self.df.columns:
-            try:
-                # Vérifier si c'est du string
-                test_val = self.df['category_clean'].iloc[0]
-                if isinstance(test_val, str):
-                    cat_col = 'category_clean'
-            except:
-                pass
-        
-        # Sinon utiliser 'category' mais convertir les listes en strings
-        if cat_col is None:
-            if 'category' not in self.df.columns:
-                logger.warning("Colonnes category/category_clean introuvables")
-                return ""
-            cat_col = 'category'
         
         df_temp = self.df.copy()
         
-        # Transformer les listes en premier élément (string)
-        def extract_category(val):
-            if isinstance(val, list):
-                return val[0] if len(val) > 0 else "Unknown"
-            elif isinstance(val, str):
-                return val if val else "Unknown"
-            else:
-                return str(val)
-        
-        df_temp[cat_col] = df_temp[cat_col].apply(extract_category)
-        category_counts = df_temp[cat_col].value_counts().head(15)
+        # Vérifier si on a la colonne fetch_status réelle
+        if 'fetch_status' not in df_temp.columns or df_temp['fetch_status'].isna().all():
+            logger.warning("Colonne 'fetch_status' vide ou absente, utilisation de catégories comme proxy")
+            # Fallback: utiliser les catégories
+            cat_col = 'category_clean' if 'category_clean' in df_temp.columns else 'category'
+            
+            def extract_category(val):
+                if isinstance(val, list):
+                    return val[0] if len(val) > 0 else "Unknown"
+                elif isinstance(val, str):
+                    return val if val else "Unknown"
+                else:
+                    return str(val)
+            
+            df_temp[cat_col] = df_temp[cat_col].apply(extract_category)
+            status_counts = df_temp[cat_col].value_counts().head(15)
+            title_subplot1 = 'Top 15 Catégories (Pie Chart)'
+            title_subplot2 = 'Top 15 Catégories (Barres)'
+        else:
+            # Utiliser les vrais statuts HTTP
+            status_counts = df_temp['fetch_status'].astype(str).value_counts()
+            title_subplot1 = 'Distribution des statuts HTTP (Pie Chart)'
+            title_subplot2 = 'Distribution des statuts HTTP (Barres)'
         
         fig, axes = plt.subplots(1, 2, figsize=(16, 6))
         
         # Pie chart
-        colors = sns.color_palette("husl", len(category_counts))
-        labels = [cat[:12] + '...' if len(cat) > 12 else cat for cat in category_counts.index]
+        colors = sns.color_palette("husl", len(status_counts))
+        labels = [str(s)[:12] + '...' if len(str(s)) > 12 else str(s) for s in status_counts.index]
         wedges, texts, autotexts = axes[0].pie(
-            category_counts.values, 
+            status_counts.values, 
             labels=labels,
             autopct='%1.1f%%',
             colors=colors,
             startangle=90,
             textprops={'fontsize': 9, 'weight': 'bold'}
         )
-        axes[0].set_title('Top 15 Catégories (Pie Chart)', fontsize=13, fontweight='bold')
+        axes[0].set_title(title_subplot1, fontsize=13, fontweight='bold')
         
         # Bar chart (horizontal)
-        bars = axes[1].barh(range(len(category_counts)), category_counts.values, 
+        bars = axes[1].barh(range(len(status_counts)), status_counts.values, 
                           color=colors, alpha=0.8, edgecolor='black', linewidth=1.2)
         
         # Ajouter les valeurs sur les barres
-        for i, (bar, count) in enumerate(zip(bars, category_counts.values)):
+        for i, (bar, count) in enumerate(zip(bars, status_counts.values)):
             axes[1].text(count, i, f' {int(count)}', va='center', fontsize=9, fontweight='bold')
         
-        axes[1].set_yticks(range(len(category_counts)))
-        labels_y = [cat[:25] + '...' if len(cat) > 25 else cat for cat in category_counts.index]
+        axes[1].set_yticks(range(len(status_counts)))
+        labels_y = [str(s)[:25] + '...' if len(str(s)) > 25 else str(s) for s in status_counts.index]
         axes[1].set_yticklabels(labels_y, fontsize=9)
         axes[1].set_xlabel('Nombre de produits', fontsize=11, fontweight='bold')
-        axes[1].set_title('Top 15 Catégories (Barres)', fontsize=13, fontweight='bold')
+        axes[1].set_title(title_subplot2, fontsize=13, fontweight='bold')
         axes[1].grid(axis='x', alpha=0.3)
         
         plt.tight_layout()
@@ -251,56 +262,101 @@ class Visualizer:
         return str(output_path)
 
     def plot_chronology(self) -> str:
-        """Figure 5: Distribution source × catégorie (heatmap)"""
+        """Figure 5: Chronologie - Volume de produits par source et temps (fetch_time réel)"""
         if self.df is None or self.df.empty or 'source' not in self.df.columns:
-            logger.warning("Aucune donnée pour heatmap source/catégorie")
+            logger.warning("Aucune donnée pour chronologie")
             return ""
         
-        # Copier le DataFrame et préparer les colonnes
         df_temp = self.df.copy()
         
-        # Utiliser category_clean s'il existe et qu'il contient des strings
-        cat_col = None
-        if 'category_clean' in df_temp.columns:
+        # Vérifier si on a fetch_time réelle
+        if 'fetch_time' not in df_temp.columns or df_temp['fetch_time'].isna().all():
+            logger.warning("Colonne 'fetch_time' vide ou absente, utilisation de heatmap source×catégorie comme proxy")
+            # Fallback: heatmap source × catégorie
+            cat_col = 'category_clean' if 'category_clean' in df_temp.columns else 'category'
+            
+            def extract_category(val):
+                if isinstance(val, list):
+                    return val[0] if len(val) > 0 else "Unknown"
+                elif isinstance(val, str):
+                    return val if val else "Unknown"
+                else:
+                    return str(val)
+            
+            df_temp[cat_col] = df_temp[cat_col].apply(extract_category)
+            
+            # Créer une table de contingence (top 12 catégories pour lisibilité)
+            top_cats = df_temp[cat_col].value_counts().head(12).index
+            df_filtered = df_temp[df_temp[cat_col].isin(top_cats)]
+            contingency_table = pd.crosstab(df_filtered['source'], df_filtered[cat_col])
+            
+            fig, ax = plt.subplots(figsize=(14, 6))
+            
+            # Heatmap
+            sns.heatmap(contingency_table, annot=True, fmt='d', cmap='YlOrRd', 
+                       cbar_kws={'label': 'Nombre de produits'}, ax=ax, 
+                       linewidths=0.5, linecolor='gray')
+            
+            ax.set_xlabel('Catégorie (Top 12)', fontsize=12, fontweight='bold')
+            ax.set_ylabel('Source', fontsize=12, fontweight='bold')
+            ax.set_title('Chronologie: Matrice Source × Catégorie', fontsize=14, fontweight='bold', pad=20)
+        else:
+            # Utiliser les vrais timestamps fetch_time
             try:
-                test_val = df_temp['category_clean'].iloc[0]
-                if isinstance(test_val, str):
-                    cat_col = 'category_clean'
-            except:
-                pass
+                df_temp['fetch_time'] = pd.to_datetime(df_temp['fetch_time'], errors='coerce')
+                df_temp = df_temp.dropna(subset=['fetch_time'])
+                
+                # Grouper par source et par heure/minute
+                df_temp['fetch_time_grouped'] = df_temp['fetch_time'].dt.floor('5min')
+                
+                # Créer un pivot table
+                chronology = df_temp.groupby(['fetch_time_grouped', 'source']).size().unstack(fill_value=0)
+                
+                if chronology.empty:
+                    logger.warning("Pas de données chronologiques valides")
+                    return ""
+                
+                fig, ax = plt.subplots(figsize=(14, 6))
+                
+                # Line plot avec markers
+                for source in chronology.columns:
+                    ax.plot(chronology.index, chronology[source], marker='o', label=source, 
+                           linewidth=2.5, markersize=6, alpha=0.8)
+                
+                ax.set_xlabel('Temps (fetch_time)', fontsize=12, fontweight='bold')
+                ax.set_ylabel('Nombre de produits', fontsize=12, fontweight='bold')
+                ax.set_title('Chronologie: Volume de produits par source et temps', fontsize=14, fontweight='bold', pad=20)
+                ax.legend(fontsize=11, loc='upper left')
+                ax.grid(alpha=0.3)
+                plt.xticks(rotation=45, ha='right')
+            except Exception as e:
+                logger.warning(f"Erreur traitement chronologie: {e}. Fallback heatmap.")
+                # En cas d'erreur, utiliser heatmap source×catégorie
+                cat_col = 'category_clean' if 'category_clean' in df_temp.columns else 'category'
+                
+                def extract_category(val):
+                    if isinstance(val, list):
+                        return val[0] if len(val) > 0 else "Unknown"
+                    elif isinstance(val, str):
+                        return val if val else "Unknown"
+                    else:
+                        return str(val)
+                
+                df_temp[cat_col] = df_temp[cat_col].apply(extract_category)
+                top_cats = df_temp[cat_col].value_counts().head(12).index
+                df_filtered = df_temp[df_temp[cat_col].isin(top_cats)]
+                contingency_table = pd.crosstab(df_filtered['source'], df_filtered[cat_col])
+                
+                fig, ax = plt.subplots(figsize=(14, 6))
+                sns.heatmap(contingency_table, annot=True, fmt='d', cmap='YlOrRd', 
+                           cbar_kws={'label': 'Nombre de produits'}, ax=ax, 
+                           linewidths=0.5, linecolor='gray')
+                ax.set_xlabel('Catégorie (Top 12)', fontsize=12, fontweight='bold')
+                ax.set_ylabel('Source', fontsize=12, fontweight='bold')
+                ax.set_title('Fallback: Matrice Source × Catégorie', fontsize=14, fontweight='bold', pad=20)
         
-        if cat_col is None:
-            cat_col = 'category'
-        
-        # Transformer les listes en premier élément (string)
-        def extract_category(val):
-            if isinstance(val, list):
-                return val[0] if len(val) > 0 else "Unknown"
-            elif isinstance(val, str):
-                return val if val else "Unknown"
-            else:
-                return str(val)
-        
-        df_temp[cat_col] = df_temp[cat_col].apply(extract_category)
-        
-        # Créer une table de contingence (top 12 catégories pour lisibilité)
-        top_cats = df_temp[cat_col].value_counts().head(12).index
-        df_filtered = df_temp[df_temp[cat_col].isin(top_cats)]
-        contingency_table = pd.crosstab(df_filtered['source'], df_filtered[cat_col])
-        
-        fig, ax = plt.subplots(figsize=(14, 6))
-        
-        # Heatmap
-        sns.heatmap(contingency_table, annot=True, fmt='d', cmap='YlOrRd', 
-                   cbar_kws={'label': 'Nombre de produits'}, ax=ax, 
-                   linewidths=0.5, linecolor='gray')
-        
-        ax.set_xlabel('Catégorie (Top 12)', fontsize=12, fontweight='bold')
-        ax.set_ylabel('Source', fontsize=12, fontweight='bold')
-        ax.set_title('Matrice Source × Catégorie', fontsize=14, fontweight='bold', pad=20)
-        plt.xticks(rotation=45, ha='right', fontsize=10)
-        plt.yticks(rotation=0, fontsize=10)
-        
+        plt.xticks(rotation=45, ha='right')
+        plt.yticks(rotation=0)
         plt.tight_layout()
         output_path = self.reports_dir / "fig5_chronology.png"
         fig.savefig(output_path, dpi=300, bbox_inches='tight')

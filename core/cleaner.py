@@ -87,15 +87,23 @@ class Cleaner:
         rows = []
         for item in data["products"]:
             try:
-                rows.append({
+                row = {
                     "id": item["id"],
                     "title": item["title"],
                     "text": item["text"],
                     "category": item["category"],
                     "source": item["source"],
-                })
+                }
+                # Préserver les métadonnées HTTP si présentes
+                if "fetch_elapsed" in item:
+                    row["fetch_elapsed"] = item["fetch_elapsed"]
+                if "fetch_status" in item:
+                    row["fetch_status"] = item["fetch_status"]
+                if "fetch_time" in item:
+                    row["fetch_time"] = item["fetch_time"]
+                rows.append(row)
             except Exception as e:
-                logger.warning(f"Erreur lors de la lecture d’un produit : {e}")
+                logger.warning(f"Erreur lors de la lecture d'un produit : {e}")
                 continue
 
         df = pd.DataFrame(rows)
@@ -126,6 +134,12 @@ class Cleaner:
             df = df[df["id"].notna()]
             logger.info(f"Nombre de lignes après suppression des id manquants: {len(df)}")
 
+            # Préserver les métadonnées HTTP si présentes AVANT le traitement
+            fetch_cols = [col for col in df.columns if col.startswith('fetch_')]
+            fetch_data = {}
+            for col in fetch_cols:
+                fetch_data[col] = df[col].copy()
+            
             df["title_clean"] = df["title"].apply(self.clean_basic)
             df["text_raw_clean"] = df["text"].apply(self.clean_basic)
             df["text_merged"] = df.apply(
@@ -136,6 +150,17 @@ class Cleaner:
             df["category_clean"] = df["category"].apply(self.clean_category)
             df = df[df["text_clean"].str.strip() != ""]
             logger.info(f"Nombre de lignes après process: {len(df)}")
+            
+            # Restaurer les colonnes fetch_* après filtrage
+            if fetch_cols:
+                logger.info(f"Restauration des métadonnées HTTP: {fetch_cols}")
+                for col in fetch_cols:
+                    # Réaligner les données après le filtrage
+                    original_indices = df.index
+                    if col in fetch_data:
+                        # Utiliser les indices du DataFrame filtré
+                        df[col] = fetch_data[col].loc[original_indices]
+            
             self.save_clean_data(df)
 
             return df

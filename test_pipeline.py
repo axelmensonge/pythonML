@@ -16,7 +16,6 @@ test_inputs = [
     "n\n",           # Réutiliser clean? Non
     "n\n",           # Réutiliser features? Non
     "n\n",           # Réutiliser modèle? Non
-    "n\n",           # Quitter? Non
     "7\n"            # Option 7: Quitter
 ]
 
