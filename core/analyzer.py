@@ -123,7 +123,6 @@ class Analyzer:
                 status_dist = status_codes.value_counts().to_dict()
                 perf["status_distribution"] = {int(k): int(v) for k, v in status_dist.items()}
                 perf["success_rate"] = float((status_codes == 200).mean() * 100)
-
         logger.info("Performances API analysées")
         return perf
 
@@ -140,6 +139,5 @@ class Analyzer:
             "top_words": self.get_top_words(df, top_n=20),
             "kpi_by_source": self.kpi_by_source(df),
         }
-
         logger.info("Analyse complète terminée")
         return analysis_report
