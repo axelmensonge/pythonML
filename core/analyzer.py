@@ -10,7 +10,7 @@ logger = get_logger(__name__)
 class Analyzer:
     def __init__(self, summary_file, keywords_file):
         try:
-            self.summay_file = summary_file
+            self.summary_file = summary_file
             self.keywords_file = keywords_file
             logger.info("Analyzer initialisé")
         except Exception as e:
@@ -93,7 +93,7 @@ class Analyzer:
         }
 
         try:
-            with open(self.summay_file, "w", encoding="utf-8") as f:
+            with open(self.summary_file, "w", encoding="utf-8") as f:
                 json.dump(final_payload, f, ensure_ascii=False, indent=2)
             logger.info(f"summary.json mis à jour avec KPIs par source")
         except Exception as e:
