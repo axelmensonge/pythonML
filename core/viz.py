@@ -434,9 +434,9 @@ class Visualizer:
         ax.grid(axis='y', alpha=0.3)
         
         plt.tight_layout()
-        output_path = self.reports_dir / "fig6_classification_scores.png"
+        output_path = self.reports_dir / "fig7_classification_scores.png"
         fig.savefig(output_path, dpi=300, bbox_inches='tight')
-        logger.info(f"Figure 6 (ML - Scores) sauvegardée: {output_path}")
+        logger.info(f"Figure 7 (ML - Scores) sauvegardée: {output_path}")
         plt.close(fig)
         return str(output_path)
 
@@ -503,7 +503,7 @@ class Visualizer:
             
             # Page 7: Classification scores (si disponible)
             if classification_report_dict is not None:
-                self._add_figure_to_pdf(pdf, "fig6_classification_scores.png")
+                self._add_figure_to_pdf(pdf, "fig7_classification_scores.png")
         
         logger.info(f"Dashboard PDF créé: {pdf_path}")
         return str(pdf_path)
@@ -536,7 +536,7 @@ class Visualizer:
             paths['fig6_confusion_matrix'] = self.plot_confusion_matrix(y_test, y_pred)
         
         if classification_report_dict is not None:
-            paths['fig6_classification_scores'] = self.plot_classification_scores(classification_report_dict)
+            paths['fig7_classification_scores'] = self.plot_classification_scores(classification_report_dict)
         
         dashboard_path = self.create_dashboard_pdf(y_test, y_pred, classification_report_dict)
         paths['dashboard'] = dashboard_path

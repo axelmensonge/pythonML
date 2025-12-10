@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 from core.fetcher import Fetcher
 from core.cleaner import Cleaner
@@ -181,6 +182,70 @@ def step_train(model: Model, features: Features, force: bool = False):
         logger.exception(f"Erreur dans step_train: {e}")
         print(f"Erreur inattendue dans l'étape train: {e}")
 
+def step_visualize(features: Features, force: bool = False):
+    """Génère les visualisations (figures + dashboard)"""
+    try:
+        print("Génération des visualisations...")
+        
+        # Charger le cleaned DataFrame
+        try:
+            clean_df = features.load_clean_dataframe()
+        except Exception as e:
+            logger.exception(f"Impossible de charger clean_data pour visualisations: {e}")
+            print(f"Fichier clean manquant ou invalide: {e}")
+            return
+        
+        # Charger les données ML du summary.json si disponible
+        y_test = None
+        y_pred = None
+        classification_report_dict = None
+        
+        summary_file = Path(SUMMARY_FILE)
+        if summary_file.exists():
+            try:
+                with open(summary_file, 'r', encoding='utf-8') as f:
+                    summary_data = json.load(f)
+                
+                ml_metrics = summary_data.get('ml_metrics', {})
+                if ml_metrics:
+                    # Extraire les données ML
+                    confusion_matrix_data = ml_metrics.get('confusion_matrix')
+                    classification_report_data = ml_metrics.get('classification_report')
+                    
+                    if confusion_matrix_data:
+                        # Créer y_test et y_pred synthétiques basés sur la matrice
+                        y_test = []
+                        y_pred = []
+                        for true_idx, row in enumerate(confusion_matrix_data):
+                            for pred_idx, count in enumerate(row):
+                                y_test.extend([true_idx] * count)
+                                y_pred.extend([pred_idx] * count)
+                    
+                    if classification_report_data:
+                        classification_report_dict = classification_report_data
+            except Exception as e:
+                logger.warning(f"Impossible de charger données ML du summary.json: {e}")
+                print(f"Données ML non disponibles (c'est normal si le modèle n'a pas été entraîné)")
+        
+        # Générer les visualisations
+        viz_results = generate_visualizations(
+            df=clean_df,
+            y_test=y_test,
+            y_pred=y_pred,
+            classification_report_dict=classification_report_dict
+        )
+        
+        successful = sum(1 for p in viz_results.values() if p)
+        print(f"[OK] Visualisations générées: {successful} fichiers créés")
+        for name, path in viz_results.items():
+            if path:
+                print(f"  * {name}: OK")
+    
+    except Exception as e:
+        logger.exception(f"Erreur dans step_visualize: {e}")
+        print(f"Erreur inattendue dans l'étape visualisations: {e}")
+
+
 def print_summary(summary_path):
     if not summary_path.exists():
         print("summary.json introuvable.")
@@ -264,55 +329,7 @@ def do_pipeline(fetcher, cleaner, features, model, analyzer):
         print("Pipeline complet terminé.")
         
         # Générer les visualisations à la fin du pipeline
-        print("\nGénération des visualisations...")
-        try:
-            clean_df = features.load_clean_dataframe()
-            
-            # Charger les données ML du summary.json pour les figures ML
-            y_test = None
-            y_pred = None
-            classification_report_dict = None
-            
-            import json
-            from pathlib import Path
-            summary_file = Path(SUMMARY_FILE)
-            if summary_file.exists():
-                with open(summary_file, 'r', encoding='utf-8') as f:
-                    summary_data = json.load(f)
-                
-                ml_metrics = summary_data.get('ml_metrics', {})
-                if ml_metrics:
-                    # Extraire les données ML
-                    confusion_matrix_data = ml_metrics.get('confusion_matrix')
-                    classification_report_data = ml_metrics.get('classification_report')
-                    
-                    if confusion_matrix_data:
-                        # Pour la matrice de confusion, créer y_test et y_pred synthétiques
-                        # basés sur la matrice
-                        y_test = []
-                        y_pred = []
-                        for true_idx, row in enumerate(confusion_matrix_data):
-                            for pred_idx, count in enumerate(row):
-                                y_test.extend([true_idx] * count)
-                                y_pred.extend([pred_idx] * count)
-                    
-                    if classification_report_data:
-                        classification_report_dict = classification_report_data
-            
-            viz_results = generate_visualizations(
-                df=clean_df,
-                y_test=y_test,
-                y_pred=y_pred,
-                classification_report_dict=classification_report_dict
-            )
-            successful = sum(1 for p in viz_results.values() if p)
-            print(f"[OK] Visualisations générées: {successful} fichiers créés")
-            for name, path in viz_results.items():
-                if path:
-                    print(f"  * {name}: OK")
-        except Exception as e:
-            logger.exception(f"Erreur génération visualisations: {e}")
-            print(f"Erreur lors de la génération des visualisations: {e}")
+        step_visualize(features)
             
     except Exception as e:
         logger.exception(f"Erreur inattendue dans pipeline complet: {e}")
@@ -356,10 +373,11 @@ def main_menu():
         print("2) Clean (nettoyer / préparer les données)")
         print("3) Features (TF-IDF + encoder)")
         print("4) Train (entraîner le modèle)")
-        print("5) Pipeline complet (enchaîne toutes les étapes)")
-        print("6) Afficher un résumé de la pipeline")
-        print("7) Quitter")
-        choice = input("Choix (1-7) : ").strip()
+        print("5) Visualize (générer les figures et dashboard)")
+        print("6) Pipeline complet (enchaîne toutes les étapes)")
+        print("7) Afficher un résumé de la pipeline")
+        print("8) Quitter")
+        choice = input("Choix (1-8) : ").strip()
 
         try:
             if choice == "1":
@@ -371,27 +389,16 @@ def main_menu():
             elif choice == "4":
                 step_train(model, features)
             elif choice == "5":
-                do_pipeline(fetcher, cleaner, features, model, analyzer)
+                step_visualize(features)
             elif choice == "6":
-                print_summary(SUMMARY_FILE)    
-                # Génération des visualisations - charger le DataFrame
-                print("\nGénération des visualisations...")
-                try:
-                    clean_df = features.load_clean_dataframe()
-                    viz_results = generate_visualizations(df=clean_df)
-                    successful = sum(1 for p in viz_results.values() if p)
-                    print(f"[OK] Visualisations générées: {successful} fichiers créés")
-                    for name, path in viz_results.items():
-                        if path:
-                            print(f"  * {name}: OK")
-                except Exception as e:
-                    logger.exception(f"Erreur génération visualisations: {e}")
-                    print(f"Erreur lors de la génération des visualisations: {e}")
+                do_pipeline(fetcher, cleaner, features, model, analyzer)
             elif choice == "7":
+                print_summary(SUMMARY_FILE)
+            elif choice == "8":
                 print("Quitter...")
                 break
             else:
-                print("Choix invalide, entrez un chiffre entre 1 et 7.")
+                print("Choix invalide, entrez un chiffre entre 1 et 8.")
         except Exception as e:
             logger.exception(f"Erreur lors de l'exécution de l'option {choice}: {e}")
             print(f"Erreur lors de l'exécution : {e}")

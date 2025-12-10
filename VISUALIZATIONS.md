@@ -1,265 +1,220 @@
-# Visualisations - Documentation
+# Documentation Visualisations
 
 ## Vue d'ensemble
 
-Le module `core/viz.py` génère automatiquement 5+ figures PNG/SVG et un dashboard PDF compilé à partir des données d'analyse. Ces visualisations fournissent une vue d'ensemble complète des produits et des performances du modèle de classification.
+Le module de visualisation génère 7 figures PNG et 1 dashboard PDF à partir des données produits et métriques ML. Les visualisations utilisent des données provenant des APIs et du modèle d'apprentissage.
 
-## Figures générées
+### Fichiers générés
+- `fig1_volume_source.png` - Volume produits par source
+- `fig2_top_keywords.png` - Mots-clés les plus fréquents
+- `fig3_latency_distribution.png` - Distribution latence HTTP
+- `fig4_http_status.png` - Distribution statuts HTTP
+- `fig5_chronology.png` - Chronologie volume/temps
+- `fig6_confusion_matrix.png` - Matrice confusion (ML)
+- `fig7_classification_scores.png` - Scores classification (ML)
+- `dashboard.pdf` - Dashboard compilé (toutes figures + page de couverture)
 
-### Figure 1: Volume par source (`fig1_volume_source.png`)
-**Type**: Bar chart
-- **Description**: Affiche le nombre de produits par source de données
-- **Données source**: `summary.json` → `sources`
-- **Éléments**:
-  - Barres colorées pour chaque source
-  - Valeurs affichées au-dessus de chaque barre
-  - Légende avec grille
+---
 
-### Figure 2: Top mots-clés (`fig2_top_keywords.png`)
-**Type**: Horizontal bar chart
-- **Description**: Les 15 mots-clés les plus fréquents avec leur compte
-- **Données source**: `keywords.csv`
-- **Éléments**:
-  - Barre horizontale pour chaque mot
-  - Gradient de couleur (viridis)
-  - Fréquence affichée sur chaque barre
-  - Tri décroissant
+## Architecture
 
-### Figure 3: Distribution des latences (`fig3_latency_distribution.png`)
-**Type**: Box plot + Histogram
-- **Description**: Distribution des latences de réponse par source
-- **Données**: Simulées de manière réaliste
-- **Éléments**:
-  - Sous-figure 1: Box plot pour comparaison statistique
-  - Sous-figure 2: Histogramme pour distribution complète
-  - Code couleur par source
+### Module principal : `core/viz.py`
 
-### Figure 4: Répartition des statuts HTTP (`fig4_http_status.png`)
-**Type**: Pie chart + Bar chart
-- **Description**: Répartition des codes de statut HTTP
-- **Codes inclus**:
-  - 200 OK (majorité)
-  - 201 Created
-  - 304 Not Modified
-  - 400, 404, 500 errors
-- **Éléments**:
-  - Pie chart avec pourcentages
-  - Bar chart avec comptes absolus
-
-### Figure 5: Chronologie - Volume par temps (`fig5_chronology.png`)
-**Type**: Line chart avec moyenne mobile
-- **Description**: Évolution du volume de produits sur 30 jours
-- **Éléments**:
-  - Courbe principale avec marqueurs
-  - Zone remplie sous la courbe
-  - Moyenne mobile (7 jours)
-  - Grille et légende
-
-### Figure 6 (ML): Matrice de confusion (`fig6_confusion_matrix.png`)
-**Type**: Heatmap
-- **Description**: Matrice de confusion du classifieur
-- **Données source**: Résultats du modèle
-- **Éléments**:
-  - Heatmap colorée (Blues)
-  - Valeurs affichées dans les cellules
-  - Labels pour classes réelles vs prédites
-
-### Figure 6 Alt (ML): Scores par classe (`fig6_classification_scores.png`)
-**Type**: Grouped bar chart
-- **Description**: Scores de classification par classe
-- **Métriques affichées**:
-  - Precision
-  - Recall
-  - F1-score
-- **Groupement**: Par classe
-
-## Dashboard PDF (`dashboard.pdf`)
-
-Compilé avec toutes les figures dans un document professionnel incluant:
-- **Page 1**: Page de titre avec résumé des données
-  - Total produits
-  - Longueur moyenne texte
-  - Détail des sources
-  - Timestamp de génération
-- **Pages 2-7**: Figures individuelles
-- **Format**: A4 portrait (11" × 8.5")
-
-## Utilisation
-
-### Usage basique
-
-```python
-from core.viz import generate_visualizations
-
-# Génère toutes les figures
-viz_results = generate_visualizations()
-
-# Avec résultats ML
-viz_results = generate_visualizations(
-    y_test=y_test,
-    y_pred=y_pred,
-    classification_report_dict=classification_report
-)
-```
-
-### Usage avancé avec classe Visualizer
-
-```python
-from core.viz import Visualizer
-
-# Initialisation
-viz = Visualizer(
-    summary_path="reports/summary.json",
-    keywords_path="reports/keywords.csv"
-)
-
-# Génération individuelle de figures
-viz.plot_volume_by_source()
-viz.plot_top_keywords()
-viz.plot_latency_distribution()
-viz.plot_http_status_distribution()
-viz.plot_chronology()
-
-# ML figures
-viz.plot_confusion_matrix(y_test, y_pred, class_names=['Classe A', 'Classe B'])
-viz.plot_classification_scores(classification_report)
-
-# Dashboard complet
-viz.create_dashboard_pdf(y_test, y_pred, classification_report)
-```
-
-### Intégration dans main.py
-
-```python
-from core.viz import generate_visualizations
-
-# Dans main()
-viz_results = generate_visualizations()
-print(f"✓ {len(viz_results)} fichiers générés")
-```
-
-## Caractéristiques techniques
-
-### Configuration matplotlib
-- **Style**: seaborn-v0_8-darkgrid (avec fallback)
-- **Palette**: husl
-- **DPI**: 300 (haute résolution)
-- **Format**: PNG/SVG (PNG par défaut)
-- **Colormaps**: Set2, viridis, Blues, husl
-
-### Dépendances
-```
-matplotlib>=3.5.0
-seaborn>=0.11.0
-pandas>=1.3.0
-numpy>=1.21.0
-Pillow>=8.0.0  (pour PDF)
-scikit-learn>=1.0.0  (pour confusion_matrix)
-```
-
-### Architecture
-
-```
-Visualizer
-├── _load_summary()          # Charge summary.json
-├── _load_keywords()         # Charge keywords.csv
-├── plot_volume_by_source()  # Figure 1
-├── plot_top_keywords()      # Figure 2
-├── plot_latency_distribution()  # Figure 3
-├── plot_http_status_distribution()  # Figure 4
-├── plot_chronology()        # Figure 5
-├── plot_confusion_matrix()  # Figure 6 (ML)
-├── plot_classification_scores()  # Figure 6 Alt (ML)
-├── create_dashboard_pdf()   # PDF compilé
-└── generate_all_figures()   # Orchestration
-```
-
-## Fichiers de sortie
-
-Tous les fichiers sont sauvegardés dans le répertoire `reports/`:
-
-| Fichier | Format | Taille approx | Description |
-|---------|--------|-------------|-------------|
-| `fig1_volume_source.png` | PNG | ~50 KB | Volume par source |
-| `fig2_top_keywords.png` | PNG | ~60 KB | Top keywords |
-| `fig3_latency_distribution.png` | PNG | ~80 KB | Distribution latences |
-| `fig4_http_status.png` | PNG | ~70 KB | Statuts HTTP |
-| `fig5_chronology.png` | PNG | ~90 KB | Chronologie |
-| `fig6_confusion_matrix.png` | PNG | ~40 KB | Matrice confusion (ML) |
-| `fig6_classification_scores.png` | PNG | ~50 KB | Scores (ML) |
-| `dashboard.pdf` | PDF | ~500 KB | Dashboard complet |
-
-## Logging
-
-Toutes les opérations sont loggées dans `logs/fetcher.log`:
-- Initialisation du Visualizer
-- Chargement des données
-- Génération de chaque figure
-- Création du PDF
-
-Exemples:
-```
-2024-01-15 10:30:45 - core.viz - INFO - Visualizer initialisé
-2024-01-15 10:30:46 - core.viz - INFO - Fichier summary.json chargé
-2024-01-15 10:30:47 - core.viz - INFO - Figure 1 sauvegardée: reports/fig1_volume_source.png
-2024-01-15 10:30:48 - core.viz - INFO - Figure 2 sauvegardée: reports/fig2_top_keywords.png
-...
-2024-01-15 10:31:00 - core.viz - INFO - Dashboard PDF créé: reports/dashboard.pdf
-```
-
-## Personnalisation
-
-### Modifier les styles
-
-```python
-# Dans viz.py, section Configuration matplotlib
-plt.style.use('ggplot')  # Autre style
-sns.set_palette("deep")  # Autre palette
-```
-
-### Ajouter des figures personnalisées
+#### Classe `Visualizer`
 
 ```python
 class Visualizer:
-    def plot_custom_analysis(self):
-        """Ma figure personnalisée"""
-        fig, ax = plt.subplots(figsize=(12, 7))
-        # ... code ...
-        output_path = self.reports_dir / "fig_custom.png"
-        fig.savefig(output_path, dpi=300, bbox_inches='tight')
-        return str(output_path)
+    def __init__(self, df=None, summary_path=SUMMARY_FILE, keywords_path=None):
+        """
+        Initialise le visualiseur avec les données produits.
+        
+        Args:
+            df: DataFrame pandas avec colonnes [id, title, text, category, source, 
+                fetch_elapsed, fetch_status, fetch_time, ...]
+            summary_path: Chemin vers summary.json (métriques ML)
+            keywords_path: Chemin vers keywords.csv (top mots-clés)
+        """
 ```
 
-## Dépannage
+#### Flux de génération
 
-### Erreur: "seaborn-v0_8-darkgrid not found"
-✓ Automatiquement géré avec fallback à 'default'
+1. **Chargement des données**
+   - DataFrame produits (clean_data.json) avec métadonnées HTTP
+   - Fichier summary.json pour les métriques ML
+   - Fichier keywords.csv pour les mots-clés
 
-### Erreur: "No module named 'PIL'"
+2. **Génération des figures (1-5)**
+   - Chaque méthode `plot_*()` crée une figure PNG
+   - Utilise les colonnes réelles du DataFrame
+
+3. **Génération des figures ML (6-7)**
+   - Optionnelles : générées si données ML disponibles
+   - Créées à partir de summary.json
+
+4. **Compilation dashboard**
+   - Agrège toutes les figures en un PDF multi-page
+   - Ajoute page de couverture avec statistiques
+
+---
+
+## Figures détaillées
+
+### Figure 1 : Volume par source
+**Fichier** : `fig1_volume_source.png`
+
+- **Type** : Bar chart
+- **Données** : `df['source'].value_counts()`
+- **Utilité** : Visualiser la distribution des produits collectés par API
+
+### Figure 2 : Top mots-clés
+**Fichier** : `fig2_top_keywords.png`
+
+- **Type** : Horizontal bar chart (top 15)
+- **Données** : `keywords.csv` (généré par Analyzer)
+- **Utilité** : Identifier les termes les plus pertinents dans les descriptions
+
+### Figure 3 : Distribution latence HTTP
+**Fichier** : `fig3_latency_distribution.png`
+
+- **Type** : Box plot + Histogram
+- **Données réelles** : `df['fetch_elapsed']` (en secondes)
+- **Statistiques** : 
+  - Moyenne : ~1.1s
+  - Min : ~0.7s
+  - Max : ~1.6s
+- **Groupement** : Par source API
+- **Fallback** : Si fetch_elapsed absent, utilise longueur texte comme proxy
+
+### Figure 4 : Distribution statuts HTTP
+**Fichier** : `fig4_http_status.png`
+
+- **Type** : Pie chart + Horizontal bar chart
+- **Données réelles** : `df['fetch_status']` (codes HTTP)
+- **Observations** : Tous les produits ont status 200 (succès)
+- **Fallback** : Si fetch_status absent, utilise distribution des catégories
+
+### Figure 5 : Chronologie volume/temps
+**Fichier** : `fig5_chronology.png`
+
+- **Type** : Line plot avec markers (ou heatmap fallback)
+- **Données réelles** : `df['fetch_time']` (timestamps ISO)
+- **Groupement** : Par source, par interval de 5 minutes
+- **Utilité** : Voir la progression du fetch au fil du temps
+- **Fallback** : Si fetch_time absent, heatmap source × catégorie
+
+### Figure 6 : Matrice confusion (ML)
+**Fichier** : `fig6_confusion_matrix.png`
+
+- **Type** : Heatmap avec annotations
+- **Données** : `summary.json['ml_metrics']['confusion_matrix']`
+- **Disponibilité** : Seulement si modèle entraîné
+- **Classes** : 3 (openbeautyfacts, openfoodfacts, openpetfoodfacts)
+
+### Figure 7 : Scores classification (ML)
+**Fichier** : `fig7_classification_scores.png`
+
+- **Type** : Grouped bar chart
+- **Données** : `summary.json['ml_metrics']['classification_report']`
+- **Métriques par classe** : Precision, Recall, F1-score
+- **Disponibilité** : Seulement si modèle entraîné
+
+### Dashboard PDF
+**Fichier** : `dashboard.pdf`
+
+- **Nombre de pages** : 6 à 8 (selon présence données ML)
+- **Page 1** : Couverture avec statistiques générales
+- **Pages 2-8** : Les 7 figures
+
+---
+
+## Intégration dans le pipeline
+
+### Option 5 : Visualize (autonome)
+
 ```bash
-pip install Pillow
+# Menu principal
+Choix (1-8) : 5
+# Génération des visualisations avec données disponibles
 ```
 
-### Erreur: "matplotlib backend not available"
-- Les backends PNG/PDF doivent être disponibles
-- Installer: `pip install matplotlib --upgrade`
+**Comportement** :
+- Charge le DataFrame clean_data.json
+- Charge les données ML du summary.json si présentes
+- Génère 5+ figures selon disponibilité des données
+- Génère dashboard complet
 
-### Figures manquantes
-- Vérifier que `summary.json` et `keywords.csv` existent
-- Vérifier que le répertoire `reports/` est accessible en écriture
+### Option 6 : Pipeline complet
 
-## Améliorations futures
+```bash
+Choix (1-8) : 6
+# Fetch → Clean → Features → Train → Visualize
+```
 
-- [ ] Support des figures SVG vectorielles
-- [ ] Thèmes personnalisables (dark mode, light mode)
-- [ ] Export Excel avec graphiques intégrés
-- [ ] Génération de HTML interactif (Plotly)
-- [ ] Export PowerPoint
-- [ ] Animations temporelles
+**Workflow** :
+1. Récupère données brutes (avec `fetch_elapsed`, `fetch_status`, `fetch_time`)
+2. Nettoie et préserve métadonnées HTTP
+3. Extrait features
+4. Entraîne modèle ML
+5. **Appelle `step_visualize()`** pour générer toutes les figures
 
-## Notes
+---
 
-- Les données de latence et statuts HTTP sont **simulées** de manière réaliste
-- Pour les remplacer par des données réelles, ajouter des champs dans `summary.json`
-- Le dashboard PDF utilise PIL pour convertir les PNG en PDF haute qualité
-- Toutes les figures sont indépendantes et peuvent être générées individuellement
+## Données utilisées
+
+### Métadonnées HTTP (colonnes réelles)
+
+| Colonne | Type | Source | Utilisation |
+|---------|------|--------|-------------|
+| `fetch_elapsed` | float | Fetcher.fetch() | Figure 3 (latence) |
+| `fetch_status` | int | Fetcher.fetch() | Figure 4 (HTTP status) |
+| `fetch_time` | str (ISO) | Fetcher.fetch() | Figure 5 (chronologie) |
+
+**Préservation du pipeline** :
+- Fetcher ajoute les colonnes
+- Cleaner les préserve via `json_to_dataframe()` et `preprocess_dataframe()`
+- Visualizer les utilise pour les figures
+
+### Données ML (depuis summary.json)
+
+| Donnée | Chemin JSON | Figure |
+|--------|-------------|--------|
+| Confusion matrix | `ml_metrics.confusion_matrix` | Fig 6 |
+| Classification report | `ml_metrics.classification_report` | Fig 7 |
+| Accuracy | `ml_metrics.accuracy` | Dashboard |
+| F1 macro | `ml_metrics.f1_macro` | Dashboard |
+
+---
+
+## Gestion des erreurs
+
+### Données manquantes
+
+| Scenario | Figure | Comportement |
+|----------|--------|-------------|
+| `fetch_elapsed` absent | Fig 3 | Utilise longueur texte comme proxy |
+| `fetch_status` absent | Fig 4 | Utilise distribution catégories |
+| `fetch_time` absent | Fig 5 | Fallback : heatmap source × catégorie |
+| Modèle non entraîné | Fig 6-7 | Pas générées (normal) |
+| clean_data.json manquant | Toutes | Erreur → message utilisateur |
+
+### Logs
+
+Tous les événements sont loggés dans les fichiers logs :
+- Génération réussie d'une figure : `logger.info(...)`
+- Avertissement (données manquantes) : `logger.warning(...)`
+- Erreur fatale : `logger.error(...)`
+
+---
+
+## Remarques importantes
+
+### Cohérence
+- Figures 1-5 générées même sans modèle entraîné
+- Figures 6-7 générées uniquement avec données ML
+- Dashboard adapte son contenu aux figures disponibles
+
+### Configuration
+- Toutes les tailles et formats sont paramétrables dans le code
+- Style matplotlib : seaborn-v0_8-darkgrid
+- Palettes : husl, viridis, Set2, YlOrRd selon la figure
+- DPI : 300 pour qualité d'impression
