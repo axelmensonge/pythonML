@@ -1,231 +1,131 @@
 import time
 import json
-import logging
 import requests
 from requests.exceptions import Timeout, ConnectionError, HTTPError
-from typing import Dict
-from core.config import SUMMARY_FILE
-
+from typing import Dict, List
 import pandas as pd
+from core.logger import get_logger
 
-from core.config import TIMEOUT, HEADERS, RAW_DATA_DIR, LOG_PATH, LOG_FORMAT, URLS
-
-# --------------------------------------------------
-# CONFIGURATION DU LOGGER
-# --------------------------------------------------
-# Le logger sert à enregistrer toutes les actions dans fetcher.log
-
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-if not logger.handlers:
-    fh = logging.FileHandler(LOG_PATH)
-    formatter = logging.Formatter(LOG_FORMAT)
-    fh.setFormatter(formatter)
-    logger.addHandler(fh)
+logger = get_logger(__name__)
 
 
-# --------------------------------------------------
-# FONCTION : fetch()
-# Envoie une requête GET à une API, mesure le temps de réponse,
-# gère les erreurs réseau, et renvoie un dictionnaire standardisé.
-# --------------------------------------------------
-
-def fetch(url, params=None) -> Dict:
-    start = time.perf_counter()
-    try:
-        response = requests.get(url, timeout=TIMEOUT, headers=HEADERS, params=params)
-        elapsed = round(time.perf_counter() - start, 3)
-        response.raise_for_status()
-
-        content_type = response.headers.get("Content-Type", "").split(";")[0].lower()
-        if "application/json" in content_type:
-            try:
-                payload = response.json()
-            except ValueError:
-                payload = response.text[:500]
-        else:
-            payload = response.text[:500]
-
-        return {
-            "url": response.url,
-            "status": response.status_code,
-            "elapsed": elapsed,
-            "content_type": content_type,
-            "payload": payload
-        }
-
-    except Timeout:
-        return {"url": url, "status": "error", "error_type": "timeout",
-                "elapsed": round(time.perf_counter() - start, 3), "content_type": None, "payload": None}
-
-    except ConnectionError:
-        return {"url": url, "status": "error", "error_type": "connection_error",
-                "elapsed": round(time.perf_counter() - start, 3), "content_type": None, "payload": None}
-
-    except HTTPError as e:
-        return {"url": url, "status": e.response.status_code, "error_type": "http_error",
-                "elapsed": round(time.perf_counter() - start, 3),
-                "content_type": e.response.headers.get("Content-Type", None), "payload": None}
-
-
-# --------------------------------------------------
-# FONCTION : save_response()
-# Sauvegarde brute des produits récupérés dans data/raw/
-# --------------------------------------------------
-
-def save_response(api_name: str, data: Dict):
-    path = RAW_DATA_DIR / f"{api_name}_response.json"
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-    logger.info(f"Réponse sauvegardée: {path}")
-
-
-# --------------------------------------------------
-# FONCTION : standardize_product()
-# Transforme un produit dans un format standard commun aux 3 APIs
-# (titre, texte, catégorie, id, source)
-# --------------------------------------------------
-
-def standardize_product(obj: dict, source: str) -> Dict:
-    return {
-        "id": obj.get("id") or obj.get("code") or obj.get("_id"),
-        "title": obj.get("product_name") or obj.get("generic_name") or obj.get("brands") or "Unknown Product",
-        "text": ((obj.get("ingredients_text") or "") + " " + (obj.get("labels") or "")).strip(),
-        "category": obj.get("categories_tags", []),
-        "source": source,
-    }
-
-
-# --------------------------------------------------
-# FONCTION : save_summary_entry()
-# Enregistre un résumé des performances de l’API :
-# - statut HTTP final
-# - temps total de réponse
-# - nombre de produits sauvegardés
-# Le tout dans reports/summary.json
-# --------------------------------------------------
-
-def save_summary_entry(api_name: str, status: int, elapsed: float, total_products: int):
-    summary = {
-        "api": api_name,
-        "status": status,
-        "response_time_seconds": elapsed,
-        "total_products_saved": total_products
-    }
-
-    if SUMMARY_FILE.exists():
+class Fetcher:
+    def __init__(self, timeout: float, max_products: int, page_size: int, headers: dict, urls: List[str], raw_data_dir):
         try:
-            with open(SUMMARY_FILE, "r", encoding="utf-8") as f:
-                existing = json.load(f)
-        except:
-            existing = {}
-    else:
-        existing = {}
+            self.timeout = timeout
+            self.headers = headers
+            self.urls = urls
+            self.max_products = max_products
+            self.page_size = page_size
+            self.raw_data_dir = raw_data_dir
+            logger.info("Fetcher initialisé")
+        except Exception as e:
+            logger.error(f"Erreur lors de l'initialisation du Fetcher: {e}")
+            raise e
 
-    existing[api_name] = summary
-
-    with open(SUMMARY_FILE, "w", encoding="utf-8") as f:
-        json.dump(existing, f, ensure_ascii=False, indent=2)
-
-    logger.info(f"Résumé mis à jour dans : {SUMMARY_FILE}")
-
-
-# --------------------------------------------------
-# FONCTION PRINCIPALE : fetch_all_pages()
-# Récupère autant de pages que nécessaire jusqu’à atteindre "max_products".
-# Boucle pagination → récupère produits → standardise → stocke.
-# Enregistre :
-# - les données brutes
-# - le résumé dans summary.json
-# --------------------------------------------------
-
-def fetch_all_pages(url: str, api_name: str, max_products: int = 1000) -> pd.DataFrame:
-    all_products = []
-    page = 1
-    page_size = 100
-
-    total_elapsed = 0
-    last_status = None
-
-    while len(all_products) < max_products:
-        params = {
-            "action": "process",
-            "json": "true",
-            "page": page,
-            "page_size": page_size
+    @staticmethod
+    def standardize_product(obj: dict, source: str) -> Dict:
+        """Met en forme un produit de façon standard pour toutes les APIs"""
+        return {
+            "id": obj.get("id") or obj.get("code") or obj.get("_id"),
+            "title": obj.get("product_name") or obj.get("generic_name") or obj.get("brands") or "Unknown Product",
+            "text": ((obj.get("ingredients_text") or "") + " " + (obj.get("labels") or "")).strip(),
+            "category": obj.get("categories_tags", []),
+            "source": source,
         }
 
-        resp = fetch(url, params=params)
+    def save_response(self, api_name: str, data: Dict):
+        """Sauvegarde brute des réponses JSON"""
+        path = self.raw_data_dir / f"{api_name}_response.json"
+        try:
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+            logger.info(f"Réponse sauvegardée: {path}")
+        except Exception as e:
+            logger.error(f"Erreur lors de la sauvegarde de la réponse pour {api_name}: {e}")
 
-        last_status = resp.get("status")
-        total_elapsed += resp.get("elapsed", 0)
+    def fetch(self, url: str, params: dict) -> Dict:
+        """Envoie une requête GET et renvoie un dictionnaire standardisé avec gestion des erreurs"""
+        start = time.perf_counter()
+        try:
+            response = requests.get(url, timeout=self.timeout, headers=self.headers, params=params)
+            elapsed = round(time.perf_counter() - start, 3)
+            response.raise_for_status()
 
-        if resp.get("status") == "error" or not resp.get("payload"):
-            logger.warning(f"Erreur à la page {page} pour {api_name}")
-            break
+            content_type = response.headers.get("Content-Type", "").split(";")[0].lower()
+            if "application/json" in content_type:
+                try:
+                    payload = response.json()
+                except ValueError:
+                    payload = response.text[:500]
+            else:
+                payload = response.text[:500]
 
-        products = resp["payload"].get("products", [])
-        if not products:
-            logger.info(f"Plus de produits à la page {page}")
-            break
+            return {
+                "url": response.url,
+                "status": response.status_code,
+                "elapsed": elapsed,
+                "content_type": content_type,
+                "payload": payload
+            }
 
-        for p in products:
-            all_products.append(standardize_product(p, api_name))
-            if len(all_products) >= max_products:
+        except Timeout:
+            return {"url": url, "status": "error", "error_type": "timeout", "elapsed": round(time.perf_counter()-start,3), "content_type": None, "payload": None}
+        except ConnectionError:
+            return {"url": url, "status": "error", "error_type": "connection_error", "elapsed": round(time.perf_counter()-start,3), "content_type": None, "payload": None}
+        except HTTPError as e:
+            return {"url": url, "status": e.response.status_code, "error_type": "http_error", "elapsed": round(time.perf_counter()-start,3), "content_type": e.response.headers.get("Content-Type", None), "payload": None}
+
+    def fetch_all_pages(self, url: str, api_name: str) -> pd.DataFrame:
+        """Récupère tous les produits d’une API avec pagination et limite max_products"""
+        all_products = []
+        page = 1
+
+        while len(all_products) < self.max_products:
+            params = {
+                "action": "process",
+                "json": "true",
+                "page": page,
+                "page_size": self.page_size
+            }
+
+            resp = self.fetch(url, params)
+
+            if resp.get("status") == "error" or not resp.get("payload"):
+                logger.warning(f"Erreur ou fin des produits à la page {page} pour {api_name}")
                 break
 
-        page += 1
-        time.sleep(0.2) 
+            products = resp["payload"].get("products", [])
+            if not products:
+                logger.info(f"Plus de produits à la page {page} pour {api_name}")
+                break
 
-    df = pd.DataFrame(all_products)
+            for p in products:
+                all_products.append(self.standardize_product(p, api_name))
+                if len(all_products) >= self.max_products:
+                    break
 
-    # Sauvegarde brute des produits
-    save_response(f"{api_name}_all", {"products": all_products, "total": len(all_products)})
+            logger.info(f"{api_name}: Page {page} récupérée ({len(products)} produits)")
+            page += 1
+            time.sleep(0.2)  # pause pour limiter le rate-limit
 
-    # Mise à jour du résumé dans reports/
-    save_summary_entry(api_name, last_status, total_elapsed, len(all_products))
+        df = pd.DataFrame(all_products)
+        self.save_response(f"{api_name}_all", {"total_products": len(all_products), "products": all_products})
+        logger.info(f"{api_name}: Total produits récupérés {len(all_products)}")
+        return df
 
-    return df
+    def fetch_all(self) -> Dict[str, pd.DataFrame]:
+        """Récupère les données de toutes les APIs configurées"""
+        data = {}
+        api_names = ["openfoodfacts", "openbeautyfacts", "openpetfoodfacts"]
 
+        i = 0
+        for url in self.urls:
+            logger.info(f"Recherche pour {api_names[i]}...")
+            df = self.fetch_all_pages(url, api_names[i])
+            data[api_names[i]] = df
+            i += 1
 
-# --------------------------------------------------
-# FONCTIONS WRAPPER PAR API
-# Permettent d’appeler facilement chaque source
-# --------------------------------------------------
-
-def fetch_openfoodfacts() -> pd.DataFrame:
-    return fetch_all_pages(URLS[0], "openfoodfacts")
-
-
-def fetch_openbeautyfacts() -> pd.DataFrame:
-    return fetch_all_pages(URLS[1], "openbeautyfacts")
-
-
-def fetch_openpetfoodfacts() -> pd.DataFrame:
-    return fetch_all_pages(URLS[2], "openpetfoodfacts")
-
-
-# --------------------------------------------------
-# FONCTION : fetch_all()
-# Lance l’extraction pour les 3 APIs
-# Retourne un dict contenant les 3 DataFrames
-# --------------------------------------------------
-
-def fetch_all() -> Dict[str, pd.DataFrame]:
-    logger.info("Recheche pour OpenFoodFacts...")
-    df_food = fetch_openfoodfacts()
-
-    logger.info("Recheche pour OpenBeautyFacts...")
-    df_beauty = fetch_openbeautyfacts()
-
-    logger.info("Recheche pour OpenPetFoodFacts...")
-    df_pet = fetch_openpetfoodfacts()
-
-    total = len(df_food) + len(df_beauty) + len(df_pet)
-    logger.info(f"Total produits récupérés : {total}")
-
-    return {
-        "openfoodfacts": df_food,
-        "openbeautyfacts": df_beauty,
-        "openpetfoodfacts": df_pet
-    }
+        total = sum(len(df) for df in data.values())
+        logger.info(f"Total produits récupérés pour toutes les APIs : {total}")
+        return data

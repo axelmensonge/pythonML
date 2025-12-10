@@ -1,3 +1,4 @@
+import json
 import pandas as pd
 import spacy
 import nltk
@@ -10,8 +11,9 @@ nltk.download("stopwords")
 
 
 class Cleaner:
-    def __init__(self):
+    def __init__(self, clean_data_path):
         try:
+            self.clean_data_path = clean_data_path
             self.nlp = spacy.load("fr_core_news_sm")
             self.stop_fr = set(stopwords.words("french"))
             self.stop_en = set(stopwords.words("english"))
@@ -28,7 +30,7 @@ class Cleaner:
         return text.lower().strip()
 
 
-    def clean_text(self,text):
+    def clean_text(self, text):
         if not text:
             logger.warning("Texte vide reçu pour le clean")
             return ""
@@ -66,6 +68,54 @@ class Cleaner:
         except Exception as e:
             logger.error(f"Erreur lors du clean de catégorie: {e}")
             raise e
+
+
+    @staticmethod
+    def json_to_dataframe(json_path):
+        try:
+            with open(json_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            logger.info(f"JSON chargé : {json_path}")
+        except Exception as e:
+            logger.error(f"Erreur lecture JSON : {e}")
+            return pd.DataFrame()
+
+        if "products" not in data or not isinstance(data["products"], list):
+            logger.error("Clé 'products' manquante ou invalide dans le JSON")
+            return pd.DataFrame()
+
+        rows = []
+        for item in data["products"]:
+            try:
+                rows.append({
+                    "id": item["id"],
+                    "title": item["title"],
+                    "text": item["text"],
+                    "category": item["category"],
+                    "source": item["source"],
+                })
+            except Exception as e:
+                logger.warning(f"Erreur lors de la lecture d’un produit : {e}")
+                continue
+
+        df = pd.DataFrame(rows)
+        logger.info(f"JSON converti en DataFrame : {len(df)} lignes")
+
+        return df
+
+
+    def save_dataframe_to_json(self, df: pd.DataFrame) -> bool:
+        if df is None or df.empty:
+            logger.warning("Tentative d'enregistrer un DataFrame vide — sauvegarde annulée.")
+            return False
+
+        try:
+            df.to_json(self.clean_data_path, orient="records", force_ascii=False, indent=4)
+            logger.info(f"DataFrame sauvegardé en JSON : {self.clean_data_path}")
+            return True
+        except Exception as e:
+            logger.error(f"Erreur lors de la sauvegarde du DataFrame en JSON : {e}")
+            return False
 
 
     def preprocess_dataframe(self, dfs):
