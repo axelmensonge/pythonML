@@ -31,6 +31,9 @@ class Model:
 
 
     def load_clean_dataframe(self) -> pd.DataFrame:
+        """
+        Charge le fichier JSON nettoyé et le convertit en DataFrame
+        """
         try:
             with open(self.clean_data_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
@@ -53,6 +56,9 @@ class Model:
 
 
     def load_training_data(self):
+        """
+        Charge la matrice de features X depuis le fichier .npy
+        """
         try:
             logger.info("Chargement des données d'entraînement...")
 
@@ -69,6 +75,9 @@ class Model:
             raise e
 
     def update_summary(self):
+        """
+        Met à jour le fichier summary.json avec les métriques ML (accuracy, F1, confusion matrix, etc.)
+        """
         self.summary_path.parent.mkdir(parents=True, exist_ok=True)
         if self.summary_path.exists():
             with open(self.summary_path, "r", encoding="utf-8") as fh:
@@ -84,12 +93,18 @@ class Model:
 
 
     def create_labels(self, df: pd.DataFrame):
+        """
+        Crée le vecteur de labels (y) à partir de la colonne 'source' du DataFrame
+        """
         if "source" not in df.columns:
             raise ValueError("La colonne 'source' est manquante dans le DataFrame")
         self.y = df["source"].values
 
 
     def train_classification(self):
+        """
+        Entraîne un modèle de classification LogisticRegression et évalue ses performances
+        """
         try:
             logger.info("Entraînement du modèle")
 

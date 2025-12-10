@@ -32,7 +32,7 @@ class Features:
 
     def extract_features(self, df: pd.DataFrame):
         """
-        Extrait TF-IDF à partir de `text_clean` et encode `category_clean`.
+        Extrait TF-IDF à partir de `text_clean` et encode `category_clean`
         """
         try:
             logger.info("Extraction des features")
@@ -82,9 +82,8 @@ class Features:
 
 
     def save_features(self, X):
-        """Sauvegarde la matrice X et les objets vectorizer/encoder.
-
-        Raise exceptions en cas d'erreur d'écriture.
+        """
+        Sauvegarde la matrice X et les objets vectorizer/encoder dans des fichiers
         """
         try:
             logger.info("Sauvegarde des features")
@@ -101,6 +100,9 @@ class Features:
 
 
     def save_full_clean_normalized_dataset(self, output_path):
+        """
+        Sauvegarde la matrice de features normalisée (X) dans un fichier numpy
+        """
         try:
             np.save(output_path, self.X)
             logger.info(f"Full clean normalized dataset sauvegardé : {output_path}")
@@ -110,9 +112,8 @@ class Features:
 
 
     def load_features(self):
-        """Charge X, vectorizer et encoder depuis les fichiers.
-
-        Raise FileNotFoundError si manquant.
+        """
+        Charge X, vectorizer et encoder depuis les fichiers
         """
         try:
             logger.info("Chargement des features")
@@ -136,9 +137,8 @@ class Features:
 
 
     def load_clean_dataframe(self) -> pd.DataFrame:
-        """Charge le JSON nettoyé (liste de dicts) et renvoie un DataFrame.
-
-        Raise FileNotFoundError or ValueError si invalide.
+        """
+        Charge le JSON nettoyé (liste de dicts) et renvoie un DataFrame
         """
         try:
             if not self.clean_data_path.exists():

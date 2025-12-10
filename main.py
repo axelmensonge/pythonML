@@ -25,13 +25,15 @@ from core.config import (
     KEYWORDs_FILE,
     CLEANED_DATA_DIR,
 )
-from core.model import Model
 from core.viz import generate_visualizations
 
 logger = get_logger(__name__)
 
 
 def prompt_yes_no(prompt: str, default: str = "o") -> bool:
+    """
+    Affiche une question interactive (oui/non) à l'utilisateur
+    """
     ans = input(f"{prompt} [{default}/n] : ").strip().lower()
     if ans == "" or ans == default:
         return True
@@ -39,6 +41,9 @@ def prompt_yes_no(prompt: str, default: str = "o") -> bool:
 
 
 def step_fetch(fetcher: Fetcher, force: bool = False):
+    """
+    Exécute l'étape de récupération des données depuis les APIs
+    """
     try:
         if not force:
             reuse = prompt_yes_no("Réutiliser les fichiers bruts déjà présents dans data/raw ?")
@@ -56,6 +61,9 @@ def step_fetch(fetcher: Fetcher, force: bool = False):
 
 
 def step_clean(cleaner: Cleaner, force: bool = False):
+    """
+    Exécute l'étape de nettoyage et normalisation des données brutes
+    """
     try:
         if not force and CLEANED_DATA_DIR.exists():
             reuse = prompt_yes_no(f"Un fichier clean existe déjà ({CLEANED_DATA_DIR}). Le réutiliser ?")
@@ -107,6 +115,9 @@ def step_clean(cleaner: Cleaner, force: bool = False):
 
 
 def step_features(features: Features, force: bool = False):
+    """
+    Exécute l'étape d'extraction des features (vectorisation TF-IDF)
+    """
     try:
         exist_feats = FEATURES_PATH.exists()
         exist_vec = VECTORIZER_PATH.exists()
@@ -147,6 +158,9 @@ def step_features(features: Features, force: bool = False):
 
 
 def step_train(model: Model, features: Features, force: bool = False):
+    """
+    Exécute l'étape d'entraînement du modèle de classification
+    """
     try:
         model_path = MODELS_DIR / "model.pkl"
         if not force and model_path.exists():
@@ -184,7 +198,9 @@ def step_train(model: Model, features: Features, force: bool = False):
         print(f"Erreur inattendue dans l'étape train: {e}")
 
 def step_visualize(features: Features, force: bool = False):
-    """Génère les visualisations (figures + dashboard)"""
+    """
+    Exécute l'étape de génération des visualisations (figures + dashboard PDF)
+    """
     try:
         print("Génération des visualisations...")
         
@@ -248,6 +264,9 @@ def step_visualize(features: Features, force: bool = False):
 
 
 def print_summary(summary_path):
+    """
+    Affiche un résumé complet du pipeline et des métriques ML
+    """
     if not summary_path.exists():
         print("summary.json introuvable.")
         return
@@ -277,6 +296,17 @@ def print_summary(summary_path):
 
 
 def do_pipeline(fetcher, cleaner, features, model, analyzer):
+    """
+    Exécute le pipeline complet avec questions interactives pour réutiliser/recréer les données
+
+    Le pipeline se déroule en 6 étapes avec des prompts utilisateur :
+    1. Fetch : récupération données brutes depuis les APIs (optionnel, avec cache)
+    2. Clean : nettoyage et normalisation du texte
+    3. Analyzer : calcul des KPIs descriptifs (longueur, fréquences, sources)
+    4. Features : extraction TF-IDF et encodage des catégories
+    5. Train : entraînement du modèle de classification avec évaluation
+    6. Visualize : génération des figures PNG et dashboard PDF
+    """
     print("Pipeline complet — on te posera des choix pour réutiliser ou recréer les artefacts.")
     try:
         if prompt_yes_no("Réutiliser data/raw existant ?"):
@@ -328,8 +358,7 @@ def do_pipeline(fetcher, cleaner, features, model, analyzer):
             step_train(model, features, force=True)
 
         print("Pipeline complet terminé.")
-        
-        # Générer les visualisations à la fin du pipeline
+
         step_visualize(features)
             
     except Exception as e:
@@ -338,6 +367,16 @@ def do_pipeline(fetcher, cleaner, features, model, analyzer):
 
 
 def main_menu():
+    """
+    Lance le menu principal interactif du pipeline marketing_ml
+
+    Initialise toutes les instances des classes (Fetcher, Cleaner, Features, Model, Analyzer)
+    avec les configurations appropriées et affiche un menu permettant à l'utilisateur de :
+    - Exécuter chaque étape individuellement (fetch, clean, features, train, visualize)
+    - Exécuter le pipeline complet automatiquement
+    - Afficher un résumé des résultats
+    - Quitter l'application
+    """
     features = Features(
         max_features=MAX_FEATURES,
         vectorizer_path=VECTORIZER_PATH,

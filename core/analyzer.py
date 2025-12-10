@@ -20,7 +20,9 @@ class Analyzer:
 
     @staticmethod
     def compute_text_length(df: pd.DataFrame, text_column="text") -> pd.DataFrame:
-        """Permet de calculer la longueur de chaque texte dans le DataFrame"""
+        """
+        Permet de calculer la longueur de chaque texte dans le DataFrame
+        """
         if text_column not in df:
             logger.error(f"Colonne '{text_column}' introuvable dans le DataFrame")
             return df
@@ -30,9 +32,11 @@ class Analyzer:
         return df
 
     def compute_text_statistics(self, df: pd.DataFrame, text_column="text") -> dict:
-        """Génération des statistiques globales sur les longueurs de tous les textes 
+        """
+        Génération des statistiques globales sur les longueurs de tous les textes
         (texte le plus petit, texte le plus grand, médiane, 
-        écart-type et total de caractères dans tous les textes)"""
+        écart-type et total de caractères dans tous les textes)
+        """
         if text_column not in df:
             logger.error(f"Colonne '{text_column}' introuvable")
             return {}
@@ -51,7 +55,9 @@ class Analyzer:
         return stats
 
     def get_top_words(self, df: pd.DataFrame, text_column="text", top_n=20):
-        """Permet d’identifier les mots les plus fréquents dans les textes"""
+        """
+        Permet d’identifier les mots les plus fréquents dans les textes
+        """
         if text_column not in df:
             logger.error(f"Colonne '{text_column}' introuvable dans le DataFrame")
             return {}
@@ -67,7 +73,9 @@ class Analyzer:
         return top_words
 
     def kpi_by_source(self, df: pd.DataFrame):
-        """Calcule les KPI selon différentes sources"""
+        """
+        Calcule les KPI selon différentes sources
+        """
         if "source" not in df:
             logger.error(f"Colonne 'source' introuvable dans le DataFrame")
             return {}
@@ -86,7 +94,9 @@ class Analyzer:
         return kpi
 
     def save_top_words_csv(self, top_words: dict):
-        """Permet de calculer la longueur de chaque texte dans le DataFrame"""
+        """
+        Permet de calculer la longueur de chaque texte dans le DataFrame
+        """
         try:
             df = pd.DataFrame(list(top_words.items()), columns=["word", "count"])
             df.to_csv(self.keywords_file, index=False)
@@ -95,7 +105,9 @@ class Analyzer:
             logger.error(f"Erreur lors de l'export de keywords.csv : {e}")
 
     def update_summary_json(self, summary_data: dict, source_kpis: dict):
-        """Récupère le résultat des fonctions et les enregistre dans summary.json"""
+        """
+        Récupère le résultat des fonctions et les enregistre dans summary.json
+        """
         final_payload = {
             "summary": summary_data,
             "kpi_by_source": source_kpis
@@ -112,7 +124,9 @@ class Analyzer:
             raise
 
     def run_full_analysis(self, df: pd.DataFrame) -> dict:
-        """Exécute toutes les analyses et retourne un rapport complet"""
+        """
+        Exécute toutes les analyses et retourne un rapport complet
+        """
         logger.info("Démarrage de l'analyse complète")
 
         if "text_length" not in df.columns:

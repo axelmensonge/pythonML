@@ -25,12 +25,18 @@ class Cleaner:
 
     @staticmethod
     def clean_basic(text):
+        """
+        Applique un nettoyage basique au texte (minuscules + strip)
+        """
         if not text:
             return ""
         return text.lower().strip()
 
 
     def clean_text(self, text):
+        """
+        Nettoie un texte en supprimant stopwords et appliquant lemmatisation
+        """
         if not text:
             logger.warning("Texte vide reçu pour le clean")
             return ""
@@ -55,6 +61,9 @@ class Cleaner:
 
 
     def clean_category(self, cat):
+        """
+        Nettoie une catégorie (liste de tags) en la joignant et appliquant nettoyage basique
+        """
         if not isinstance(cat, list):
             logger.warning("Catégorie non liste reçue pour le clean")
             return ""
@@ -72,6 +81,9 @@ class Cleaner:
 
     @staticmethod
     def json_to_dataframe(json_path):
+        """
+        Charge un fichier JSON brut et le convertit en DataFrame pandas
+        """
         try:
             with open(json_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
@@ -94,7 +106,6 @@ class Cleaner:
                     "category": item["category"],
                     "source": item["source"],
                 }
-                # Préserver les métadonnées HTTP si présentes
                 if "fetch_elapsed" in item:
                     row["fetch_elapsed"] = item["fetch_elapsed"]
                 if "fetch_status" in item:
@@ -113,6 +124,9 @@ class Cleaner:
 
 
     def save_dataframe_to_json(self, df: pd.DataFrame) -> bool:
+        """
+        Sauvegarde un DataFrame en fichier JSON
+        """
         if df is None or df.empty:
             logger.warning("Tentative d'enregistrer un DataFrame vide — sauvegarde annulée.")
             return False
@@ -127,6 +141,9 @@ class Cleaner:
 
 
     def preprocess_dataframe(self, dfs):
+        """
+        Applique tout le pipeline de nettoyage sur un ou plusieurs DataFrames
+        """
         try:
             logger.info("Process DataFrame")
             df = pd.concat(dfs.values(), ignore_index=True)
@@ -134,7 +151,6 @@ class Cleaner:
             df = df[df["id"].notna()]
             logger.info(f"Nombre de lignes après suppression des id manquants: {len(df)}")
 
-            # Préserver les métadonnées HTTP si présentes AVANT le traitement
             fetch_cols = [col for col in df.columns if col.startswith('fetch_')]
             fetch_data = {}
             for col in fetch_cols:
@@ -150,15 +166,12 @@ class Cleaner:
             df["category_clean"] = df["category"].apply(self.clean_category)
             df = df[df["text_clean"].str.strip() != ""]
             logger.info(f"Nombre de lignes après process: {len(df)}")
-            
-            # Restaurer les colonnes fetch_* après filtrage
+
             if fetch_cols:
                 logger.info(f"Restauration des métadonnées HTTP: {fetch_cols}")
                 for col in fetch_cols:
-                    # Réaligner les données après le filtrage
                     original_indices = df.index
                     if col in fetch_data:
-                        # Utiliser les indices du DataFrame filtré
                         df[col] = fetch_data[col].loc[original_indices]
             
             self.save_clean_data(df)
@@ -169,6 +182,9 @@ class Cleaner:
             return pd.DataFrame()
 
     def save_clean_data(self, df, filename="clean_data.json"):
+        """
+        Sauvegarde les données nettoyées dans /data/processed/ en JSON
+        """
         try:
             PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
             path = PROCESSED_DIR / filename
