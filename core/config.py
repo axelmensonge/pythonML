@@ -1,10 +1,11 @@
 from pathlib import Path
 
+from nltk.corpus.reader import KEYWORD
+
 BASE_DIR = Path(__file__).parent.parent
 
 TIMEOUT = 10
 MAX_PRODUCTS = 1000
-PAGE = 1
 PAGE_SIZE = 100
 
 HEADERS = {
@@ -24,11 +25,14 @@ MAX_WORKERS = 5
 REPORTS_DIR = BASE_DIR / "reports"
 DATA_DIR = BASE_DIR / "data"
 RAW_DATA_DIR = DATA_DIR / "raw"
+PROCESSED_DATA_DIR = DATA_DIR / "processed"
+CLEANED_DATA_DIR = PROCESSED_DATA_DIR / "clean_data.json"
 SUMMARY_FILE = REPORTS_DIR / "summary.json"
 MODELS_DIR = DATA_DIR / "models"
 VECTORIZER_PATH = MODELS_DIR / "vectorizer.pkl"
 ENCODER_PATH = MODELS_DIR / "encoder.pkl"
 FEATURES_PATH = DATA_DIR / "processed" / "features.npy"
+KEYWORDs_FILE = REPORTS_DIR / "keywords.csv"
 
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
