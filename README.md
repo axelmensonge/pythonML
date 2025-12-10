@@ -2,6 +2,8 @@ Projets Python réalisé par Axel, Mathias, Quentin.B et Vincent
 
 Ce projet a pour but de récupérer des données à partir de 3 APIs différentes. 
 
+Lien du répository GitHub : https://github.com/axelmensonge/pythonML.git
+
 ## Table des matières
 1. [APIs utilisées](#apis-utilisées)
 2. [Structure du projet](#structure-du-projet)
