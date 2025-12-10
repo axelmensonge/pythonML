@@ -42,14 +42,7 @@ def step_fetch(fetcher: Fetcher, force: bool = False):
                 return
 
         print("Lancement du fetch depuis les APIs...")
-        results = fetcher.fetch_all()
-        for name, df in results.items():
-            out = RAW_DATA_DIR / f"{name}_all.json"
-            try:
-                df.to_json(out, orient="records", force_ascii=False, indent=2)
-                logger.info(f"Raw sauvegardé: {out}")
-            except Exception:
-                logger.exception(f"Impossible d'écrire raw: {out}")
+        fetcher.fetch_all()
         print("Fetch terminé.")
     except Exception as e:
         logger.exception(f"Erreur durant fetch: {e}")
