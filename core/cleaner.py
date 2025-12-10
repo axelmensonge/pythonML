@@ -4,6 +4,7 @@ import spacy
 import nltk
 from nltk.corpus import stopwords
 from core.logger import get_logger
+from core.config import PROCESSED_DIR
 
 logger = get_logger(__name__)
 nltk.download("stopwords")
@@ -135,8 +136,18 @@ class Cleaner:
             df["category_clean"] = df["category"].apply(self.clean_category)
             df = df[df["text_clean"].str.strip() != ""]
             logger.info(f"Nombre de lignes après process: {len(df)}")
+            self.save_clean_data(df)
 
             return df
         except Exception as e:
             logger.warning(f"Erreur lors du process du dataframe: {e}")
             return pd.DataFrame()
+
+    def save_clean_data(self, df, filename="clean_data.json"):
+        try:
+            PROCESSED_DIR.mkdir(parents=True, exist_ok=True)
+            path = PROCESSED_DIR / filename
+            df.to_json(path, orient="records", force_ascii=False, indent=2)
+            logger.info(f"Données nettoyées sauvegardées dans {path}")
+        except Exception as e:
+            logger.error(f"Erreur sauvegarde données nettoyées : {e}")

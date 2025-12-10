@@ -1,4 +1,5 @@
 import json
+import os
 import re
 from collections import Counter
 from core.logger import get_logger
@@ -93,6 +94,8 @@ class Analyzer:
         }
 
         try:
+            summary_dir = os.path.dirname(self.summary_file)
+            os.makedirs(summary_dir, exist_ok=True)
             with open(self.summary_file, "w", encoding="utf-8") as f:
                 json.dump(final_payload, f, ensure_ascii=False, indent=2)
             logger.info(f"summary.json mis à jour avec KPIs par source")
@@ -123,7 +126,6 @@ class Analyzer:
                 status_dist = status_codes.value_counts().to_dict()
                 perf["status_distribution"] = {int(k): int(v) for k, v in status_dist.items()}
                 perf["success_rate"] = float((status_codes == 200).mean() * 100)
-
         logger.info("Performances API analysées")
         return perf
 
@@ -140,6 +142,5 @@ class Analyzer:
             "top_words": self.get_top_words(df, top_n=20),
             "kpi_by_source": self.kpi_by_source(df),
         }
-
         logger.info("Analyse complète terminée")
         return analysis_report

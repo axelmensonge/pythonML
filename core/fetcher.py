@@ -90,6 +90,8 @@ class Fetcher:
             }
 
             resp = self.fetch(url, params)
+            elapsed = resp.get("elapsed", None)
+            status = resp.get("status", None)
 
             if resp.get("status") == "error" or not resp.get("payload"):
                 logger.warning(f"Erreur ou fin des produits à la page {page} pour {api_name}")
@@ -101,7 +103,11 @@ class Fetcher:
                 break
 
             for p in products:
-                all_products.append(self.standardize_product(p, api_name))
+                std_p = self.standardize_product(p, api_name)
+                std_p["fetch_elapsed"] = elapsed
+                std_p["fetch_status"] = status
+                std_p["fetch_time"] = pd.Timestamp.now().isoformat()
+                all_products.append(std_p)
                 if len(all_products) >= self.max_products:
                     break
 

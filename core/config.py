@@ -28,7 +28,9 @@ RAW_DATA_DIR = DATA_DIR / "raw"
 PROCESSED_DATA_DIR = DATA_DIR / "processed"
 CLEANED_DATA_DIR = PROCESSED_DATA_DIR / "clean_data.json"
 SUMMARY_FILE = REPORTS_DIR / "summary.json"
+KEYWORDS_FILE = REPORTS_DIR / "keywords.csv"
 MODELS_DIR = DATA_DIR / "models"
+PROCESSED_DIR = DATA_DIR / "processed"
 VECTORIZER_PATH = MODELS_DIR / "vectorizer.pkl"
 ENCODER_PATH = MODELS_DIR / "encoder.pkl"
 FEATURES_PATH = DATA_DIR / "processed" / "features.npy"
@@ -38,7 +40,7 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 LOG_DIR = BASE_DIR / "logs"
-LOG_PATH = LOG_DIR / "fetcher.log"
+LOG_PATH = LOG_DIR / "marketing.log"
 
 LOG_DIR.mkdir(parents=True, exist_ok=True)
 
