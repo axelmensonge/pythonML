@@ -1,20 +1,82 @@
 {
-  "openfoodfacts": {
-    "api": "openfoodfacts",
-    "status": 200,
-    "response_time_seconds": 12.279000000000002,
-    "total_products_saved": 1000
+  "summary": {
+    "total_products": 2998,
+    "average_text_length": 142.2,
+    "sources": {
+      "openbeautyfacts": 1000,
+      "openfoodfacts": 1000,
+      "openpetfoodfacts": 998
+    }
   },
-  "openbeautyfacts": {
-    "api": "openbeautyfacts",
-    "status": 200,
-    "response_time_seconds": 11.219999999999999,
-    "total_products_saved": 1000
+  "kpi_by_source": {
+    "openbeautyfacts": {
+      "total_products": 1000,
+      "avg_text_length": 122.39
+    },
+    "openfoodfacts": {
+      "total_products": 1000,
+      "avg_text_length": 204.97
+    },
+    "openpetfoodfacts": {
+      "total_products": 998,
+      "avg_text_length": 99.26
+    }
   },
-  "openpetfoodfacts": {
-    "api": "openpetfoodfacts",
-    "status": 200,
-    "response_time_seconds": 12.423,
-    "total_products_saved": 1000
+  "ml_metrics": {
+    "model_path": "C:\\dev\\python\\pythonML\\data\\models\\model.pkl",
+    "accuracy": 0.89,
+    "f1_macro": 0.8890065359477125,
+    "confusion_matrix": [
+      [
+        174,
+        16,
+        10
+      ],
+      [
+        3,
+        196,
+        1
+      ],
+      [
+        23,
+        13,
+        164
+      ]
+    ],
+    "classification_report": {
+      "openbeautyfacts": {
+        "precision": 0.87,
+        "recall": 0.87,
+        "f1-score": 0.87,
+        "support": 200.0
+      },
+      "openfoodfacts": {
+        "precision": 0.8711111111111111,
+        "recall": 0.98,
+        "f1-score": 0.9223529411764706,
+        "support": 200.0
+      },
+      "openpetfoodfacts": {
+        "precision": 0.9371428571428572,
+        "recall": 0.82,
+        "f1-score": 0.8746666666666667,
+        "support": 200.0
+      },
+      "accuracy": 0.89,
+      "macro avg": {
+        "precision": 0.8927513227513227,
+        "recall": 0.89,
+        "f1-score": 0.8890065359477125,
+        "support": 600.0
+      },
+      "weighted avg": {
+        "precision": 0.8927513227513227,
+        "recall": 0.89,
+        "f1-score": 0.8890065359477126,
+        "support": 600.0
+      }
+    },
+    "test_samples": 600,
+    "pred_samples": 600
   }
 }

@@ -119,10 +119,12 @@ class Fetcher:
         data = {}
         api_names = ["openfoodfacts", "openbeautyfacts", "openpetfoodfacts"]
 
-        for url, name in zip(self.urls, api_names):
-            logger.info(f"Recherche pour {name}...")
-            df = self.fetch_all_pages(url, name)
-            data[name] = df
+        i = 0
+        for url in self.urls:
+            logger.info(f"Recherche pour {api_names[i]}...")
+            df = self.fetch_all_pages(url, api_names[i])
+            data[api_names[i]] = df
+            i += 1
 
         total = sum(len(df) for df in data.values())
         logger.info(f"Total produits récupérés pour toutes les APIs : {total}")

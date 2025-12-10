@@ -1,14 +1,9 @@
-import json
-from pathlib import Path
-
-import pandas as pd
-
 from core.fetcher import Fetcher
 from core.cleaner import Cleaner
 from core.features import Features
 from core.model import Model
+from core.analyzer import Analyzer
 from core.logger import get_logger
-from core.analyzer import compute_text_length, get_top_words, kpi_by_source, save_top_words_csv, update_summary_json
 from core.config import (
     RAW_DATA_DIR,
     SUMMARY_FILE,
@@ -24,91 +19,240 @@ from core.config import (
     MODELS_DIR,
     RANDOM_STATE,
     TEST_SIZE,
+    KEYWORDs_FILE,
+    CLEANED_DATA_DIR,
 )
 
 logger = get_logger(__name__)
 
 
-def load_raw_files(raw_dir: Path) -> dict:
-    """Lit les fichiers JSON dans raw_dir et renvoie un dict name->DataFrame (brut).
+def prompt_yes_no(prompt: str, default: str = "o") -> bool:
+    ans = input(f"{prompt} [{default}/n] : ").strip().lower()
+    if ans == "" or ans == default:
+        return True
+    return ans in ("o", "oui", "y", "yes")
 
-    Prend en charge JSONL, JSON array, et JSON with top-level key 'products'.
-    """
-    dfs = {}
-    if not raw_dir.exists():
-        logger.warning(f"Dossier raw introuvable: {raw_dir}")
-        return dfs
+def step_fetch(fetcher: Fetcher, force: bool = False):
+    try:
+        if not force:
+            reuse = prompt_yes_no("Réutiliser les fichiers bruts déjà présents dans data/raw ?")
+            if reuse:
+                print("Utilisation des fichiers raw existants (fetch SKIPPED).")
+                logger.info("Fetch skipped: reuse raw files")
+                return
 
-    for f in raw_dir.iterdir():
-        if not f.is_file() or f.suffix.lower() not in (".json", ".txt"):
-            continue
-        try:
-            df = None
+        print("Lancement du fetch depuis les APIs...")
+        results = fetcher.fetch_all()
+        for name, df in results.items():
+            out = RAW_DATA_DIR / f"{name}_all.json"
             try:
-                df = pd.read_json(f, lines=True)
-            except ValueError:
+                df.to_json(out, orient="records", force_ascii=False, indent=2)
+                logger.info(f"Raw sauvegardé: {out}")
+            except Exception:
+                logger.exception(f"Impossible d'écrire raw: {out}")
+        print("Fetch terminé.")
+    except Exception as e:
+        logger.exception(f"Erreur durant fetch: {e}")
+        print(f"Erreur pendant le fetch: {e}")
+
+
+def step_clean(cleaner: Cleaner, force: bool = False):
+    try:
+        if not force and CLEANED_DATA_DIR.exists():
+            reuse = prompt_yes_no(f"Un fichier clean existe déjà ({CLEANED_DATA_DIR}). Le réutiliser ?")
+            if reuse:
+                print("Réutilisation du clean existant.")
+                logger.info("Clean step skipped: reuse existing clean file")
+                return
+
+        candidates = {
+            "openbeautyfacts": RAW_DATA_DIR / "openbeautyfacts_all_response.json",
+            "openpetfoodfacts": RAW_DATA_DIR / "openpetfoodfacts_all_response.json",
+            "openfoodfacts": RAW_DATA_DIR / "openfoodfacts_all_response.json",
+        }
+
+        dfs = {}
+        for key, path in candidates.items():
+            if path.exists():
                 try:
-                    df = pd.read_json(f)
-                except ValueError:
-                    with open(f, "r", encoding="utf-8") as fh:
-                        data = json.load(fh)
-                    if isinstance(data, dict) and "products" in data and isinstance(data["products"], list):
-                        df = pd.json_normalize(data["products"])
-                    elif isinstance(data, list):
-                        df = pd.json_normalize(data)
-                    elif isinstance(data, dict):
-                        # fallback: première liste trouvée
-                        df = pd.DataFrame()
-                        for k, v in data.items():
-                            if isinstance(v, list):
-                                df = pd.json_normalize(v)
-                                break
-                        if df.empty:
-                            df = pd.json_normalize(data)
-                    else:
-                        df = pd.DataFrame()
-            if df is None or df.empty:
-                logger.info(f"Aucun enregistrement lu depuis {f}")
-                continue
-            dfs[f.stem] = df
-            logger.info(f"Chargé raw file: {f} -> {len(df)} lignes")
+                    df = cleaner.json_to_dataframe(path)
+                    dfs[key] = df
+                    logger.info(f"Chargé raw pour {key}: {len(df)} lignes")
+                except Exception as e:
+                    logger.exception(f"Erreur lecture raw {path}: {e}")
+                    print(f"Erreur lecture {path}: {e}")
+            else:
+                logger.warning(f"Fichier raw attendu non trouvé: {path}")
+
+        if not dfs:
+            print("Aucun fichier raw valable trouvé. Lancez d'abord le fetch.")
+            return
+
+        try:
+            clean_df = cleaner.preprocess_dataframe(dfs)
         except Exception as e:
-            logger.warning(f"Impossible de lire le fichier raw {f}: {e}")
-            continue
-    return dfs
+            logger.exception(f"Erreur preprocess_dataframe: {e}")
+            print(f"Erreur lors du preprocessing: {e}")
+            return
+
+        try:
+            cleaner.save_dataframe_to_json(clean_df)
+            print(f"Données nettoyées sauvegardées : {CLEANED_DATA_DIR}")
+        except Exception as e:
+            logger.exception(f"Erreur sauvegarde clean: {e}")
+            print(f"Erreur lors de la sauvegarde du clean: {e}")
+
+    except Exception as e:
+        logger.exception(f"Erreur dans step_clean: {e}")
+        print(f"Erreur inattendue dans l'étape clean: {e}")
 
 
-def save_clean_dataframe(df: pd.DataFrame, out_path: Path) -> None:
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    df.to_json(out_path, orient="records", force_ascii=False, indent=2)
-    logger.info(f"Clean data sauvegardé: {out_path}")
+def step_features(features: Features, force: bool = False):
+    try:
+        exist_feats = FEATURES_PATH.exists()
+        exist_vec = VECTORIZER_PATH.exists()
+        exist_enc = ENCODER_PATH.exists()
+
+        if not force and exist_feats and exist_vec and exist_enc:
+            reuse = prompt_yes_no("Des features / vectorizer / encoder existent. Les réutiliser ?")
+            if reuse:
+                try:
+                    X, vec, enc = features.load_features()
+                    features.vectorizer = vec
+                    features.encoder = enc
+                    features.X = X
+                    print(f"Features chargées : {X.shape}")
+                    return
+                except Exception as e:
+                    logger.exception(f"Échec chargement features existantes: {e}")
+                    print("Impossible de charger les artefacts existants ; on recrée.")
+
+        try:
+            clean_df = features.load_clean_dataframe()
+        except Exception as e:
+            logger.exception(f"Impossible de charger clean_data pour features: {e}")
+            print(f"Fichier clean manquant ou invalide: {e}")
+            return
+
+        try:
+            features.extract_features(clean_df)
+            features.save_features(features.X)
+            print("Features extraites et sauvegardées.")
+        except Exception as e:
+            logger.exception(f"Erreur extraction/sauvegarde features: {e}")
+            print(f"Erreur lors de l'extraction des features: {e}")
+
+    except Exception as e:
+        logger.exception(f"Erreur dans step_features: {e}")
+        print(f"Erreur inattendue dans l'étape features: {e}")
 
 
-def update_summary_ml(metrics: dict, summary_path: Path = SUMMARY_FILE) -> None:
-    summary_path.parent.mkdir(parents=True, exist_ok=True)
-    if summary_path.exists():
-        with open(summary_path, "r", encoding="utf-8") as fh:
-            summary = json.load(fh)
-    else:
-        summary = {}
+def step_train(model: Model, features: Features, force: bool = False):
+    try:
+        model_path = MODELS_DIR / "model.pkl"
+        if not force and model_path.exists():
+            reuse = prompt_yes_no(f"Un modèle existe déjà ({model_path}). Le réutiliser (pas de réentraînement) ?")
+            if reuse:
+                print("Réutilisation du modèle existant.")
+                return
 
-    summary.setdefault("ml_metrics", {}).update(metrics)
+        try:
+            X, _, _ = features.load_features()
+        except Exception as e:
+            logger.exception(f"Features non chargées: {e}")
+            print("Features manquantes. Exécutez d'abord l'étape features.")
+            return
 
-    with open(summary_path, "w", encoding="utf-8") as fh:
-        json.dump(summary, fh, ensure_ascii=False, indent=2)
-    logger.info(f"summary.json mis à jour avec métriques ML: {summary_path}")
+        try:
+            df_clean = model.load_clean_dataframe()
+        except Exception as e:
+            logger.exception(f"Clean data non chargée pour entraînement: {e}")
+            print("Clean data manquante. Exécutez d'abord l'étape clean.")
+            return
+
+        try:
+            model.X = X
+            model.create_labels(df_clean)
+            model.train_classification()
+            model.update_summary()
+            print("Entraînement terminé ; métriques sauvegardées dans summary.json")
+        except Exception as e:
+            logger.exception(f"Erreur lors de l'entraînement: {e}")
+            print(f"Erreur lors de l'entraînement: {e}")
+
+    except Exception as e:
+        logger.exception(f"Erreur dans step_train: {e}")
+        print(f"Erreur inattendue dans l'étape train: {e}")
 
 
-def run_pipeline():
-    logger.info("--- Début pipeline complet : fetch -> clean -> features -> model -> summary ---")
+def do_pipeline(fetcher, cleaner, features, model, analyzer):
+    print("Pipeline complet — on te posera des choix pour réutiliser ou recréer les artefacts.")
+    try:
+        if prompt_yes_no("Réutiliser data/raw existant ?"):
+            logger.info("Pipeline: reuse raw")
+        else:
+            step_fetch(fetcher, force=True)
 
-    # instances
+        if prompt_yes_no("Réutiliser clean existant ?"):
+            logger.info("Pipeline: reuse clean")
+        else:
+            step_clean(cleaner, force=True)
+
+        # Analyzer KPIs
+        try:
+            clean_df = features.load_clean_dataframe()
+            df_kpi = analyzer.compute_text_length(clean_df, text_column="text_clean")
+            top_words = analyzer.get_top_words(df_kpi, text_column="text_clean", top_n=30)
+            analyzer.save_top_words_csv(top_words)
+            source_kpis = analyzer.kpi_by_source(df_kpi)
+            summary_base = {
+                "total_products": len(df_kpi),
+                "average_text_length": round(df_kpi['text_length'].mean(), 1),
+                "sources": df_kpi['source'].value_counts().to_dict(),
+            }
+            analyzer.update_summary_json(summary_base, source_kpis)
+            print("KPIs descriptifs calculés.")
+        except Exception as e:
+            logger.exception(f"Erreur KPIs dans pipeline: {e}")
+            print(f"Erreur calcul KPIs: {e}")
+
+        if prompt_yes_no("Réutiliser features/vectorizer/encoder existants ?"):
+            try:
+                X, vec, enc = features.load_features()
+                features.vectorizer = vec
+                features.encoder = enc
+                features.X = X
+                print("Features existantes chargées.")
+            except Exception:
+                print("Impossible de charger les features existantes ; on les recrée.")
+                step_features(features, force=True)
+        else:
+            step_features(features, force=True)
+
+        if prompt_yes_no("Réutiliser modèle existant si présent ?"):
+            model_path = MODELS_DIR / "model.pkl"
+            if not model_path.exists():
+                print("Aucun modèle trouvé ; entraînement nécessaire.")
+                step_train(model, features, force=True)
+        else:
+            step_train(model, features, force=True)
+
+        print("Pipeline complet terminé.")
+    except Exception as e:
+        logger.exception(f"Erreur inattendue dans pipeline complet: {e}")
+        print(f"Erreur inattendue pendant le pipeline: {e}")
+
+
+def main_menu():
     features = Features(
         max_features=MAX_FEATURES,
         vectorizer_path=VECTORIZER_PATH,
         encoder_path=ENCODER_PATH,
         features_path=FEATURES_PATH,
+        clean_data_path=CLEANED_DATA_DIR,
     )
+
+    analyzer = Analyzer(summary_file=SUMMARY_FILE, keywords_file=KEYWORDs_FILE)
 
     fetcher = Fetcher(
         timeout=TIMEOUT,
@@ -119,94 +263,47 @@ def run_pipeline():
         raw_data_dir=RAW_DATA_DIR,
     )
 
-    cleaner = Cleaner()
+    cleaner = Cleaner(clean_data_path=CLEANED_DATA_DIR)
 
     model = Model(
         model_dir=MODELS_DIR,
         random_state=RANDOM_STATE,
         test_size=TEST_SIZE,
+        features_path=FEATURES_PATH,
+        clean_data_path=CLEANED_DATA_DIR,
+        summary_path=SUMMARY_FILE,
     )
 
-    processed_dir = Path("data/processed")
-    processed_dir.mkdir(parents=True, exist_ok=True)
-    clean_path = processed_dir / "clean_data.json"
+    while True:
+        print("\n=== Menu pipeline marketing_ml ===")
+        print("1) Fetch (récupérer les données depuis les APIs)")
+        print("2) Clean (nettoyer / préparer les données)")
+        print("3) Features (TF-IDF + encoder)")
+        print("4) Train (entraîner le modèle)")
+        print("5) Pipeline complet (enchaîne toutes les étapes)")
+        print("6) Quitter")
+        choice = input("Choix (1-6) : ").strip()
 
-    # 1) Fetch
-    try:
-        logger.info("Étape 1/6 — fetch des APIs")
-        results = fetcher.fetch_all()
-        # sauvegarder raw DataFrames
-        for name, df in results.items():
-            out = RAW_DATA_DIR / f"{name}_all.json"
-            df.to_json(out, orient="records", force_ascii=False, indent=2)
-            logger.info(f"Raw sauvegardé: {out}")
-    except Exception as e:
-        logger.error(f"Erreur lors du fetch: {e}")
-        return
-
-    # 2) Read raw
-    logger.info("Étape 2/6 — lecture des fichiers raw")
-    dfs = load_raw_files(RAW_DATA_DIR)
-    if not dfs:
-        logger.error("Aucun fichier raw chargé — arrêt du pipeline")
-        return
-
-    # 3) Clean
-    logger.info("Étape 3/6 — nettoyage")
-    clean_df = cleaner.preprocess_dataframe(dfs)
-    if clean_df.empty:
-        logger.error("DataFrame nettoyé vide — arrêt du pipeline")
-        return
-    save_clean_dataframe(clean_df, clean_path)
-
-    # 4) Analyzer KPIs
-    logger.info("Étape 4/6 — calcul KPIs descriptifs")
-    try:
-        df_kpi = compute_text_length(clean_df)
-        top_words = get_top_words(df_kpi, text_column="text_clean", top_n=30)
-        save_top_words_csv(top_words)
-        source_kpis = kpi_by_source(df_kpi)
-        summary_base = {
-            "total_products": len(df_kpi),
-            "average_text_length": round(df_kpi['text_length'].mean(), 1),
-            "sources": df_kpi['source'].value_counts().to_dict(),
-        }
-        # mise à jour initiale du summary (KPIs)
-        update_summary_json(summary_base, source_kpis, path=SUMMARY_FILE)
-    except Exception as e:
-        logger.warning(f"Erreur KPIs descriptifs: {e}")
-
-    # 5) Features
-    logger.info("Étape 5/6 — extraction features TF-IDF + encoder")
-    try:
-        features.extract_features(clean_df)
-        X = features.X
-        features.save_features(X)
-    except Exception as e:
-        logger.error(f"Erreur extraction features: {e}")
-        raise e
-
-    # 6) Model training
-    logger.info("Étape 6/6 — entraînement modèle")
-    try:
-        y = Model.create_labels(clean_df)
-        model.train_classification(X, y)
-        res = model.final_result
-        ml_metrics = {
-            "model_path": res.get("model_path"),
-            "accuracy": res.get("accuracy"),
-            "f1_macro": res.get("f1_macro"),
-            "confusion_matrix": res.get("confusion_matrix"),
-            "classification_report": res.get("classification_report"),
-        }
-        update_summary_ml(ml_metrics, SUMMARY_FILE)
-    except Exception as e:
-        logger.error(f"Erreur entraînement modèle: {e}")
-        return
-
-    logger.info("--- Pipeline terminé avec succès ---")
-    print("Pipeline exécuté. Fichiers écrits: data/processed/clean_data.json, data/processed/features.npy, data/models/*, reports/summary.json")
+        try:
+            if choice == "1":
+                step_fetch(fetcher)
+            elif choice == "2":
+                step_clean(cleaner)
+            elif choice == "3":
+                step_features(features)
+            elif choice == "4":
+                step_train(model, features)
+            elif choice == "5":
+                do_pipeline(fetcher, cleaner, features, model, analyzer)
+            elif choice == "6":
+                print("Quitter...")
+                break
+            else:
+                print("Choix invalide, entrez un chiffre entre 1 et 6.")
+        except Exception as e:
+            logger.exception(f"Erreur lors de l'exécution de l'option {choice}: {e}")
+            print(f"Erreur lors de l'exécution : {e}")
 
 
 if __name__ == "__main__":
-    run_pipeline()
+    main_menu()

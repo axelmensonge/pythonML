@@ -1,10 +1,729 @@
 {
+  "total_products": 1000,
   "products": [
     {
-      "id": "8710255145839",
+      "id": "0706460029284",
+      "title": "Whiskas carne",
+      "text": "",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food",
+        "en:non-food-products",
+        "en:open-pet-food-facts",
+        "en:pet-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "0604329006202",
       "title": "Unknown Product",
       "text": "",
       "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "5998749145012",
+      "title": "Pedigree junior",
+      "text": "",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:dog-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "8992982800315",
+      "title": "Float snack bawang",
+      "text": "Halal",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "12448456",
+      "title": "Dentastix daily oral care pui",
+      "text": "",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:dog-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "5998749170205",
+      "title": "Rodeo vita",
+      "text": "",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:dog-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "5900951310713",
+      "title": "Pedigree junior",
+      "text": "No artificial flavors,No artificial colors",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:dog-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "4008429108952",
+      "title": "Adult 1+ pui",
+      "text": "",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:dog-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "5998749129821",
+      "title": "Cu pui",
+      "text": "",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "8410136025822",
+      "title": "Cu ton",
+      "text": "",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "5900951304354",
+      "title": "Cu pui pt pisici sterile",
+      "text": "",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "7613287595416",
+      "title": "Purina felix",
+      "text": "",
+      "category": [
+        "fr:aliments-pour-animaux-domestiques"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "7613033663246",
+      "title": "One Sec Junior Poulet 1,5KG",
+      "text": "Poulet (17%) (dont os, viande, peau), Protéines de volaille déshydratées, Blé (14%), Gluten de blé, Graisses animales, Farine de soja, Farine de protéines de maïs, Protéines de pois, Amidon de mais Racine de chicorée séchée (2%), Maïs, Substances minérales, Hydrolysat (avec ajout de 0,025% de poudre de Lactobacillus Delbrueckii et Fermentum traitée thermiquement), Levures, Huile de poisson. 1000 Mit E. 400-mg/kg: Vit C-140",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "7337373633256",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "5900951303180",
+      "title": "Whiskas cu pui și curcan 340g",
+      "text": "",
+      "category": [
+        "en:open-pet-food-facts"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710485659",
+      "title": "Boulettes en sauce au boeuf",
+      "text": "Viandes et sous - produits animaux (dont boeuf 4%), céréales, substances minérales, sucres. Green Dot, fr:triman",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710523375",
+      "title": "Croquettes riches en poulet frais junior",
+      "text": "Volaille (35% dont protéines de poulet déshydratées 21%, poulet frais 14%), blé, graisses animales, gluten de maïs , protéines animales déshydratées, protéines de volaille hydrolysées, protéines animales hydrolysées, pulpe de betterave déshydratée, farine de krill, levure de bière , minéraux, chicorée déshydratée, manno oligo saccharides, chlorure de potassium, canneberges déshydratées. Triman",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710485598",
+      "title": "Emincés en gelée au poulet, au saumon et à la truite, au bœuf, aux poissons blancs",
+      "text": "EMINCÉS EN GELÉE AU POULET ET AU FOIE : Viandes et sous-produits animaux (dont poulet 4%, foie 4%), sous-produits d'origine végétale (inuline de chicorée 0.4%), substances minérales, sucres. EMINCÉS EN GELÉE AU BŒUF : Viandes et sous-produits animaux (dont bœuf 4%), sous-produits d'origine végétale (inuline de chicorée 0.4%), substances minérales, sucres. EMINCÉS EN GELÉE AU SAUMON ET À LA TRUITE : Viandes et sous-produits animaux, poissons et sous-produits de poissons (saumon 4%, truite 4%), sous-produits d'origine végétale (inuline de chicorée 0.4%), substances minérales. EMINCÉS EN GELÉE AU POISSON BLANC : Viandes et sous-produits animaux, poissons et sous-produits de poissons (poisson blanc 4%), sous-produits d'origine végétale (inuline de chicorée 0.4%), substances minérales. en:no-colorings, Triman",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710523429",
+      "title": "Chiot - Multicroquette riche au poulet * et aux légumes**",
+      "text": "Céréales (dont 4% riz dans les croquettes au poulet), viandes et sous-produits animaux (dont poulet déshydraté 14% dans les croquettes au poulet), sous-produits d'origine végétale, huiles et graisses, substances minérales, légumes (1% légumes verts déshydratés, équivalent à 4% de légumes verts dans les croquettes aux légumes verts), levures. *72%de croquettes au poulet dans le mélange **12.5% de croquettes aux légumes verts",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710523412",
+      "title": "Croquette chien adulte boeuf",
+      "text": "Céréales, sous-produits d'origine végétale, viandes et sous-produits animaux (dont boeuf déshydraté 4%), huiles et graisses, substances minérales.",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710530090",
+      "title": "Terrine riche en boeuf",
+      "text": "Viandes et sous produits animaux (dont bœuf 14%), substances minérales, huiles et graisses (0.2% d'huile de poisson), sous-produits d'origine végétale (inuline de chicorée 0.1%)",
+      "category": [
+        "fr:nourriture-humide-pour-chat"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710523511",
+      "title": "Croquettes chien petit senior riche en poulet frais",
+      "text": "Volaille déshydratée, poulet (14% poulet frais), riz (14%), maïs, blé, remoulage de blé, son de blé, graisse de volaille, protéines animales transformées déshydratées, hydrolysat de protéines animales, pois déshydratés, protéines de volaille hydrolysées déshydratées, pulpe de betterave déshydratée, substances minérales, huile de poisson (0,1%), levures de bière (0,1%), pulpe de chicorée déshydratée.",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710523542",
+      "title": "Chien medium maxi multicroquettes riches en poulet frais*",
+      "text": "Céréales, viandes et sous-produits animaux (dont 14% de poulet frais dans les croquettes au poulet), sous-produits d'origine végétale, huiles et graisses (dont 0.1% d'huile de poisson dans les croquettes au poulet), légumes, substances minérales, levures (0.1% dans les croquettes au poulet). *64.6% de croquettes au poulet dans le mélange",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710523610",
+      "title": "Multicroquette à la volaille * et aux légumes **",
+      "text": "Céréales, Viandes et sous-produits animaux (dont protéines de volaille déshydratées 4% dans les croquettes à la volaille), Sous-produits d'origine végétale, Huiles et graisses, Légumes (dont légumes verts 4% dans les croquettes aux légumes verts), Substances minérales, extraits de protéines végétales. * 60% de croquettes à la volaille ** 20% de croquettes aux légumes verts",
+      "category": [
+        "en:open-pet-food-facts"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710530083",
+      "title": "Terrine riche en poulet",
+      "text": "Viandes et sous produits animaux (dont poulet 14%), substances minérales, huiles et graisses (0,2% d'huile de poisson), sous-produits d'origine végétale (inuline de chicorée 0,1%)",
+      "category": [
+        "fr:nourriture-humide-pour-chat"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710523405",
+      "title": "Croquettes riches en saumon frais",
+      "text": "Saumon frais (16%), protéines de volaille déshydratées, blé, maïs, protéines animales déshydratées, gluten de maïs, protéines de volaille hydrolysées, pulpe de betterave déshydratée, graisses animales, fibre végétale, protéines animales hydrolysées, minéraux, huile de poisson, racine de chicorée déshydratée, chlorure de potassium, levure de bière.",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710541935",
+      "title": "Terrine riche en boeuf",
+      "text": "Viandes et sous-produits animaux (dont boeuf 14%),substances minérales. Triman",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710542031",
+      "title": "Emincés en sauce au saumon",
+      "text": "Viandes et sous-produits animaux, poissons et sous-produits de poissons (dont saumon 4%), substances minérales. Triman",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710380022",
+      "title": "\"Régal'Cat au saumon",
+      "text": "Céréales,viandes et sous-produits animaux, huiles et graisses, extraits de protéines végétales, poissons et sous-produits de poissons (dont saumon 4%), sous produits d'origine végétale, substances minérales, lait et produits laitiers Triman",
+      "category": [
+        "en:open-pet-food-facts"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3254565831730",
+      "title": "Grandes perruches repas complet",
+      "text": "Céréales (dont millets 36%),graines (dont tournesol 10%, alpiste 10%, sarrasin 5%), substances minérales,extraits de protéines végétales, produits de la boulangerie, fruits (8.6% defruits à partir de fruits déshydratés : pomme, pêche, prune, poire et abricot),sous-produits d'origine végétale, sucres, huiles et graisses.",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710543120",
+      "title": "Mélange de graines rongeurs herbivores",
+      "text": "Sous-produits d'origine végétale, céréales, légumes, graines, sucres, substances minérales Triman",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710526581",
+      "title": "Effilés au poulet et à la dinde en sauce sans céréales ajoutées",
+      "text": "EFFILÉS EN SAUCE RICHE EN POULET AVEC TOMATES, THYM ET PERSIL : Viandes et sous-produits animaux (dont poulet 14%), sous-produits d'origine végétale (inuline de chicorée 0.4%), substances minérales, légumes (tomates déshydratées 0,45% - équivalent à 4% de tomates), herbes 0,05% (thym 0,025%, persil 0,025%) . EFFILÉS EN SAUCE RICHE EN DINDE AVEC DES BAIES D'ARGOUSIE: Viandes et sous-produits animaux (dont dinde14%), huiles et graisses (huile de lin 0,5%), sous-produits d'origine végétale (inuline de chicorée 0.4%), substances minérales, baies d'argousier (0,05%) Triman, en:no-colorings",
+      "category": [
+        "en:non-food-products",
+        "en:open-pet-food-facts",
+        "en:pet-food",
+        "en:cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710550982",
+      "title": "Pâtée au boeuf",
+      "text": "Viandes et sous-produits animaux (dont boeuf 4%), substances minérales. Triman",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710523351",
+      "title": "Multi croquettes au bœuf* et au poulet** pour chat stérilisé",
+      "text": "Céréales, viandes et sous-produits animaux (dont poulet déshydraté 4% dans les croquettes au poulet, bœuf déshydraté 4% dans les croquettes au bœuf), sous-produits d'origine végétale, huiles et graisses, légumes (dont légumes verts 4% dans les croquettes aux légumes verts, carottes déshydratées 0.45% équivalent à 4% de carottes dans les croquettes aux carottes), substances minérales, extraits de protéines végétales, levures. * 30% de croquettes steack rouge au bœuf. ** 30% de croquettes steack beige au poulet.",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710523337",
+      "title": "Multi croquettes au bœuf* et au poulet** pour chat stérilisé",
+      "text": "Céréales, viandes et sous-produits animaux (dont poulet déshydraté 4% dans les croquettes au poulet, bœuf déshydraté 4% dans les croquettes au bœuf), sous-produits d'origine végétale, huiles et graisses, légumes (dont légumes verts 4% dans les croquettes aux légumes verts, carottes déshydratées 0.45% équivalent à 4% de carottes dans les croquettes aux carottes), substances minérales, extraits de protéines végétales, levures. * 30% de croquettes steack rouge au bœuf. ** 30% de croquettes steack beige au poulet.",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710550890",
+      "title": "Pâtée au boeuf et aux légumes",
+      "text": "Viandes et sous-produits animaux (dont boeuf 4%), légumes(carottes 2%, 0,5% de petits poisdéshydratés équivaut à 2% de petits pois), substancesminérales. Triman",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710380060",
+      "title": "Auchan Adult Regal' Dog dents saines petit chien",
+      "text": "Sous-produits d'origine végétale, céréales, viandes et sous-produits animaux, extraits de protéines végétales, substances minérales",
+      "category": [
+        "en:open-pet-food-facts"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710366576",
+      "title": "Canaris Baguettes avec du miel.",
+      "text": "Céréales (dont millet rouge 8,5%, millet jaune 5,1%), graines (dont alpiste 33,9%, niger 6,4%), sucres (dont miel 4%), huiles et graisses.",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710485567",
+      "title": "Emincés en gelée au saumon ASC, à la truite ASC, au poulet et au veau - Junior",
+      "text": "EMINCÉS EN GELÉE AU VEAU : Viandes et sous-produits animaux (dont veau 4%), poissons et sous-produits de poissons, substances minérales, sous-produits d'origine végétale (inuline de chicorée 0.4%), sucres. EMINCÉS EN GELÉE AU POULET : Viandes et sous-produits animaux (dont poulet 4%), poissons et sous-produits de poissons, sous-produits d'origine végétale (inuline chicorée 0.4%), substances minérales, sucres. EMINCÉS EN GELÉE AU SAUMON : Viandes et sous-produits animaux, poissons et sous-produits de poissons (saumon certifié ASC 4%), sous-produits d'origine végétale (inuline de chicorée 0.4%), substances minérales, sucres. EMINCÉS EN GELÉE À LA TRUITE : Viandes et sous-produits animaux, poissons et sous-produits de poissons (truite certifiée ASC 4%), sous-produits d'origine végétale (inuline de chicorée 0.4%), substances minérales, sucres. Aquaculture responsable ASC, Triman",
+      "category": [
+        "en:open-pet-food-facts"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "0840243144587",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "4136039002961",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "50558143",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "4047974092644",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "8436002688298",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "4068134000118",
+      "title": "Winston Trockenfutter",
+      "text": "No added sugar",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "4305615918242",
+      "title": "Nassleckerlie",
+      "text": "No added sugar",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "8711295589973",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3662852000453",
+      "title": "authentic adult grad race",
+      "text": "",
+      "category": [
+        "en:non-food-products",
+        "en:open-pet-food-facts",
+        "en:pet-food",
+        "en:wet-pet-food",
+        "en:dog-food",
+        "en:wet-dog-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "4008429134791",
+      "title": "Filets Les Effilés de Poulet",
+      "text": "Kipfilet (37%), tapiocazetmeel.",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "4008429134869",
+      "title": "Filets au Poulet et au Thon issu de la pêche durable",
+      "text": "Filets de poulet (35%), filets de thon (4%), amidon de tapioca, xylose, maltodextrine. Sustainable Seafood MSC",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "5060329692602",
+      "title": "Chinese chicken stick",
+      "text": "chicken",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "4058172100611",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "5940540840177",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "ro:băuturi-răcoritoare"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "8445290888174",
+      "title": "MeGaMix gatitos",
+      "text": "No colorings",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "8445290067623",
+      "title": "Cat Chow Multiproteina Adultos",
+      "text": "No colorings",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food",
+        "en:adult-cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "7797453973144",
+      "title": "Sabor Salmón",
+      "text": "No colorings",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "7797453973687",
+      "title": "Sabor Carne",
+      "text": "",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "8445291478701",
+      "title": "Gati sabor Pescado y Salmón",
+      "text": "No colorings",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "8445290572899",
+      "title": "MeGaMix gatitos",
+      "text": "No colorings",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "8445290573643",
+      "title": "MeGaMix adultos",
+      "text": "",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food",
+        "en:adult-cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "8445290599094",
+      "title": "Kissanruoka Agail Senior",
+      "text": "",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3250392415235",
+      "title": "Canaillou émincé en gelée pour chat",
+      "text": "",
+      "category": [
+        "en:open-pet-food-facts"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710487295",
+      "title": "Terrine à la volaille",
+      "text": "Viandes et sous-produits animaux (dont volaille 4%), céréales, poissons et sous-produits de poissons, huiles et graisses, substances minérales, sucres. Triman, en:no-colorings",
+      "category": [
+        "en:meats-and-their-products",
+        "en:prepared-meats",
+        "en:terrines",
+        "en:poultry-terrines"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710485710",
+      "title": "Terrine à la volaille",
+      "text": "Viandes et sous-produits animaux (dont volaille 4%), céréales, poissons et sous-produits de poissons, huiles et graisses, substances minérales, sucres. en:no-colorings",
+      "category": [
+        "en:meats-and-their-products",
+        "en:prepared-meats",
+        "en:terrines",
+        "en:poultry-terrines"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710487233",
+      "title": "Bouchées en sauce au boeuf, aux pâtes et aux carottes",
+      "text": "Viandes et sous-produits animaux (dont boeuf 4%), céréales, légumes (carottes 4%), produits de la boulangerie (pâtes sèches 2% équivalent à 4% de pâtes), substances minérales, sucres. Triman, en:no-colorings",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710485697",
+      "title": "Bouchées en sauce :- au boeuf, aux pâtes et aux carottes- à la volaille, aux pâtes et aux carottes- au poulet, aux pâtes et aux carottes",
+      "text": "Au boeuf, aux pâtes et aux carottes : Viandes et sous-produits animaux (dont boeuf 4%), céréales, légumes (carottes 4%), produits de la boulangerie (pâtes sèches 2% équivalent à 4% de pâtes), substances minérales, sucres.\n\nA la volaille, aux pâtes et aux carottes : Viandes et sous-produits animaux (dont volaille 4%), céréales, légumes (carottes 4%), produits de la boulangerie (pâtes sèches 2% équivalent à 4% de pâtes), substances minérales, sucres.\n\nAu poulet, aux pâtes et aux carottes : Viandes et sous-produits animaux (dont poulet 4%), céréales, légumes (carottes 4%), produits de la boulangerie (pâtes sèches 2% équivalent à 4% de pâtes), substances minérales, sucres. en:no-colorings",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710487394",
+      "title": "Emincés en gelée au boeuf et au foie",
+      "text": "Viandes et sous-produits animaux (dont boeuf 4% et foie 4%), substances minérales, sucres. No colorings, en:green-dot",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710485789",
+      "title": "Emincés en gelée au boeuf et au foie, au saumon et au thon, au gibier, au poulet",
+      "text": "Emincés au boeuf et au foie : Viandes et sous-produits animaux (dont boeuf 4% et foie 4%), substances minérales, sucres.\n\nEmincés au gibier : Viandes et sous-produits animaux (dont gibier 4%), substances minérales, sucres.\n\nEmincés au poulet : Viandes et sous-produits animaux (dont poulet 4%), substances minérales, sucres.\n\nEmincés au saumon et au thon : Viandes et sous-produits animaux, poissons et sous-produits de poissons (dont saumon 4% et thon 4%), substances minérales, sucres. Sans colorants artificiels,Sans conservateurs artificiels,Triman",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710487431",
+      "title": "Bouchées en sauce au poulet, à la dinde et aux légumes",
+      "text": "Viandes et sous-produits animaux (dont poulet 4% et dinde 4%), céréales, légumes (3% de carottes et 2% de haricots verts), substancesminérales, sucres. Point Vert,Sans colorants,Triman",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710485796",
+      "title": "Bouchées en sauce",
+      "text": "Au thon et au saumon : Viandes et sous-produits animaux, poissons et sous-produitsde poissons (dont thon 4% et saumon 4%), céréales, légumes (3% de carottes et 0.5% de petits pois déshydratés équivaut à 2% de petits pois), substancesminérales, sucres.\n\nAu boeuf et au foie : Viandes et sous-produits animaux (dont boeuf 4% et foie 4%), céréales, légumes (3% de carottes et 2% de haricots verts), substances minérales, sucres.\n\nÀ la dinde et au canard : Viandes et sous-produits animaux (dont dinde 4% et canard 4%), céréales, légumes (3% de carottes et 2% de haricots verts), substances minérales, sucres.\n\nAu poulet et à la dinde : Viandes et sous-produits animaux (dont poulet 4% et dinde 4%), céréales, légumes (3% de carottes et 2% de haricots verts), substancesminérales, sucres. Triman",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710487356",
+      "title": "Terrine à l'agneau",
+      "text": "Viandes et sous-produits animaux (dont agneau 4%), céréales, substances minérales, extraits de protéines végétales, sucres. Point Vert,Sans colorants",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food",
+        "en:wet-pet-food",
+        "en:wet-cat-food",
+        "en:open-pet-food-facts"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710485772",
+      "title": "Terrines chat",
+      "text": "Au boeuf : Viandes et sous-produits animaux (dont boeuf 4%), céréales, substancesminérales, extraits de protéines végétales, sucres. \n\nAu poulet : Viandes et sous-produits animaux (dont poulet 4%), poissons etsous-produits de poissons, céréales, substances minérales, extraits deprotéines végétales, sucres.\n\nAu thon : Viandes et sous-produits animaux, poissons etsous-produits de poissons (thon 4%), céréales, substances minérales,extraits de protéines végétales, sucres.\n\nA l'agneau : Viandes et sous-produits animaux (dont agneau 4%), céréales, substancesminérales, extraits de protéines végétales, sucres.",
+      "category": [
+        "fr:nourriture-humide-pour-chat"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710487363",
+      "title": "Terrine au boeuf",
+      "text": "Viandes et sous-produits animaux (dont boeuf 4%), céréales, substances minérales, extraits de protéines végétales, sucres. Triman, en:no-colorings",
+      "category": [
+        "fr:nourriture-humide-pour-chat"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3596710485819",
+      "title": "Terrines au boeuf, au poulet au thon",
+      "text": "Au boeuf : Viandes et sous-produits animaux (dont boeuf 4%), céréales, substancesminérales, extraits de protéines végétales, sucres. \n\nAu poulet : Viandes et sous-produits animaux (dont poulet 4%), poissons etsous-produits de poissons, céréales, substances minérales, extraits deprotéines végétales, sucres.\n\nAu thon : Viandes et sous-produits animaux, poissons etsous-produits de poissons (thon 4%), céréales, substances minérales,extraits de protéines végétales, sucres. en:no-colorings",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3560070823055",
+      "title": "Simpl Croquettes au boeuf",
+      "text": "_Composition_ : Céréales, sous-produits d'origine végétale, viandes et sous-produits animaux (dont protéines de boeuf déshydratées 4%), huiles et graisses, substances minérales.\r\n_Constituants analytiques :_ Protéine brute : 20%, Matières grasses brutes : 7%, Cellulose brute : 4%, Cendres brutes : 9,5%, Humidité : 9%\r\n_Additifs :_ Antioxygènes. _Additifs nutritionnels (/kg) :_ Vitamine A : 9000 UI, Vitamine D3 : 600 UI, Sulfate de fer (II) monohydraté : 116 mg (Fer : 35 mg), Iodate de calcium anhydre : 2,8 mg (Iode : 1 mg), Sulfate de cuivre (II) pentahydraté : 16 mg (Cuivre : 4 mg), Sulfate manganeux monohydraté : 12 mg (Manganèse : 3,7 mg), Sulfate de zinc monohydraté : 168 mg (Zinc : 59 mg), L-sélénométhionine : 0,1 mg (Sélénium : 0,05 mg).",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "4047777239871",
+      "title": "Medica Hypoallergénique - Poulet",
+      "text": "",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food",
+        "en:wet-pet-food",
+        "en:wet-cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "4047777239864",
+      "title": "Medica Hypoallergénique - Dinde",
+      "text": "",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food",
+        "en:wet-pet-food",
+        "en:wet-cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "4047777240518",
+      "title": "Medica Hypoallergénique - Volaille",
+      "text": "Riz (30,9 %), protéines de pommes de terre (23 %), protéines de volaille (15 %), graisse de volaille (5,4 %), fécule de pomme de terre (4 %), graisse de bœuf (4 %), huile de sardine (3,6 %), pulpe de betterave séchée (3,5 %), cellulose (2,3 %), carbonate de calcium (1,9 %), foie de volaille hydrolysé (1,5 %), phosphate monocalcique (1,1 %), huile de saumon (0,5 %), chlorure de potassium (0,5 %), huile de bourrache (0,5 %), huile de lin (0,3 %), chlorure de sodium (0,25 %).\r\n\r\nAdditifs/kg (nutritionnels) : vitamine A 22000 UI, vitamine D3 2000 UI, taurine 900 mg, cuivre (3b405) 5 mg, fer (3b103) 100 mg, iode (3b202) 1 mg, manganèse (3b502) 40 mg, sélénium (3b801) 0,12 mg, zinc (3b605) 150 mg.",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:dry-pet-food",
+        "en:cat-food",
+        "en:dry-cat-food"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "3250391945191",
+      "title": "Terrine pour Chaton de la marque Canaillou",
+      "text": "ALIMENT COMPLET POUR CHATON : COMPOSITION : Riche en poulet et en lait : Viandes et sous-produits animaux (dont poulet 14%), lait et produits de laiterie (poudre de lait écrémé 1.4% équivalent à 4% de lait écrémé), substances minérales, sucres. CONSTITUANTS ANALYTIQUES : Protéine brute : 11% - Cellulose brute : 0.8% - Matières grasses brutes : 6% - Cendres brutes : 2.5% - Humidité : 79%. ADDITIFS : Additifs nutritionnels : Vitamine E (3a700): 93mg, Taurine (3a370): 195.38mg, Vitamine B1 (3a821): 20.94 mg, Biotine: 0.01mg, Cuivre (3b405): 0.09mg, Iode (3b202): 0.26mg, Manganèse (3b503): 1.12mg, Zinc (3b605): 14.86mg.",
+      "category": [
+        "en:non-food-products",
+        "en:open-pet-food-facts"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "5000161019632",
+      "title": "Purina One",
+      "text": "",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:dry-pet-food",
+        "en:cat-food",
+        "en:dry-cat-food",
+        "en:pet-food",
+        "en:open-pet-food-facts"
+      ],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "8413037375744",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openpetfoodfacts"
+    },
+    {
+      "id": "5998749144220",
+      "title": "Tavuk ile",
+      "text": "",
+      "category": [
+        "en:dog-and-cat-food",
+        "en:cat-food"
+      ],
       "source": "openpetfoodfacts"
     },
     {
@@ -82,13 +801,6 @@
       "source": "openpetfoodfacts"
     },
     {
-      "id": "8906059720475",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
       "id": "8422823190942",
       "title": "Unknown Product",
       "text": "",
@@ -113,13 +825,6 @@
       "id": "5203064009216",
       "title": "Wheat Rusks",
       "text": "Wheat flour, sugar, yeast, glucose syrup, emulsifiers (lecithins, polyoxy-ethylene-sorbitan mono-oleate), salts of fatty acids with sodium, potassium and calcium, pasteurized whole eggs, rapeseed oil, wheat fiber, rye flour, salt, flour treatment agent (ascorbic acid)",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "1195268821090002588000395023067639",
-      "title": "Unknown Product",
-      "text": "",
       "category": [],
       "source": "openpetfoodfacts"
     },
@@ -406,16 +1111,6 @@
       "title": "Unknown Product",
       "text": "",
       "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710485796",
-      "title": "Bouchées en sauce",
-      "text": "Au thon et au saumon : Viandes et sous-produits animaux, poissons et sous-produitsde poissons (dont thon 4% et saumon 4%), céréales, légumes (3% de carottes et 0.5% de petits pois déshydratés équivaut à 2% de petits pois), substancesminérales, sucres.\n\nAu boeuf et au foie : Viandes et sous-produits animaux (dont boeuf 4% et foie 4%), céréales, légumes (3% de carottes et 2% de haricots verts), substances minérales, sucres.\n\nÀ la dinde et au canard : Viandes et sous-produits animaux (dont dinde 4% et canard 4%), céréales, légumes (3% de carottes et 2% de haricots verts), substances minérales, sucres.\n\nAu poulet et à la dinde : Viandes et sous-produits animaux (dont poulet 4% et dinde 4%), céréales, légumes (3% de carottes et 2% de haricots verts), substancesminérales, sucres. Triman",
-      "category": [
-        "en:dog-and-cat-food",
-        "en:cat-food"
-      ],
       "source": "openpetfoodfacts"
     },
     {
@@ -857,13 +1552,6 @@
       "source": "openpetfoodfacts"
     },
     {
-      "id": "3560070823055",
-      "title": "Simpl Croquettes au boeuf",
-      "text": "_Composition_ : Céréales, sous-produits d'origine végétale, viandes et sous-produits animaux (dont protéines de boeuf déshydratées 4%), huiles et graisses, substances minérales.\r\n_Constituants analytiques :_ Protéine brute : 20%, Matières grasses brutes : 7%, Cellulose brute : 4%, Cendres brutes : 9,5%, Humidité : 9%\r\n_Additifs :_ Antioxygènes. _Additifs nutritionnels (/kg) :_ Vitamine A : 9000 UI, Vitamine D3 : 600 UI, Sulfate de fer (II) monohydraté : 116 mg (Fer : 35 mg), Iodate de calcium anhydre : 2,8 mg (Iode : 1 mg), Sulfate de cuivre (II) pentahydraté : 16 mg (Cuivre : 4 mg), Sulfate manganeux monohydraté : 12 mg (Manganèse : 3,7 mg), Sulfate de zinc monohydraté : 168 mg (Zinc : 59 mg), L-sélénométhionine : 0,1 mg (Sélénium : 0,05 mg).",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
       "id": "3560070892730",
       "title": "Chew Bones",
       "text": "Peau de bœuf.\n\n_Constituants analytiques :_ Protéine brute : 80%, Humidité : 16%",
@@ -979,13 +1667,6 @@
       "id": "3254565831679",
       "title": "Oiseaux exotiques REPAS COMPLET",
       "text": "Céréales (dont panis jaune31%, millet jaune 26%, millet japonais 4%), graines (dont niger 2%), substancesminérales, extraits de protéines végétales, produits de la boulangerie, fruits(8.6% de fruits à partir de fruits déshydratés : pomme, pêche, prune, abricotet poire), sous-produits d'origine végétale, sucres, huiles et graisses.",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3254565831730",
-      "title": "Grandes perruches repas complet",
-      "text": "Céréales (dont millets 36%),graines (dont tournesol 10%, alpiste 10%, sarrasin 5%), substances minérales,extraits de protéines végétales, produits de la boulangerie, fruits (8.6% defruits à partir de fruits déshydratés : pomme, pêche, prune, poire et abricot),sous-produits d'origine végétale, sucres, huiles et graisses.",
       "category": [],
       "source": "openpetfoodfacts"
     },
@@ -3737,19 +4418,6 @@
       "source": "openpetfoodfacts"
     },
     {
-      "id": "0706460029284",
-      "title": "Whiskas carne",
-      "text": "",
-      "category": [
-        "en:dog-and-cat-food",
-        "en:cat-food",
-        "en:non-food-products",
-        "en:open-pet-food-facts",
-        "en:pet-food"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
       "id": "3065890133822",
       "title": "Katzenfutter im Beutel Ragout in Gelee",
       "text": "",
@@ -3873,51 +4541,6 @@
       "source": "openpetfoodfacts"
     },
     {
-      "id": "3596710485659",
-      "title": "Boulettes en sauce au boeuf",
-      "text": "Viandes et sous - produits animaux (dont boeuf 4%), céréales, substances minérales, sucres. Green Dot, fr:triman",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710487363",
-      "title": "Terrine au boeuf",
-      "text": "Viandes et sous-produits animaux (dont boeuf 4%), céréales, substances minérales, extraits de protéines végétales, sucres. Triman, en:no-colorings",
-      "category": [
-        "fr:nourriture-humide-pour-chat"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710485819",
-      "title": "Terrines au boeuf, au poulet au thon",
-      "text": "Au boeuf : Viandes et sous-produits animaux (dont boeuf 4%), céréales, substancesminérales, extraits de protéines végétales, sucres. \n\nAu poulet : Viandes et sous-produits animaux (dont poulet 4%), poissons etsous-produits de poissons, céréales, substances minérales, extraits deprotéines végétales, sucres.\n\nAu thon : Viandes et sous-produits animaux, poissons etsous-produits de poissons (thon 4%), céréales, substances minérales,extraits de protéines végétales, sucres. en:no-colorings",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710487356",
-      "title": "Terrine à l'agneau",
-      "text": "Viandes et sous-produits animaux (dont agneau 4%), céréales, substances minérales, extraits de protéines végétales, sucres. Point Vert,Sans colorants",
-      "category": [
-        "en:dog-and-cat-food",
-        "en:cat-food",
-        "en:wet-pet-food",
-        "en:wet-cat-food",
-        "en:open-pet-food-facts"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710485772",
-      "title": "Terrines chat",
-      "text": "Au boeuf : Viandes et sous-produits animaux (dont boeuf 4%), céréales, substancesminérales, extraits de protéines végétales, sucres. \n\nAu poulet : Viandes et sous-produits animaux (dont poulet 4%), poissons etsous-produits de poissons, céréales, substances minérales, extraits deprotéines végétales, sucres.\n\nAu thon : Viandes et sous-produits animaux, poissons etsous-produits de poissons (thon 4%), céréales, substances minérales,extraits de protéines végétales, sucres.\n\nA l'agneau : Viandes et sous-produits animaux (dont agneau 4%), céréales, substancesminérales, extraits de protéines végétales, sucres.",
-      "category": [
-        "fr:nourriture-humide-pour-chat"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
       "id": "3596710487462",
       "title": "Bouchées en sauce au thon, au saumon et aux légumes",
       "text": "Viandes et sous-produits animaux, poissons et sous-produits de poissons (dont thon 4% et saumon 4%), céréales, légumes (3% de carottes et 0.5% de petits pois déshydratés équivaut à 2% de petits pois), substances minérales, sucres. No colorings, en:green-dot",
@@ -3934,27 +4557,6 @@
         "en:terrines",
         "en:chicken-terrines"
       ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710487233",
-      "title": "Bouchées en sauce au boeuf, aux pâtes et aux carottes",
-      "text": "Viandes et sous-produits animaux (dont boeuf 4%), céréales, légumes (carottes 4%), produits de la boulangerie (pâtes sèches 2% équivalent à 4% de pâtes), substances minérales, sucres. Triman, en:no-colorings",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710485697",
-      "title": "Bouchées en sauce :- au boeuf, aux pâtes et aux carottes- à la volaille, aux pâtes et aux carottes- au poulet, aux pâtes et aux carottes",
-      "text": "Au boeuf, aux pâtes et aux carottes : Viandes et sous-produits animaux (dont boeuf 4%), céréales, légumes (carottes 4%), produits de la boulangerie (pâtes sèches 2% équivalent à 4% de pâtes), substances minérales, sucres.\n\nA la volaille, aux pâtes et aux carottes : Viandes et sous-produits animaux (dont volaille 4%), céréales, légumes (carottes 4%), produits de la boulangerie (pâtes sèches 2% équivalent à 4% de pâtes), substances minérales, sucres.\n\nAu poulet, aux pâtes et aux carottes : Viandes et sous-produits animaux (dont poulet 4%), céréales, légumes (carottes 4%), produits de la boulangerie (pâtes sèches 2% équivalent à 4% de pâtes), substances minérales, sucres. en:no-colorings",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710487431",
-      "title": "Bouchées en sauce au poulet, à la dinde et aux légumes",
-      "text": "Viandes et sous-produits animaux (dont poulet 4% et dinde 4%), céréales, légumes (3% de carottes et 2% de haricots verts), substancesminérales, sucres. Point Vert,Sans colorants,Triman",
-      "category": [],
       "source": "openpetfoodfacts"
     },
     {
@@ -4384,13 +4986,6 @@
       "source": "openpetfoodfacts"
     },
     {
-      "id": "3596710523429",
-      "title": "Chiot - Multicroquette riche au poulet * et aux légumes**",
-      "text": "Céréales (dont 4% riz dans les croquettes au poulet), viandes et sous-produits animaux (dont poulet déshydraté 14% dans les croquettes au poulet), sous-produits d'origine végétale, huiles et graisses, substances minérales, légumes (1% légumes verts déshydratés, équivalent à 4% de légumes verts dans les croquettes aux légumes verts), levures. *72%de croquettes au poulet dans le mélange **12.5% de croquettes aux légumes verts",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
       "id": "3596710523498",
       "title": "Croquette moelleuse chien adulte boeuf frais et aux carottes",
       "text": "Céréales, viandes et sous-produits animaux (dont boeuf frais 4%), huiles et graisses, sucres, sous-produits d'origine végétale, substances minérales, légumes (0,5% carottes déshydratées, équivalent à 4% de carottes).",
@@ -4428,26 +5023,12 @@
       "source": "openpetfoodfacts"
     },
     {
-      "id": "3596710523511",
-      "title": "Croquettes chien petit senior riche en poulet frais",
-      "text": "Volaille déshydratée, poulet (14% poulet frais), riz (14%), maïs, blé, remoulage de blé, son de blé, graisse de volaille, protéines animales transformées déshydratées, hydrolysat de protéines animales, pois déshydratés, protéines de volaille hydrolysées déshydratées, pulpe de betterave déshydratée, substances minérales, huile de poisson (0,1%), levures de bière (0,1%), pulpe de chicorée déshydratée.",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
       "id": "3596710523474",
       "title": "MultiCroquettes Petit chien à la volaille* aux légumes verts**",
       "text": "Céréales, viandes et sous-produits animaux (dont volaille déshydratée 4% dans les croquettes à la volaille), sous-produits d'origine végétale, huiles et graisses, légumes (1% légumes verts déshydratés, équivalent à 4% de légumes verts dans les croquettes aux légumes verts), substances minérales, levures. *70%de croquettes à la volaille dans le mélange **12.5% de croquettes aux légumes verts dans le mélange",
       "category": [
         "en:open-pet-food-facts"
       ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710523542",
-      "title": "Chien medium maxi multicroquettes riches en poulet frais*",
-      "text": "Céréales, viandes et sous-produits animaux (dont 14% de poulet frais dans les croquettes au poulet), sous-produits d'origine végétale, huiles et graisses (dont 0.1% d'huile de poisson dans les croquettes au poulet), légumes, substances minérales, levures (0.1% dans les croquettes au poulet). *64.6% de croquettes au poulet dans le mélange",
-      "category": [],
       "source": "openpetfoodfacts"
     },
     {
@@ -4503,15 +5084,6 @@
         "en:cat-food",
         "en:dry-cat-food",
         "en:dry-pet-food"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710380022",
-      "title": "\"Régal'Cat au saumon",
-      "text": "Céréales,viandes et sous-produits animaux, huiles et graisses, extraits de protéines végétales, poissons et sous-produits de poissons (dont saumon 4%), sous produits d'origine végétale, substances minérales, lait et produits laitiers Triman",
-      "category": [
-        "en:open-pet-food-facts"
       ],
       "source": "openpetfoodfacts"
     },
@@ -4614,15 +5186,6 @@
       "source": "openpetfoodfacts"
     },
     {
-      "id": "3596710380060",
-      "title": "Auchan Adult Regal' Dog dents saines petit chien",
-      "text": "Sous-produits d'origine végétale, céréales, viandes et sous-produits animaux, extraits de protéines végétales, substances minérales",
-      "category": [
-        "en:open-pet-food-facts"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
       "id": "3596710485536",
       "title": "Emincés en sauce au bœuf et carottes, au foie et carottes, au poulet et petits pois, au veau et petits pois",
       "text": "EMINCÉS EN SAUCE AU BŒUF, FOIE ET CAROTTES : Viandes et sous-produits animaux (dont bœuf 4%, dont foie 4%), céréales, poissons et sous-produits de poissons, extrait de protéines végétales, sous-produits d'origine végétale (inuline de chicorée 0.4%), substances minérales, légumes (carottes déshydratées 0,45% - équivalent à 4% de carottes), sucres. EMINCÉS EN SAUCE AU BŒUF , AGNEAU ET CAROTTES : Viandes et sous-produits animaux (dont bœuf 4%, dont agneau 4%), céréales, poissons et sous-produits de poissons, extrait de protéines végétales, sous-produits d'origine végétale (inuline de chicorée 0.4%), substances minérales, légumes (carottes déshydratées 0,45% - équivalent à 4% de carottes), sucres. EMINCÉS EN SAUCE AU POULET ET PETITS POIS : Viandes et sous-produits animaux (dont poulet 4%), céréales, poissons et sous-produits de poissons, extrait de protéines végétales, substances minérales, sous-produits d'origine végétale (inuline de chicorée 0.4%), légumes (petits pois déshydratées 0.45% - équivalent à 4% de petits pois), sucres. EMINCÉS EN SAUCE AU VEAU, FOIE ET PETITS POIS : Viandes et sous-produits animaux (dont veau 4%, dont foie 4%), céréales, poissons et sous-produits de poissons, extrait de protéines végétales, sous-produits d'origine végétale (inuline de chicorée 0.4%), substances minérales, légumes (petits pois déshydratées 0.45% - équivalent à 4% de petits pois), sucres. en:no-colorings",
@@ -4652,20 +5215,6 @@
       "category": [
         "en:open-pet-food-facts"
       ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710487394",
-      "title": "Emincés en gelée au boeuf et au foie",
-      "text": "Viandes et sous-produits animaux (dont boeuf 4% et foie 4%), substances minérales, sucres. No colorings, en:green-dot",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710485789",
-      "title": "Emincés en gelée au boeuf et au foie, au saumon et au thon, au gibier, au poulet",
-      "text": "Emincés au boeuf et au foie : Viandes et sous-produits animaux (dont boeuf 4% et foie 4%), substances minérales, sucres.\n\nEmincés au gibier : Viandes et sous-produits animaux (dont gibier 4%), substances minérales, sucres.\n\nEmincés au poulet : Viandes et sous-produits animaux (dont poulet 4%), substances minérales, sucres.\n\nEmincés au saumon et au thon : Viandes et sous-produits animaux, poissons et sous-produits de poissons (dont saumon 4% et thon 4%), substances minérales, sucres.",
-      "category": [],
       "source": "openpetfoodfacts"
     },
     {
@@ -5294,18 +5843,6 @@
       "title": "Unknown Product",
       "text": "",
       "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710526581",
-      "title": "Effilés au poulet et à la dinde en sauce sans céréales ajoutées",
-      "text": "EFFILÉS EN SAUCE RICHE EN POULET AVEC TOMATES, THYM ET PERSIL : Viandes et sous-produits animaux (dont poulet 14%), sous-produits d'origine végétale (inuline de chicorée 0.4%), substances minérales, légumes (tomates déshydratées 0,45% - équivalent à 4% de tomates), herbes 0,05% (thym 0,025%, persil 0,025%) . EFFILÉS EN SAUCE RICHE EN DINDE AVEC DES BAIES D'ARGOUSIE: Viandes et sous-produits animaux (dont dinde14%), huiles et graisses (huile de lin 0,5%), sous-produits d'origine végétale (inuline de chicorée 0.4%), substances minérales, baies d'argousier (0,05%) Triman, en:no-colorings",
-      "category": [
-        "en:non-food-products",
-        "en:open-pet-food-facts",
-        "en:pet-food",
-        "en:cat-food"
-      ],
       "source": "openpetfoodfacts"
     },
     {
@@ -7593,490 +8130,6 @@
         "en:cat-food"
       ],
       "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3560071001575",
-      "title": "Companino Vitalive Adult",
-      "text": "Céréales, viandes et sous-produits animaux (dont volaille déshydratée 28 % dans les croquettes à la volaille), sous produits d'origine végétale, extraits de protéines végétales, huiles et graisses, substances minérales, légumes (carottes déshydratées 0,6% équivalent à 4% de carottes dans les croquettes aux carottes, pois 4% dans les croquettes aux pois), levures.\n35% de croquettes à la volaille, 10% de croquettes aux carottes, 10% de croquettes aux pois dans le produit fini.",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3560071001582",
-      "title": "Companino Vitalive Adult",
-      "text": "Céréales, viandes et sous-produits animaux (dont bœuf déshydraté 4% dans les croquettes au bœuf et foie déshydraté 2,2% équivalent à 4% de foie dans les croquettes au foie), sous-produits d'origine végétale, huiles et graisses, substances minérales, extraits de protéines végétales, légumes (carottes déshydratées 0,6% équivalent à 4% de carottes dans les croquettes aux carottes, pois 4% dans les croquettes aux pois), levures.\n35% de croquettes au boeuf, 35% de croquettes au foie, 10% de croquettes aux carottes, 10% de croquettes aux pois dans le produit fini. Fabriqué en France",
-      "category": [
-        "en:non-food-products",
-        "en:open-pet-food-facts",
-        "en:pet-food",
-        "en:cat-food"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3560071001599",
-      "title": "Companino Vitalive Adult",
-      "text": "Céréales, viandes et sous-produits animaux (dont bœuf déshydraté 4% dans les croquettes au bœuf et foie déshydraté 2,2% équivalent à 4% de foie dans les croquettes au foie), sous-produits d'origine végétale, huiles et graisses, substances minérales, extraits de protéines végétales, légumes (carottes déshydratées 0,6% équivalent à 4% de carottes dans les croquettes aux carottes, pois 4% dans les croquettes aux pois), levures.\n35% de croquettes au boeuf, 35% de croquettes au foie, 10% de croquettes aux carottes, 10% de croquettes aux pois dans le produit fini.",
-      "category": [
-        "en:dog-and-cat-food",
-        "en:cat-food",
-        "en:pet-food",
-        "en:open-pet-food-facts"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3560071001605",
-      "title": "Companino Vitalive Adult",
-      "text": "Céréales, viandes et sous-produits animaux (dont volaille déshydratée 28 % dans les croquettes à la volaille), sous produits d'origine végétale, extraits de protéines végétales, huiles et graisses, substances minérales, légumes (carottes déshydratées 0,6% équivalent à 4% de carottes dans les croquettes aux carottes, pois 4% dans les croquettes aux pois), levures.\n35% de croquettes à la volaille, 10% de croquettes aux carottes, 10% de croquettes aux pois dans le produit fini.",
-      "category": [
-        "en:dog-and-cat-food",
-        "en:cat-food",
-        "en:nourriture-pour-animaux",
-        "en:open-pet-food-facts"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3560071001612",
-      "title": "Companino Vitalive Adult",
-      "text": "Céréales, viandes et sous-produits animaux (dont volaille déshydratée 28 % dans les croquettes à la volaille), sous produits d'origine végétale, extraits de protéines végétales, huiles et graisses, substances minérales, légumes (carottes déshydratées 0,6% équivalent à 4% de carottes dans les croquettes aux carottes, pois 4% dans les croquettes aux pois), levures.\n35% de croquettes à la volaille, 10% de croquettes aux carottes, 10% de croquettes aux pois dans le produit fini.",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3560071001643",
-      "title": "Companino Vitalive Adult",
-      "text": "Céréales, viandes et sous produits animaux, sous-produits d'origine végétale, huiles et graisses, poissons et sous-produits de poissons (dont poisson déshydraté 4% dans les croquettes au poisson), substances minérales, extraits de protéines végétales, légumes (carottes déshydratées 0,6% équivalent à 4% de carottes dans les croquettes aux carottes, pois 4% dans les croquettes aux pois), levures.\n35% de croquettes au poisson, 10% de croquettes aux carottes, 10% de croquettes aux pois dans le produit fini.",
-      "category": [
-        "en:pet-food",
-        "en:cat-food"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3560071567545",
-      "title": "Vitalize au bœuf",
-      "text": "Céréales, viandes et sous-produits animaux (dont protéines de bœuf déshydratées 4% dans les croquettes au bœuf), sous-produits d'origine végétale (dont pulpe de betterave déshydratée 1.4%), légumes (dont pois 4% dans les croquettes aux pois, carottes déshydratées 0,78% équivalent à 4% de carottes dans les croquettes aux carottes), huiles et graisses, substances minérales, extrait de protéines végétales.\r\n\r\n74% de croquettes en forme de losanges marron au bœuf. 16% de croquettes en forme d'étoiles vertes et jaunes aux pois. 8% de croquettes en forme d'étoiles orange aux carottes. No artificial flavors,No flavors",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3560071576639",
-      "title": "Simply Croquettes au boeuf",
-      "text": "Céréales, viandes et sous-produits animaux (dont protéines de boeuf déshydratées 14%), sous-produits d'origine végétale, huiles et graisses, substances minérales, légumes, levures.\r\n_Constituants analytiques :_ Protéine brute : 31%, Matières grasses brutes : 9%, Cellulose brute : 3,5%, Cendres brutes : 8,5%, Humidité : 10%\r\n_Additifs :_ Antioxygènes, colorants. _Additifs nutritionnels (/kg) :_ Vitamine A : 27 000 UI, Vitamine D3 : 1200 UI, Vitamine E : 100 mg, Taurine : 1000 mg, Iodate de calcium anhydre : 2,3 mg (Iode: 1,5 mg), Sulfate de cuivre (II) pentahydraté : 19,6 mg (Cuivre: 5 mg), Sulfate manganeux monohydraté : 23 mg (Manganèse: 7,5 mg), Sulfate de zinc monohydraté : 137,4 mg (Zinc: 50 mg), Sélénite de sodium : 0,33 mg (Sélénium: 0,15 mg), DL-méthionine : 4400 mg.",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8007229126926",
-      "title": "Osso di proscuitto italiano",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3411113083892",
-      "title": "Adaptil chew",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710541904",
-      "title": "Terrine riche en poulet",
-      "text": "Viandes et sous-produits animaux (dont poulet 14%),substances minérales. Triman",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710542116",
-      "title": "Terrine riche en saumon",
-      "text": "Viandes et sous produits animaux, poissons et sous-produits de poisson (dont saumon 14%), substances minérales. Triman",
-      "category": [
-        "fr:nourriture-humide-pour-chat"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710542093",
-      "title": "Terrine riche en boeuf",
-      "text": "Viandes et sous-produits animaux (dont boeuf14%),substances minérales. Triman",
-      "category": [
-        "fr:nourriture-humide-pour-chat"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710541829",
-      "title": "Pâtée au poulet",
-      "text": "Viandes et sous-produits animaux (dont 4% de poulet), substances minérales. Triman",
-      "category": [
-        "en:non-food-products",
-        "en:open-pet-food-facts",
-        "en:pet-food",
-        "en:wet-pet-food"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710542000",
-      "title": "Pâtée au poisson",
-      "text": "Viandes et sous-produits animaux, poissons et sous-produits de poissons (dont poisson 4%), substances minérales. Triman",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710543120",
-      "title": "Mélange de graines rongeurs herbivores",
-      "text": "Sous-produits d'origine végétale, céréales, légumes, graines, sucres, substances minérales Triman",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710543151",
-      "title": "Boules de graisse sans filet",
-      "text": "Céréales, huiles et graisses (graisse 18%), graines, substances minérales Triman",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710541935",
-      "title": "Terrine riche en boeuf",
-      "text": "Viandes et sous-produits animaux (dont boeuf 14%),substances minérales. Triman",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710542154",
-      "title": "Terrine à la dinde",
-      "text": "Viandes et sous-produits animaux (dont dinde 4%),substances minérales. Triman",
-      "category": [
-        "fr:nourriture-humide-pour-chat"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710542031",
-      "title": "Emincés en sauce au saumon",
-      "text": "Viandes et sous-produits animaux, poissons et sous-produits de poissons (dont saumon 4%), substances minérales. Triman",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710542055",
-      "title": "Emincés en sauce à la dinde",
-      "text": "Viandes et sous-produits animaux ( dont dinde 4%), substances minérales. Triman",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710541973",
-      "title": "Terrine au poulet",
-      "text": "Viandes et sous-produits animaux (dont poulet 4%), substances minérales, sous-produits d'origine végétale (inuline 0.4%), huiles et graisses (0.1% d'huile de tournesol). Triman",
-      "category": [
-        "en:meats-and-their-products",
-        "en:prepared-meats",
-        "en:non-food-products",
-        "en:open-pet-food-facts",
-        "en:pet-food",
-        "en:terrines",
-        "en:chicken-terrines"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "9003579007136",
-      "title": "Kitten sterilised",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "5900951302527",
-      "title": "Whiskas Pure Delight",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "0950000302331",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3065890132399",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710529988",
-      "title": "Auchan boisson lactee pour chat 3x200ml",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710529995",
-      "title": "Boisson lactée",
-      "text": "Lait et produits de laiterie (lait 99.4%), sous produits d'origine végétale (inuline de chicorée 0,4%). Triman",
-      "category": [
-        "en:beverages-and-beverages-preparations",
-        "en:beverages",
-        "en:dairies",
-        "en:dairy-drinks"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3596710523610",
-      "title": "Multicroquette à la volaille * et aux légumes **",
-      "text": "Céréales, Viandes et sous-produits animaux (dont protéines de volaille déshydratées 4% dans les croquettes à la volaille), Sous-produits d'origine végétale, Huiles et graisses, Légumes (dont légumes verts 4% dans les croquettes aux légumes verts), Substances minérales, extraits de protéines végétales. * 60% de croquettes à la volaille ** 20% de croquettes aux légumes verts",
-      "category": [
-        "en:open-pet-food-facts"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8445291238794",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "5400141608298",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [
-        "fr:nutri-score"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480012004463",
-      "title": "Paté con atún para gatos adultos",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480012004449",
-      "title": "Bocaditos en salsa con buey",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480012004296",
-      "title": "Alimento para perros adultos con carne, pollo, arroz y verduras",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "0008429131721",
-      "title": "Perfekt Portions",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "6294001831983",
-      "title": "Tuna mixed creamy treats",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "3065890152670",
-      "title": "Katzenfutter",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8007520027380",
-      "title": "Miglior Gatto Le specialità italiane",
-      "text": "Carni e derivati 54%, minerali, prodotti ottenuti dalla trasformazione di erbe it:Miglior Gatto Le specialità italiane",
-      "category": [
-        "it:cibo-per-gatti"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "4008429160318",
-      "title": "Sensitive mir Truthahn",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000136466",
-      "title": "Alimento completo",
-      "text": "Sin gluten,Punto Verde",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8410909241879",
-      "title": "Comida para canarios",
-      "text": "OALIMENTO COMPLETO PARA CANARIOS\r\nY JILGUEROS.\r\nCOMPOSICION: Semilla de alpiste, semilla de\r\ncolza, semilla de lino, avena decorticada,\r\nsemilla de canamo, semilla de niger, harina de\r\ntrigo, levadura y sal.\r\nADITIVOS ORGANOLEPTICOS: Colorantes.\r\nMODO DE EMPLEO: Servir directamente al\r\ncomedero. Mantener el comedero limpio y\r\nlleno, renovando las semillas. Cambiar el agua\r\ndel bebedero diariamente.",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "4008239237453",
-      "title": "Barritas de miel y fruta para periquitos",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000707635",
-      "title": "Biscoitos",
-      "text": "Cereales, carnes y subproductos animales (huesito: 20% ternera, pollo y cerdo; relleno del corazón: 6% pollo), sustancias minerales, subproductos de origen vegetal, levaduras. ADITING",
-      "category": [
-        "en:dog-and-cat-food",
-        "en:dry-pet-food",
-        "en:cat-food",
-        "en:open-pet-food-facts"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000707628",
-      "title": "Snack galletas perro adulto con pollo y ternera razas pequeñas y medianas",
-      "text": "",
-      "category": [
-        "en:dog-and-cat-food",
-        "en:dog-food"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000220097",
-      "title": "Snack barritas perro adulto de pollo e hígado",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000521354",
-      "title": "Snack palitos perro adulto con pollo y ternera",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000521439",
-      "title": "Hueso dental perro adulto sabor menta y perejil",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000134943",
-      "title": "Huesos de cuero con pollo y zanahoria perro adulto",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000238122",
-      "title": "Stick dental perro adulto con menta",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000521392",
-      "title": "Ministick dental perro adulto",
-      "text": "",
-      "category": [
-        "en:open-pet-food-facts"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000133328",
-      "title": "Comida perro adulto Supreme pollo fresco con frutas y verduras",
-      "text": "Punto Verde",
-      "category": [
-        "en:dog-and-cat-food",
-        "en:dog-food",
-        "en:non-food-products",
-        "en:open-pet-food-facts",
-        "en:pet-food"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000133335",
-      "title": "Comida perro adulto Supreme pollo fresco con frutas y verduras",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000155627",
-      "title": "Comida perro adulto Supreme salmón fresco con frutas y verduras",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000133342",
-      "title": "Comida perro adulto Supreme salmón fresco con frutas y verduras",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000231710",
-      "title": "Comida perro sénior esterilizados Supreme pollo fresco con frutas y verduras",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000232076",
-      "title": "Comida perro júnior Supreme con pollo fresco, frutas y verduras",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000231734",
-      "title": "Aritos perro adulto y sénior",
-      "text": "Punto Verde",
-      "category": [
-        "en:dog-and-cat-food",
-        "en:dog-food",
-        "en:non-food-products",
-        "en:open-pet-food-facts",
-        "en:pet-food"
-      ],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000157430",
-      "title": "Comida perro adulto con pollo, ternera, frutas y verduras",
-      "text": "Proteínas animais esidratadas 3% (das quais frango 16% e vitela 4%), milho, cevada, gordura de ave (10,5%), arroz (5), er ilhas (4%), proteínas animais hidrolisadas (4%), polpa % de beterraba (2%), substâncias minerais, fibras vegetais, cenoura (4% de 0,5% de cenoura de desidratada), óleo de salmão (0,5%), levedura de cerveja (350 mg/kg paredes de levedura como fonte de MOS e Betaglucanos), maçã (0,03%), mirtilos (0,03%). 24.UI, Vitamina D3: 1.600UI, Vitamina E: 92mg, Vitamina D ina ADITIVOS/kg: Vitaminas: Vitamin mcg. Oligoelementos: Ferro (sulfato de ferro (II). erro B1: 5,4mg, Vitamina B2: 12,3mg, Vitam oso, mono-hidrato): 77mg, Zinco (oxido de zinco): 13bing, Manganês (sulfato de manganês, mono-hidrato): alcio 36mg, Cobre (sulfato de cobre (II), penta-hidrato): 13,5m lodo (iodato de cálcio ar o): 1,3mg. Selénio (selenito de sódio): 0,22mg. Antioxidantes. antio imun Com com raca",
-      "category": [],
-      "source": "openpetfoodfacts"
-    },
-    {
-      "id": "8480000382979",
-      "title": "Comida perro adulto con ternera, pollo, verduras y arroz",
-      "text": "",
-      "category": [],
-      "source": "openpetfoodfacts"
     }
-  ],
-  "total": 1000
+  ]
 }

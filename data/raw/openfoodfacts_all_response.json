@@ -1,9 +1,10 @@
 {
+  "total_products": 1000,
   "products": [
     {
       "id": "6111035000430",
       "title": "Sidi Ali",
-      "text": "une eau minérale naturelle",
+      "text": "une eau minérale naturelle&quot; asd",
       "category": [
         "en:beverages-and-beverages-preparations",
         "en:beverages",
@@ -15444,6 +15445,5 @@
       ],
       "source": "openfoodfacts"
     }
-  ],
-  "total": 1000
+  ]
 }

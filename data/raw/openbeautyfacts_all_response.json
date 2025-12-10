@@ -1,5 +1,2357 @@
 {
+  "total_products": 1000,
   "products": [
+    {
+      "id": "6974296536984",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3337875685900",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "en:face",
+        "en:face-scrubs"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8720181433573",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3600542571913",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5056379590548",
+      "title": "Scrub lavant purifiant",
+      "text": "Wine Purifiante pour démêler. tact avec les yeux. En cas de contact, rincer abondamment à l'eau. Avoid contact with eye area. If contact o SOUM CHLORIDE, SODIUM LAURETH SULFATE, AQUA/WATER/EAU, BUTYLENE GLYCOL, COCAMIDE MEA, PEG-100 STEARATE STEARATE, HYDRATED SILICA, FRAGRANCE (PARFUM), SACCHARIDE ISOMERATE, MENTHYL LACTATE, BISABOLOL PRUNS LCS (SWEET ALMOND) OIL, CITRIC ACID, SODIUM CITRATE, PHENOXYETHANOL, BENZYL SALICYLATE, LINALOOL LIMONEE EL CINNAMAL",
+      "category": [
+        "en:hair",
+        "en:hair-care",
+        "en:hair-masks"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5201410964035",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3600523764259",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "en:hair",
+        "en:shampoos",
+        "en:shampoo-for-dry-hair"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4005900378170",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "en:body",
+        "en:body-creams"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6111245030845",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8059385035192",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0054986000165",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0052041429057",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8721073626448",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6977351001915",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8904256081986",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "10788916",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3666989040467",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4823107609626",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3660005361536",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3423474719556",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8435415032360",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8480010040852",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0056500370402",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6903072472604",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6111260426517",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6111260265192",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8719238063702",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4069484003811",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8713539005928",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0099482532017",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6111260992760",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4987241113453",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "en:eyedrop"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8901030948237",
+      "title": "lux  Flaw less glow jasmine",
+      "text": "",
+      "category": [
+        "en:soap"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8909106025202",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8711568142294",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "00417901",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6223001380290",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8053732164269",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6975050633215",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6111056014508",
+      "title": "Cadum",
+      "text": "ماء صوديوم لوریٹ سلفات کو کامید MEA صوديوم لوراید کدول بهینی عطر ، دايميثيكون، حمض ميريستيك، بولي كواترنيوم 7 جليكول دايستيرات بي. 12 دايستيرات حمض الستريك، رباعي الصوديوم انتا، صوديوم بنزوات صوديوم | 55 بروبيلين جليكول أوليات، بودرة البيض خلاء سالیسیلات با0302EEEFE الصبار، سيترونياول EXP يصنع ويوزع من طرف 05/2027 COLGATE-PALMOLIVE MAROC A conserver dans un lieu frais et sec, à l'abri du soleil et de la chaleur. يحفظ في مكان بارد وجاف بعيداً عن أشعة الشمس والحرارة المباشرة Colgan SAVE WATER www.colgate.com/savewater كولجيت بالموليف المغرب علامة تجارية مسجلة ص.ب. 7565 الحي الصناعي عين السبع - الدار البيضاء - المغرب 380mleمل PMAC380AV44 6111056 014508 A utiliser avant: voir date sur la bouteille. يفضل إستخدامه قبل راجع التاريخ المطبوع على العبوة M (R)",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6111041189037",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3282770397376",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6971772410912",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8906050562005",
+      "title": "Sun screen",
+      "text": "Demineralised water, glyceryl MonuStearate,cetyl alcohol, carbomer, glycerine, sodium PCA,\nRaspberry seed oil, lavender extract, tea tree extract , benzophenone - 3, butyl methoxydensile mithai , ethyla diamine Tetra acetic acid, triethylamine, zinc oxide, allantoin, tocopherol acetate vitamin e, DM DM hydantoin",
+      "category": [
+        "en:sun-screen"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4335619134515",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "en:suncare",
+        "en:in-sun-protections",
+        "en:sunscreen"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4630121103463",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4650099501467",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "7509552830507",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8025272603980",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3973062008635",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8700216660525",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8414807544650",
+      "title": "Cremosas",
+      "text": "",
+      "category": [
+        "en:accessories",
+        "en:moist-wipes",
+        "en:baby-wipes"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8410412280174",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8695077221100",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3266191065601",
+      "title": "Lessive",
+      "text": "&lt;5% Agents de surface anioniques, Agents de surface nom ioniques, Agents de surface amphotères, Potassium Sorbate Lactic Acid, Parfums. Contient aussi : Eau, Sel. 99% du total des ingrédients sont d'origine naturelle. Ecocert",
+      "category": [
+        "fr:produits-entretien"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3058320002034",
+      "title": "Crème mains réparatrice",
+      "text": "✓ AUX HUILES 100% VÉGÉTALES ✓ TESTÉE SOUS CONTRÔLE DERMATOLOGIQUE FORMULE AUX HUILES 100% VÉGÉTALES Des Huiles de Karité et d'Abricot pour nourrir et apaiser les mains De l'Allantoine réparatrice - De la Glycérine végétale pour hydrater intensément les mains RÉSULTATS PROUVÉS La Crème Mains Réparatrice répare et nourrit les mains sèches et abîmées. La peau retrouve tout son confort et paraît visiblement plus lisse. La peau est protégée de la sécheresse: 100%&quot; La peau est réparée : 94%* TEXTURE AGRÉABLE Appliquer chaque jour en massant délicatement. Sa texture légère et non collante pénètre rapidement et ne laisse pas les mains grasses. *étude consommateur sur 52 sujets, après 7 jours d'utilisation 603942 52 - INGRÉDIENTS: AQUA / WATER, GLYCERIN, CETEARYL ALCOHOL, GLYCERYL STEARATE, BUTYROSPERMUM PARKII BUTTER 7 SHEA BUTTER, GLYCERYL STEARATE SE DIMETHICONE, PRUNUS ARMENIACA KERNEL OIL / APRICOT KERNEL OIL, ALLANTOIN, SODIUM POLYACRYLATE, CAPRYLYL GLYCOL, CITRIC ACID, CHLORHEXIDINE DIGLUCONATE, CI 14700/RED 4 LINALOOL, GERANIOL, EUGENOL, LIMONENE, HYDROXYCITRONELLAL, CITRAL, CITRONELLOL HEXYL CINNAMAL, BENZYL ALCOHOL, PARFUM/FRAGRANCE (FIL Z281366/1). BAC DE &OI TRI Ce tube contient 35% Omle 35% de plastique recyclé (hors additifs). Plus d'informations et conseils sur www.mixa.fr Cristal 09 69 39 50 10) APPEL NON SURTAXE Conseils Consommateurs cs-92300 Levallois-Pemet FRANCE 93584 ST QUEN CEDEX FR 12M 3612623744567 R 2034",
+      "category": [
+        "ro:crema-de-mâini"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4607034476328",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8720181638596",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8007750012842",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3770000717068",
+      "title": "Lotion tonique hydratante",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3663518176680",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3596710524006",
+      "title": "Crème corps réparatrice",
+      "text": "Aqua, glycerin, isopropyl palmitate, butyrospermum parkii butter, myristyl myristate, sodium acrylates copolymer, helianthus annuus seed oil, phenethyl alcohol, parfum, niacinamide, lecithin, caprylyl glycol, tetramethyl acetyloctahydronaphthalenes, sodium hydroxide, citrus aurantium peel oil, limonene, rosmarinus officinalis leaf extract. en:made-in-spain",
+      "category": [
+        "en:non-food-products",
+        "en:open-beauty-facts"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3245678667897",
+      "title": "Protège-lingerie large ultra thin",
+      "text": "Voile de surface (polypropylène, polyéthylène), couche de distribution (polyéthylène, polyester), coeur absorbant (celullose, polyacrylate de sodium), enveloppe extérieure (polyéthylène, polypropylène, carbonate de calcium), colle. en:FSC, FSC Mix",
+      "category": [
+        "en:health-beauty",
+        "en:non-open-products-facts",
+        "en:personal-care",
+        "en:feminine-sanitary-supplies",
+        "fr:produits-menstruels",
+        "fr:protege-lingerie"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8850006951644",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3245678667477",
+      "title": "Serviettes hygiéniques Maxi Jour",
+      "text": "Voile de surface (polypropylène), coeur absorbant (cellulose), enveloppe extérieur (polypropylène, polyéthylène), colle",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0664445308093",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3596710534845",
+      "title": "Protections absorbantes niveau 1",
+      "text": "Voile de surface (polypropylène), couche d'acquisition (poyéthylène, polypropylène, polyester), corps absorbant (cellulose, polymère superabsorbant), enveloppe extérieure (polyéthylène, polypropylène, carbonate de calcium, encre), élastiques (polyisoprène), colle (polymères thermoplastiques), encre.",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3600542617734",
+      "title": "Shampooing nourrissant",
+      "text": "AQUA/WATER, AMMONIUM LAURYL SULFATE, SODIUM CHLORIDE, COCAMIDOPROPYL BETAINE, ARGANIA SPINOSA KERNEL OIL, CAMELLIA OLER CITRADE GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE, CITRIC ACID, TOCOPHEROL, SODIUM BENZOATE, BENZOIC ACID, LINALOOL GERANIONELL BENZA FUN FRAGRANCE Végan,Cruelty free",
+      "category": [
+        "en:hair",
+        "en:shampoos"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3560071233105",
+      "title": "Nectar of Bio",
+      "text": "Bio",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3560071406622",
+      "title": "Carrefour, Nectar of Beauty",
+      "text": "AQUA, GLYCERIN, SODIUM LAURETH SULFATE MICROCRYSTALLINE CELLULOSE, ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER, BAMBUSA ARUNDINACEA STEM POWDER, CELLULOSE SODIUM BENZOATE, PARFUM, VITIS VINIFERA SEED POWDER, XANTHAN GUM, ETHYLHEXYLGLYCERIN, SODIUM HYDROXIDE, BUTYROSPERMUM PARKII BUTTER, SODIUM GLUCONATE, PROPANEDIOL, VANILLA PLANIFOLIA FRUIT EXTRACT, ALCOHOL, TRIS(TETRAMETHYLHYDROXYPIPERIDINOL) CITRATE, TOCOPHEROL, CI 15510, CI 61570.",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3560071424077",
+      "title": "Carrefour",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3560071233136",
+      "title": "Carrefour",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3760305010063",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4084200772901",
+      "title": "Hautklar",
+      "text": "603258 115 - INGREDIENTS: AQUA / WATER • COCO-BETAINE • PROPYLENE GLYCOL • SODIUM LAURETH SULFATE • PEG-120 METHYL GLUCOSE DIOLEATE • DISODIUM COCOAMPHODIACETATE • SODIUM CHLORIDE • BENZYL ALCOHOL • BENZYL SALICYLATE • EUCALYPTUS GLOBULUS LEAF EXTRACT • LIMONENE • LINALOOL • MENTHOL • MENTHOXYPROPANEDIOL • SALICYLIC ACID • SODIUM BENZOATE • TETRASODIUM EDTA • ZINC GLUCONATE • PARFUM / FRAGRANCE (F.I.L. B183571/1).",
+      "category": [
+        "en:face",
+        "en:facial-creams",
+        "de:kosmetik"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8692730510311",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0676280044913",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8904256023283",
+      "title": "Nivea body milk",
+      "text": "Aqua, Paraffinum Liquidum, Glycerin, C15-19 Alkane, Alcohol Denat. (3.53% V/V), Cetearyl Alcohol, Glyceryl Stearate Citrate, Dimethicone, Phenoxyethanol, Prunus Amygdalus Dulcis Oil, Parfum, Carbomer, Tocopherol, Sodium Hydroxide, Linalool, Citronellol, Alpha-Isomethyl Ionone, Maris Sal, Citrus Aurantium Peel Oil, Limonene, Acetyl Cedrene, Benzyl Alcohol, Lavandula Oil/Extract, Benzyl Salicylate, Terpineol, Linalyl Acetate, Sodium Hyaluronate CH",
+      "category": [
+        "en:body-lotion"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5029354004378",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8470001542410",
+      "title": "Bexident",
+      "text": "Aqua (Water)/Agua, Sorbitol, Glycerin/Glicerina, Panthenol/Pantenol, PEG-60 Hydrogenated Castor Oil/Aceite de ricino hidrogenado, Hydroxyethylcellulose/Hidroxietilceclulosa, Chitosan/Quitosán, Poloxamer 188/Poloxámero 188, Lactic Acid/Ácido láctico, Chlorhexidine Digluconate/Digluconato de Clorhexidina, Aroma (Flavor), Allantoin/Alantoína, Sodium Saccharin/Sacarina sódica, Eugenol, Limonene/Limoneno, BHT, Composición: Chitosan 0,5%, Digluconato de clorhexidina 0,2%, Pantenol 5,0%, Alantoína 0,15%, Sacarina sódica 0,01%, Excipiente bioadhesivo aromatizado c,s,p, 100g Sin gluten, Sin Alcohol En caso de intoxicación o de ingestión accidental, llamar al Servicio Médico de Información Toxicológica, Telf,: 91 562 04 20 (En España), Sin gluten",
+      "category": [
+        "en:non-food-products",
+        "en:open-beauty-facts"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0782126003089",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3303210035075",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5901330025389",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4005808729890",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3439600018103",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "en:perfumes",
+        "en:men-perfumes"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8422823653072",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8437000435891",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3660005389998",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8700216497039",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3600551067339",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3760341009793",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8430055005002",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8414807551122",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4005808770328",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0764302231042",
+      "title": "INTENSIVE HYDRATION SHAMPOO",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3450601046414",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4006000158785",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3473311502506",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3770012764166",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6111246207680",
+      "title": "Unknown Product",
+      "text": "aqua, glycerin, cetearyl alcohol, dimethicone, dicaprylyl carbonate, ceteareth-20, cera alba, butyrospermum parkii butter, caprylic/capric triglyceride, sodium cetearyl sulfate, allantoin, tetrasodium EDTA, citric acid, phenoxyethanol, ethylhexylglycerin, tocopherol acetate, parfum, benzyl salicylate, citronellol, geraniol, hexyl cinnamal, linalool, alpha-isomethyl ionone",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6928001834636",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5011321413788",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8901030840821",
+      "title": "Vaseline Cocoa Lip Therapy",
+      "text": "Not tested on animals,Dermatologically tested,Natural ingredients",
+      "category": [
+        "en:suncare",
+        "en:face",
+        "en:in-sun-protections",
+        "en:sunscreen",
+        "en:lip-balms",
+        "en:lip-balms-with-sun-protection"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "9504000211691",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0044004332118",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5060328893864",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8029241105406",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "it:olio-capelli"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4792037709846",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6928001834483",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "59092629",
+      "title": "Deodorante",
+      "text": "52033LH03:27 MADEI INGREDIENTSIC&CTABIMINGREDIENTE Aqua Aluminum Sesquichlorohydrate, Glycerin, Helianthus Annuus Seed Oil, Steareth-2, Calbum Chlonde, Parfum, Glycine, Steareth-20, Disodium EDTA, Pentaerythrity Tetra-6-butyl Hydroxyhydrocinnamate, Alpha-Isomethyl Ionone, Amyl Salicylate Benzyl Benzoate, Citronellol, Citrus Aurantium Peel C, Coumarin, Eucalyptus Gobulus Oil, Eugenol, Hexyl Cinnamal, Limonene, Linalool, Linalyl Acetate Pogostemon Cablin Of, Tetramethyl Acetyloctahydronaphthalenes ZAM 64800334 Q www.unilever.com K5909 2629 50ml/me ECOPONTO Zi Unilever RA-455 3013 AL-N",
+      "category": [
+        "en:hygiene",
+        "en:deodorants",
+        "en:deodorant-with-alum-stone"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8436022039872",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8436022393929",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6111251841282",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "fr:tiger"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3600551135809",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8002383161035",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0850355002002",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3590150593288",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3610340639999",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8720892227041",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "7509552845891",
+      "title": "Elvive Hidra [Hialurónico]",
+      "text": "Aqua, Sodium Laureth Sulfate, Sodium Lauryl Sulfate, Cocamidopropyl Betaine, Sodium Chloride, Glycol Distearate, Parfum, Hexylene Glycol, Guar Hydroxypropyltrimonium Chloride, Cocamide MEA, Coco-Betaine, Lactic Acid, Sodium Benzoate, Sodium Hydroxide, Hydroxycitronellal, Hydrolyzed Hyaluronic Acid, Sodium Hyaluronate, Phenoxyethanol, Steareth-6, Acetic Acid, PEG-100 Stearate, Trideceth-10, Trideceth-3, Salicylic Acid, Dimethicone, Limonene, Fumaric Acid, Linalool, Amodimethicone, Carbomer, Citric Acid, Hexyl Cinnamal",
+      "category": [
+        "en:non-food-products",
+        "en:open-beauty-facts"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5287002201085",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6932511216028",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3450601101021",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6181100532944",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8719134202496",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8004395133727",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "22243218",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5208005110051",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0040309039004",
+      "title": "Dove hand wash 2x refill",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4003583211425",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0697045165469",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8693239203308",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8700216208444",
+      "title": "Anti-dandruff shampoo",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8414227058171",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "7640157266268",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6295120060179",
+      "title": "Dettol Lavander chamimile",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8901248154192",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4088700011775",
+      "title": "Tartar Control Mouthwash",
+      "text": "Water, Alcohol, Sorbitol, Flavour, Poloxamer 407, Sodium Saccharin, Benzoic Acid, Sodium Benzoate, Eucalyptol, Zinc Chloride, Thymol, CI 42090.",
+      "category": [
+        "en:hygiene",
+        "en:mouthwash"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8055348241945",
+      "title": "Relizema cream",
+      "text": "AQUA, HYDROGENATED POLYDECENE, ETHYLHEXYL PALMITATE, DIMETHICONE, GLYCERIN, GLYCERYL STEARATE PEG-100 STEARATE, CETEARYL ALCOHOL, MAGNESIUM STEARATE, RICINUS COMMUNIS SEED OIL, PHENOXYETHANOL, ASCORBYL PALMITATE, DISODIUM EDTA, ETHYLHEXYLGLYCERIN, FURFURYL PALMITATE, ETHYL LINOLENATE, TOCOPHERYL ACETATE, SODIUM HYALURONATE, ETHYL OLEATE, ETHYL UINOLEATE, PROPYL GALLATE, TOCOPHEROL, ETHYL PALMITATE, ETHYL STEARATE.",
+      "category": [
+        "en:cream"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0085805005313",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0194346377459",
+      "title": "Melatonin Gummies",
+      "text": "ORGANIC TAPIOCA SYRUP, ORGANIC SUGAR, CONTAINS &lt;2% OF: CITRIC ACID, NATURAL FLAVORS, ORGANIC BLACK CARROT JUICE CONCENTRATE (COLOR), ORGANIC CARNAUBA WAX, ORGANIC SUNFLOWER OIL, PECTIN, SODIUM CITRATE. Natural flavors, en:with-sunflower-oil",
+      "category": [
+        "en:supplement"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "7502251481346",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4680002020075",
+      "title": "Долфин средство для промывания для взрослых",
+      "text": "Галит, соль поваренная пищевая йодированная, калий хлористый, натрий двууглекислый (сода пищевая), экстракт сухой -- шиповник (плоды), экстракт сухой -- солодка (корень).",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6925267308284",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5010724527375",
+      "title": "Dry Shampoo blush",
+      "text": "",
+      "category": [
+        "en:open-beauty-facts"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4008233177007",
+      "title": "Kneipp",
+      "text": "Zutaten: Glukosesirup, Zucker, Magnesiumcitrat, Wasser, Verdickungsmittel: Pektin; Säuerungsmittel: Citronensäure; Säureregulator: Natriumcitrate; Farbstoff: Anthocyane; pflanzliches Öl (Kokosnuss), Überzugsmittel: Carnaubawachs; natürliches Aroma, Cyanocobalamin.",
+      "category": [
+        "de:nahrungsergänzung"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3574660026788",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0057990063911",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4005900911957",
+      "title": "Baby & kids sensitive protect 50+",
+      "text": "",
+      "category": [
+        "en:suncare",
+        "en:in-sun-protections",
+        "en:sunscreen"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0733739107596",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0381370015314",
+      "title": "Stress Relief Lotion",
+      "text": "Water, Glycerin, Distearyldimonium Chloride, Petrolatum, Isopropyl Palmitate, Cetyl Alcohol, Dimethicone, Avena Sativa (Oat) Kernel Flour, Benzyl Alcohol, Fragrance, Lavandula Angustifolia (Lavender) Flower Extract, Sodium Chloride Mehmet",
+      "category": [
+        "en:non-food-products",
+        "en:open-beauty-facts"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5054563100146",
+      "title": "Unknown Product",
+      "text": "Aqua, Hydrated Silica, Sorbitol, Glycerin, Pentasodium Triphosphate, Potassium Nitrate, PEG-6, Aroma, Titanium Dioxide, Sodium Methyl Cocoyl Taurate, Cocamidopropyl Betaine, Xanthan Gum, Sodium Hydroxide, Sodium Saccharin, Sodium Fluoride",
+      "category": [
+        "en:non-food-products",
+        "en:open-beauty-facts"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4604857000099",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0667558197578",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "es:esencia"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "20964955",
+      "title": "dentalux",
+      "text": "Aqua, Alcohol, Sorbitol, Sodium Saccharin, Sodium Fluoride, Cocamidopropyl Betaine, Sodium Benzoate, Citric Acid, Aroma, CI 47005, CI 42053.",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8011607412204",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8715342036861",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3383482308183",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "fr:lave-vaisselle"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8718951655362",
+      "title": "Nettoyant Ménager Salle de Bain Anti-Calcaire",
+      "text": "",
+      "category": [
+        "fr:nettoyant"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8720181474989",
+      "title": "Capsules Lave-vaisselle Absolu Plus Tout en 1 Bicarbonate",
+      "text": "",
+      "category": [
+        "fr:lave-vaisselle"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8720181630163",
+      "title": "Capsules Lave-vaisselle Pro Expert 4EN1",
+      "text": "",
+      "category": [
+        "fr:lave-vaissele"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6118000181064",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "ar:médicaments"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8700216210607",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "en:products"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5038581148441",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6294007505314",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5949084028096",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3600523526147",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3770000717693",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3600551145976",
+      "title": "Narta",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3600551053721",
+      "title": "Douche Vanille Coco",
+      "text": "",
+      "category": [
+        "en:hygiene",
+        "en:showers-and-baths",
+        "en:shower-gels"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0800897250072",
+      "title": "NYX Fat Oil Slick Click",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5057566186292",
+      "title": "IRL FILTER",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3564706767706",
+      "title": "Shampoing Hydratant",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5033871000164",
+      "title": "Shampooing Blond illuminant",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3600551055619",
+      "title": "Expert Nutri-Frzz Shampooing",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3286010085276",
+      "title": "Shampoing hydratant",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3141380083416",
+      "title": "Shot nutrition - huile de mangue BIO et Kératine végétale",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3600551147208",
+      "title": "Expert Nutri-Frizz Soin Spray Raviveur de Boucles Professionnel",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3600551150840",
+      "title": "Dermo Ressource",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3600551177847",
+      "title": "Couleur & Kératine – Shampoing Protection Couleur",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5037156232066",
+      "title": "FRIZZease",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3574661809762",
+      "title": "MASQUE NUTRITION",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3700390875710",
+      "title": "Masques Yeux Hydratants Pastèque",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3700390875703",
+      "title": "Masques Yeux Hydratants Concombre",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3700390875062",
+      "title": "Masque Visage Tigre Hydratant",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3616305953124",
+      "title": "Déodorant Sport Fresh 72H",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3346029402119",
+      "title": "Colgate Total Active Prevention",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8700216667104",
+      "title": "dentifrice",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8718951696235",
+      "title": "Colgate Total Active Prevention",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3250393448225",
+      "title": "Savon de Marseille",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3770027500056",
+      "title": "PHYCOCYANINE",
+      "text": "de la phycocyanine S&You se fait par filtration tangentielle à froid, at a partir d'une spiruline fraîche. La phycocyanine est le principal e spruline dont la couleur bleue-rouge est naturelle. fabrication 100% françaises : Glycerine végétale, eau purifiée, extrait de spiruline fraîche 200 mg/l en Phycocyanine. filisation (DIR): caté par jour (10 ml), pures ou diluées. de de spiruline (Spirulina Platensis) : 3 ml Nutritionnelles (10 ml): ie C 20 mg SPORT PROTECT spart, expri 250ml",
+      "category": [
+        "fr:complement-alimentaire"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3662217018864",
+      "title": "Déodorant baume",
+      "text": "COCOS NUCIFERA (COCONUT) OIL, ZEA MAYS (CORN) STARCH, MAGNESIUM HYDROXIDE, BUTYROSPERMUM PARKII (SHEA) BUTTER, BEHENYL ALCOHOL, COPERNICIA CERIFERA (CARNAUBA) WAX, ZINC RICINOLEATE, PARFUM (FRAGRANCE), MAGNESIUM CARBONATE HYDROXIDE, LINALYL ACETATE, VANILLIN, TOCOPHEROL, HELIANTHUS ANNUUS (SUNFLOWER) SEED OIL Cosmos organic",
+      "category": [
+        "en:hygiene",
+        "en:deodorants"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8009518141580",
+      "title": "Eyeliner",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "05629206",
+      "title": "Olio viso",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "30189010",
+      "title": "Mascara",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6932511230727",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "7322542003459",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8850006325216",
+      "title": "Colgate best ever Nigger",
+      "text": "Purified Water, Fresh Brew from Green Tea Leaves, Sugar, Acidity Regulators (Citric Acid, Sodium Citrate, Malic Acid), Antioxidant (Ascorbic Acid), Artificial Flavor and Color (Caramel)",
+      "category": [
+        "en:cosmetic-products"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0037000949411",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "9300607762075",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "9318637069637",
+      "title": "Cetaphil Gentle Skin Cleanser",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0628942555558",
+      "title": "Tranquility Facial Mask",
+      "text": "",
+      "category": [
+        "en:facial-mask"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0628942555541",
+      "title": "Tranquility Facial Exfoliant",
+      "text": "",
+      "category": [
+        "en:face",
+        "en:face-scrubs"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0628942555749",
+      "title": "Floral Eye Makeup Remover",
+      "text": "",
+      "category": [
+        "en:floral-eye-makeup-remover"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0628942555640",
+      "title": "Tranquility Facial Toner",
+      "text": "",
+      "category": [
+        "en:facial-toner"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0628942555619",
+      "title": "Botanicals Facial Cleanser",
+      "text": "",
+      "category": [
+        "en:facial-cleanser"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0628942555718",
+      "title": "Botanicals Facial Serum",
+      "text": "",
+      "category": [
+        "en:facial-serum"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0628942555732",
+      "title": "Botanicals Facial Exfoliant",
+      "text": "",
+      "category": [
+        "en:face",
+        "en:face-scrubs"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0628942555800",
+      "title": "Botanicals Facial Mask",
+      "text": "",
+      "category": [
+        "en:facial-mask"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0628942555466",
+      "title": "Botanicals Facial Moisturizing Gel",
+      "text": "",
+      "category": [
+        "en:facial-moisturizing-gel"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0628942555787",
+      "title": "Botanicals Facial Toner",
+      "text": "",
+      "category": [
+        "en:facial-toner"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3337872418570",
+      "title": "Lipikar Baume AP+",
+      "text": "Aqua/water, Butyrospermum parkii butter/shea butter, glycerin, dimethicone, niacinamide, paraffinum liquidum/mineral oil, cetearyl alcohol, Brassica campestris oleifera oil/rapeseed seed oil, ammonium polyacryldimethyltauramide/ammonium polyacryloyldimethyl taurate, PEG-100 stearate, glyceryl stearate, PEG-20 methyl glucose sesquistearate, cera microcristallina/microcrystalline wax, paraffin, sorbitan tristearate, dimethiconol, mannose, disodium EDTA, capryloyl glycine, vitreoscilla ferment, xanthan gum, pentaerythrityl tetra-di-t-butyl hydroxyhydrocinnamate, sodium benzoate, (Code FIL : B166073/2) Sans paraben, Sans parfum",
+      "category": [
+        "en:body-lotion"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3549620318456",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3282770396515",
+      "title": "KELUAL SQUANORM Shampooing traitant hydratant - Pellicules sèches",
+      "text": "WATER (AQUA). GLYCERIN. DECYL GLUCOSIDE. DISODIUM COCOYL GLUTAMATE. SUCCINIC ACID. 1,2-HEXANEDIOL. CAPRYLYL GLYCOL. FRAGRANCE (PARFUM). HYDROXYPROPYL GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE. PIROCTONE OLAMINE. SODIUM HYDROXIDE. TRISODIUM ETHYLENEDIAMINE DISUCCINATE. XANTHAN GUM",
+      "category": [
+        "en:hair",
+        "en:shampoos"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0077223893160",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6111242750272",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "ar:oni"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6111266601246",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3574661842615",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8480024553065",
+      "title": "CROWE",
+      "text": "",
+      "category": [
+        "en:body",
+        "en:body-milks"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "12740701",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "42126676",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3323034871765",
+      "title": "Akileine Pieds très secs",
+      "text": "ACHILLEE& ACIDES AMINES Propriétés hydratantes et protectrices INGRÉDIENTS CLÉS BOULEAU BIO & HUILE DE FIGUE DE BARBARIE BIO Booster d'hydratation régénèrent la barrière cutanée pour limiter la perte en eau FACILE & PRATIQUE HUILES VEGETALES DE CAMELINE& PÉPINS DE RAISIN Hydratent protègent et assouplissent la peau Une seule application par jour sur l'ensemble du pied. Penetration facile et rapide, ne colle pas. Convient aux peaux sensibles et aux enfants dès 6 ans. lisé par les professionnels de santé. sage externe EN isturizes immediately and durably. Preserves the natural moisture of dry and very dy feet. BASY & CONVENIENTI by one application per day on the whole foot By and fast penetration, not sticky. Sable for sensitive skin and children from & years old. matologically tested Ar External Use dracam 18 M EN Phosphate Tocopher 3 323034 871765 www.acepta.com R TUBE & CAPSULE MADE IN MONACO OLABORATOIRES ASEPTA 1/3 avenue Albert 1-98000 MONACO SARL Le Mas Noir 1 MP. Leviers - 86240 BEAUSOLEIL F دا OTHER 150 ml 5 fl.c (125 ml +25 ml gratuits)",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3662217015627",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5013965951732",
+      "title": "Toothpaste",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8001120736932",
+      "title": "spaghetti integrali biologici",
+      "text": "Semola integrale di grano duro da agricoltura biologica. Può contenere soia e senape. Paese di coltivazione del grano: Italia. Paese di molitura: Italia. a consumarsi preferibilmente entro il: Vedfianco. S MODITÀ DI CONSERVAZIONE SUG Cuocere peril tem minuti), scolare",
+      "category": [
+        "it:bio"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4009900550833",
+      "title": "Wrigley's extra peppermint 250",
+      "text": "sorbitol, maltitol, aspartame, mannitol, acesulfame K, gum base, flavourings, thickener (gum arabic), humectant (glycerol), emulsifier (soy lecithin), glazing agent (carnauba wax), antioxidant (BHA) en:contains-a-source-of-phenylalanine",
+      "category": [
+        "en:gum",
+        "en:sugarfree"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0019200771825",
+      "title": "Disinfecting Wipes - Lemon & Lime Blossom",
+      "text": "Alkyl (50% C, 40% C 10% (s) dimethyl benzyl ammonium chloride, No ingredients found",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0018084892480",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0841058005193",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3600542571951",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "7611916125669",
+      "title": "Handcrème",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5045098968950",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8907122002993",
+      "title": "vlcc skin glow facial kit 25g",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6972430491410",
+      "title": "Violet powder",
+      "text": "Violet Powder Experience Flawless,Shine-Free Skin With Our Oil-Controlling,Powder-Free P ressed Powder, This innovative Formula EffectivelBlots Away Oil And Minimiz es The Appearance Of Pores, Leaving A Natural, Matte Finish Without Addin g Color. its Silku-Smooth Texture Glides Effortlessly Over The Skin, Providing A Soft And Lightweight Feel That Won't Overdry. Perfect For All Skin Types, This Long-Lasting And Waterproof Compact Is Ideal For Everyday Wear. For Your Convenience, A Mirrored Compact And Puff Are Included, Ensuring Easy and Precise Application Wherever You Go. HOW TO USE: Using the included puff,gently apply to the face as needea.Wear alone or o ver foundation to help control shine. INGREDIENTS POLYMETHYLSILSESQUIOXANE,DIMETHICONE, VINYL DIMETHICONE/METHIC ONE SILSESQUIOXANE CROSSPOLYMER,C30-45 ALKYLDIMETHICONE,C30-45 OLEFIN,PHENOXYETHANOL,CAPRYLYL GLYCOL, ETHYLHEXYLGLYCERIN,C7336 0,ALUMINUM HYDROXIDE,BLUE1 LAKE(C142090). CAUTION:Avoid contact with eyes.If contact occurs, rinse well with water.In c ase of iritation develops, please discontinue use.Keep out of reach of childre n.Keep in a cool place away from light. SHELF LIFE:Three years MADE IN P.R.C 12M",
+      "category": [
+        "en:makeup",
+        "en:face-makeup"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3071009513232",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3600542231848",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "9693133081124",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0875010002708",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "en:hair",
+        "en:hair-conditioners"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0764047126719",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "en:perfumes",
+        "fr:aqua",
+        "fr:arachidyl-alcohol",
+        "fr:arachydyl-glucoside",
+        "fr:behrnyl-alcohol",
+        "fr:benzyle-alcohol",
+        "fr:cannabis-sativa-seed-oil",
+        "fr:cera-alba",
+        "fr:citral",
+        "fr:dehydroacetic-acid",
+        "fr:eugeniol",
+        "fr:geraniol",
+        "fr:glycerin",
+        "fr:helianthus-annuus-seed-oil",
+        "fr:limonene",
+        "fr:linalool",
+        "fr:pelargonium-graveolens-oil",
+        "fr:sodium-hempseedate",
+        "fr:sodium-olivate",
+        "fr:thymus-vulgaris-flower-leag-steam-water",
+        "fr:tocopherol"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "59095361",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8717163965030",
+      "title": "Dove",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3058325035884",
+      "title": "Expert peau sensible",
+      "text": "",
+      "category": [
+        "en:cosmetic-products"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8901247571921",
+      "title": "Cream  Hair colour Shine On",
+      "text": "",
+      "category": [
+        "en:hair",
+        "en:hair-dyes"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3600524133986",
+      "title": "Heat slayer 230°",
+      "text": "",
+      "category": [
+        "el:μαλλιά"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0625882295858",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3549620005028",
+      "title": "Savonnettes extra douces Verveine Citron",
+      "text": "Sodium palmate, sodium palm kernelate, aqua (water), parfum (fragrance), olea europaea (olive) fruit oil, palm acid, palm kernel acid, verbena officinalis extract, citrus limon (lemon) fruit extract, glycerin, propylene glycol, sodium chloride, potassium sorbate, sodium benzoate, tetrasodium edta, tetrasodium etidronate, citric acid, CI 19140 (yellow 5), CI 77288 (chrominium oxide greens), citral, limonene, geraniol, citronellol, linalool Végétarien,Fabriqué en France,Pas de composant animal,Sans paraben,Sans phenoxyethanol,Enrichi en huile d'olive",
+      "category": [
+        "en:hygiene",
+        "en:soaps"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3549620005080",
+      "title": "Savonnettes extra douces Fleur de cerisier",
+      "text": "SODIUM PALMATE, SODIUM PALM KERNELATE, AQUA (WATER), OLEA EUROPAEA (OLIVE) FRUIT OIL, PALM ACID, PALM KERNEL ACID, PRUNUS CERASUS (BITTER CHERRY) FLOWER EXTRACT, PARFUM (FRAGRANCE), GLYGERIN, SODIUM CHLORIDE, SODIUM BENZOATE, TETRASODIUM EDTA, TETRASODIUM ETIDRONATE, CITRIC ACID, SILICA, CI 77492 (IRON OXIDES), CI 77491 (IRON OXIDES), CI 77499 (IRON OXIDES), LINALOOL, CITRONELLOL Végétarien, Pas de composant animal, Non teste sur les animaux, Sans paraben, Sans phenoxyethanol",
+      "category": [
+        "en:hygiene",
+        "en:soaps",
+        "en:dermatological-soaps"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5905669004244",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6292625179849",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3700928802881",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3700392166410",
+      "title": "Savon parfumé",
+      "text": "SODIUM PALMATE, SODIUM PALM KERNELATE, AQUA, PARFUM, PALM KERNEL ACID, SODIUM CHLORIDE, GLYCERIN, BUTYROSPERMUM PARKII BUTTER*, OLEA EUROPAEA FRUIT OIL, SODIUM HYDROXIDE, TETRASODIUM ETIDRONATE, HEXYL CINNAMAL Ingrédients issus de l'agriculture biologique. Ingredients from organic farming. Uit de biologische landbouw afkomstige ingrediënten. Eviter le contact avec les yeux. En cas de contact avec les yeux, rincer abondamment à l'eau claire. Garder hors de portée des enfants. En cas d'irritation ou autre réaction défavorable, arrêter son utilisation. Avoid contact with eyes. In case of contact with eyes, rinse off with clear water. Keep out of the reach of children. In the event of irritation or any other adverse reaction, stop using the soap. Contact met de ogen vermijden. Bij contact met de ogen, overvloedig spoelen met schoon water. Buiten het bereik van kinderen houden. Bij irritaties of overige ongewenste reacties het product niet meer gebruiken. 100 g. 12 M 3.52 Oz 100% ETUI RECYCLE RECYCLABLE 100% RECYCLED AND RECYCLABLE PACKAGING Galeo - La Cité du Végétal BAC DE TRI 14F Route de Grillon 84600 Valréas - FRANCE IMPRIM'VERT* Tél. +33 (0)4.26.48.79.50 www.galeoconcept.com ENGAGE RSE MOBILE AFAQ 24000 Confirmé✶✶ AFNOR CERTIFICATION ENTREPRISE ENGAGÉE DANS UNE DÉMARCHE RSE",
+      "category": [
+        "en:hygiene",
+        "en:soaps"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3600542159661",
+      "title": "Shampoo Ultra Dolce Rivitalizzante 5 piante",
+      "text": "AQUA/WATER, AMMONIUM LAURYL SULFATE, SODIUM CHLORIDE, COCAMIDOPROPYL BETAINE, CAMELLIA SINENSIS LEAF EXTRACT, ALOE BARBADENSIS LEAF JUICE, LAMIUM ALBUM FLOWER/LEAF/STEM EXTRACT, LIPPIA CITRIODORA LEAF EXTRACT, CITRUS LIMON FRUIT EXTRACT/LEMON FRUIT EXTRACT, GLYCERIN, TRIETHYL CITRATE, SODIUM HYDROXIDE, ALCOHOL, GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE, CITRIC ACID, MALTODEXTRIN, POTASSIUM SORBATE, SODIUM BENZOATE, BENZOIC ACID, LINALOOL, LIMONENE, CITRAL, PARFUM / FRAGRANCE. Senza coloranti artificiali,Plastics for Change,Senza siliconi",
+      "category": [
+        "en:hair",
+        "en:shampoos"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3337875905466",
+      "title": "Lipikar Huile Lavante AP+",
+      "text": "AQUA /WATER, GLYCERIN, SUCROSE, SODIUM LAURETH SULFATE, COCO-BETAINE, SODIUM CHLORIDE, CITRIC ACID, NIACINAMIDE, PARFUM / FRAGRANCE, PEG-75 SHEA BUTTER GLYCERIDES, POLYSORBATE 20, PPG-5-CETETH-20, Sodium benzoate, SODIUM HYDROXIDE, VITREOSCILLA FERMENT",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3245677725345",
+      "title": "Cosmia bio gel douche tonifiant citron verveine",
+      "text": "AQUA, COCO-BETAINE, GLYCERIN, DECYL GLUCOSIDE, XANTHAN GUM, CITRIC ACID, SODIUM BENZOATE, PARFUM, LIMONENE, CITRAL, ALOE BARBADENSIS LEAF JUICE POWDER*, SODIUM HYDROXIDE, CITRUS LIMON FRUIT EXTRACT*, VERBENA OFFICINALIS LEAF EXTRACT, POTASSIUM SORBATE*Ingrédient issu de l'Agriculture Biologique. Bio,Triman",
+      "category": [
+        "en:non-food-products"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3560070917488",
+      "title": "Déodorant parfum floral",
+      "text": "BUTANE, ALCOHOL DENAT., PROPANE, ISOBUTANE, TRIETHYL CITRATE, PROPYLENE GLYCOL, PARFUM. Facilement inflammable, Point vert",
+      "category": [
+        "en:hygiene",
+        "en:deodorants"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0628942555572",
+      "title": "Equilibrium Facial Serum",
+      "text": "INGREDIENTS/INGRÉDIENTS: Aqua (Purified Water), *Fucus Vesiculosus Extract, Caprylic/ Capric Triglyceride, *Glycerin, * Aloe Barbadensis Leaf Extract, Arachidyl Alcohol (and) Behenyl Alcohol (and) Arachidy! Glucoside, Glyceryl Stearate, Lauryl Lactate, 1,2-Hexanediol (and) Caprylyl Caprylyl Glycol, *Citrus Nobilis Fruit Extract, Dehydroacetic Acid, Macrocystis Pyrifera Extract, Chondrus Crispus (Carrageenan) Extract, Palmaria Palmata Extract, Ethylhexylglycerin, Mica, Algin, Yeast Extract, Dimethiconol Meadowfoamate, Cucumis Sativus (Cucumber) Fruit Extract, Squalane. *Denotes organic ingredient.",
+      "category": [
+        "en:serum"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8712561483094",
+      "title": "Unknown Product",
+      "text": "Aqua, Petrolatum, Glycerin, Stearic Acid, Isopropyl Palmitate, Glycol Stearate, Dimethicone, Triethanolamine, Glyceryl Stearate, Butyrospermum Parkii Butter, Theobroma Cacao Seed Butter, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Cetyl Alcohol, Phenoxyethanol, Methylparaben, Parfum, Magnesium Aluminum Silicate, Carbomer, Propylparaben, Stearamide AMP, Disodium EDTA, Titanium Dioxide, Linalool, Coumarin, Geraniol, Benzyl Alcohol, Citronellol, Limonene, CI 77891",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3760114999016",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5410076926046",
+      "title": "Oral B Toothpaste Tatar Control",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "42449522",
+      "title": "Nivea Labello® Sun Protect SPF 50",
+      "text": "FSC,FSC Mix",
+      "category": [
+        "en:suncare",
+        "en:face",
+        "en:in-sun-protections",
+        "en:lip-balms"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4305615624945",
+      "title": "Isana Professional",
+      "text": "Aqua, Cetearyl Alcohol, Propylene Glycol Behentrimonium Chloride, Distearoylethyl Hydroxyethyl - Argania Spinosa Kernel Oil, Prunus Domestica Seed Oil, monium Methosulfate, Stearamidopropyl Dimethylamine Isopropyl Alcohol, Parfum, Limonene, Citrus Aurantium Peel Oil, Tetramethyl Acetyloctahydronaphthalenes, Citrus Limon Peel Oil, Citric Acid, Sodium Hydroxide, Benzoic Acid, Dehydroacetic Acid, Phenoxyethanol.",
+      "category": [
+        "en:hair"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4305615625584",
+      "title": "Haarkur 13in1 Intensiv & Pflege",
+      "text": "Aqua, Isopropyl Palmitate, Cetearyl Alcohol, Quaternium-87, B Searate, Propylene Glycol, Panthenol, Prunus Armeniaca Kernel Oil, Stearamidogo Dimethylamine, Behentrimonium Chloride, Glycerin, Hydrolyzed Keratin, Bells Pe Power Extract, Parfum, Hydroxyethylcellulose, Citric Acid, Limonene, Linalool, Hohol, Phenoxyethanol, Benzoic Acid, Dehydroacetic od, Potassium Sorbate, Sodium Benzoate, Sorbic Acid.",
+      "category": [
+        "en:hair"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6290360590189",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4067796183573",
+      "title": "Unknown Product",
+      "text": "Aqua, Glycerin, Cetearyl Alcohol, Glyceryl Stearate, Isopropyl Palmitate, Ethylhexyl Stearate, Ceteareth-20, Cetyl Palmitate, Parfum, Tocopheryl Acetate, Sodium Benzoate, Panthenol, Citric Acid, Limonene, Geraniol, Potassium Sorbate, Methyl Benzoate",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3612060903985",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "en:perfumes",
+        "en:eau-de-toilette"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8690131114862",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4012400800704",
+      "title": "Protector solar",
+      "text": "",
+      "category": [
+        "en:non-open-products-facts"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8715342046570",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5400141506471",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0082855069203",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "nl:gezichtverzorging"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3606000620988",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "7709844639478",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "en:hair",
+        "en:hair-care",
+        "en:hair-masks"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6902395830542",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "en:makeup"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0072140452315",
+      "title": "Healing ointment",
+      "text": "Mineral Oil, Ceresin, Lanolin Alcohol, Panthenol, Glycerin, Bisabolol",
+      "category": [
+        "en:non-food-products",
+        "en:open-beauty-facts"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3760270361634",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [
+        "en:body",
+        "en:face",
+        "en:facial-creams"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "42438755",
+      "title": "straw berry shine",
+      "text": "",
+      "category": [
+        "en:face",
+        "en:lip-balms"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8700216013291",
+      "title": "intim rasur gel",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6130574003177",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3282770388701",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "2000014497849",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "6971494856456",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5060561630097",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8941193067024",
+      "title": "বসুন্ধরা টয়লেট টিস্যু",
+      "text": "সেলুলোজ Soft & Absorbent",
+      "category": [
+        "en:toilet-paper",
+        "en:টয়লেট-পেপার"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0079656045321",
+      "title": "Unknown Product",
+      "text": "Water, Glyceryl Stearate, PEG-100 Stearate, Cetyl Alcohol, Cetyl Dimethicone, Propylene Glycol, Phenoxyethanol, Caprylyl Glycol, Eicosene Copolymer, Acrylates/C12-22 Alkyl Methacrylate Copolymer, Behenyl Alcohol, Sodium Acrylate, Chlorphenesin, Xanthan Gum, Disodium EDTA, Fragrance, Tocopheryl Acetate, Aloe Barbadensis Juice",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0792850140998",
+      "title": "burts bee lip balm",
+      "text": "beeswax, cocos nucifera (coconut) oil, helianthus annuus (sunflower) seed oil, mentha piperita (peppermint) oil, lanolin, tocopherol, rosmarinus officinalis (rosemary) leaf extract, glycine soja (soybean) oil, canola oil, limonene, linalool, eugenol",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3596710482085",
+      "title": "Essuie-tout compact, 2 plis",
+      "text": "Ouate de celluloses mélangées",
+      "category": [
+        "en:non-food-products",
+        "en:open-beauty-facts"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "5060144643193",
+      "title": "Original Hand Cream",
+      "text": "Aqua (Water), Glycerin, Isopropyl palmitate, Aloe barbadensis leaf juice, Ethylhexyl palmitate, Glyceryl stearate citrate, Cetearyl alcohol, Phenoxyethanol, Carbomer, Sodium stearoyl glutamate, Benzoic acid, Parfum (Fragrance), Xanthan gum, Dehydroacetic acid, Limonene, Linalool, Citronellol, Geraniol, Citric acid, Sodium hydroxide. &quot;A blend of natural ingredients.",
+      "category": [
+        "en:moisturiser"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "19865043",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8681554628661",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0010017939676",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0745314828772",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3800013538074",
+      "title": "hand cream",
+      "text": "en:Aroma",
+      "category": [
+        "en:cherry",
+        "en:hand-cream"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "3250392271305",
+      "title": "Intermarche",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0455060265157",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "4005900123947",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8901207051418",
+      "title": "Gulabari pure rose",
+      "text": "",
+      "category": [
+        "en:hygiene",
+        "en:soaps",
+        "en:scented-soaps",
+        "en:bar-soaps",
+        "en:scented-bar-soaps"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "0001093589823",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "8719134163469",
+      "title": "The Ritual of Ayurveda - Shampoo",
+      "text": "",
+      "category": [
+        "en:hair",
+        "en:shampoos"
+      ],
+      "source": "openbeautyfacts"
+    },
+    {
+      "id": "93571890",
+      "title": "Unknown Product",
+      "text": "",
+      "category": [],
+      "source": "openbeautyfacts"
+    },
     {
       "id": "3468080410053",
       "title": "Unknown Product",
@@ -29,27 +2381,6 @@
       "source": "openbeautyfacts"
     },
     {
-      "id": "0852578006065",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "2000014497849",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6291108523117",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
       "id": "8888202027283",
       "title": "Charming",
       "text": "Ethanol, Butane, Isobutane, Propane, Fragrance, PPG-20 Methyl Glucose Ether, Propylene Glycol, Ethylhexylglycerin, Octenidine HCI, BHT. ISO 14001",
@@ -57,13 +2388,6 @@
         "en:hygiene",
         "en:deodorants"
       ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3600551174822",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
       "source": "openbeautyfacts"
     },
     {
@@ -75,13 +2399,6 @@
     },
     {
       "id": "0446041037030",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8904417302578",
       "title": "Unknown Product",
       "text": "",
       "category": [],
@@ -140,49 +2457,7 @@
       "source": "openbeautyfacts"
     },
     {
-      "id": "8908000861114",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
       "id": "4335619281240",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0254491969401",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8718951660519",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "5010959977457",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8697926007606",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0739810119656",
       "title": "Unknown Product",
       "text": "",
       "category": [],
@@ -241,41 +2516,6 @@
         "en:facial-creams",
         "en:day-creams"
       ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3522930004400",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4006000084589",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "5902643070110",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "59472193",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0449020034563",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
       "source": "openbeautyfacts"
     },
     {
@@ -407,56 +2647,7 @@
       "source": "openbeautyfacts"
     },
     {
-      "id": "8003670743651",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6936760804388",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4005900123947",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3499320008372",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6972518499499",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
       "id": "4067796083316",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3455540004808",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8700216685030",
       "title": "Unknown Product",
       "text": "",
       "category": [],
@@ -470,98 +2661,7 @@
       "source": "openbeautyfacts"
     },
     {
-      "id": "4744183013957",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0810074860017",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8695077158215",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "59096092",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6181100318739",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "9732559310095",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8594015705071",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6970418870820",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "42449522",
-      "title": "Nivea Labello® Sun Protect SPF 50",
-      "text": "FSC,FSC Mix",
-      "category": [
-        "en:face",
-        "en:lip-balms"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "59092629",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [
-        "en:hygiene",
-        "en:deodorants",
-        "en:deodorant-with-alum-stone"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
       "id": "3178041361354",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0600032365933",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "5430001942019",
       "title": "Unknown Product",
       "text": "",
       "category": [],
@@ -570,13 +2670,6 @@
     {
       "id": "20226756",
       "title": "crème pour les mains",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4335619208261",
-      "title": "Unknown Product",
       "text": "",
       "category": [],
       "source": "openbeautyfacts"
@@ -591,101 +2684,7 @@
       "source": "openbeautyfacts"
     },
     {
-      "id": "0370075117829",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7640111502791",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8719238063252",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "5201410964097",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
       "id": "5033871000232",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7322541067070",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4009900550833",
-      "title": "Extra Peppermint",
-      "text": "sorbitol, maltitol, aspartame, mannitol, acesulfame K, gum base, flavourings, thickener (gum arabic), humectant (glycerol), emulsifier (soy lecithin), glazing agent (carnauba wax), antioxidant (BHA) en:contains-a-source-of-phenylalanine",
-      "category": [
-        "en:gum",
-        "en:sugarfree"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8433751143368",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "5890552908030",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3256229033467",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4036221702153",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0220619354282",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "00472301",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6132202000039",
       "title": "Unknown Product",
       "text": "",
       "category": [],
@@ -712,13 +2711,6 @@
       "source": "openbeautyfacts"
     },
     {
-      "id": "8680186362554",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
       "id": "3600551053844",
       "title": "Unknown Product",
       "text": "",
@@ -740,13 +2732,6 @@
       "source": "openbeautyfacts"
     },
     {
-      "id": "3600524150556",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
       "id": "0659525365226",
       "title": "Eezze instant noodles k7",
       "text": "",
@@ -763,13 +2748,6 @@
     {
       "id": "8690101992346",
       "title": "Mima macaroni 400g K15",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6132262400039",
-      "title": "Unknown Product",
       "text": "",
       "category": [],
       "source": "openbeautyfacts"
@@ -843,13 +2821,6 @@
       "source": "openbeautyfacts"
     },
     {
-      "id": "8718951548947",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
       "id": "3086127501641",
       "title": "Bic chrome platinum k1",
       "text": "",
@@ -906,13 +2877,6 @@
       "source": "openbeautyfacts"
     },
     {
-      "id": "4894819707092",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
       "id": "3596710483778",
       "title": "Mouchoirs boite",
       "text": "100% ouate de pure cellulose en:FSC, FSC Mix",
@@ -936,13 +2900,6 @@
       "id": "0640509040147",
       "title": "Agent 47",
       "text": "Protein",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0702318741698",
-      "title": "Unknown Product",
-      "text": "",
       "category": [],
       "source": "openbeautyfacts"
     },
@@ -1414,15 +3371,6 @@
         "en:shampoo-conditioner",
         "en:conditioners",
         "en:hair-conditioner"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8904256023283",
-      "title": "Nivea body milk",
-      "text": "",
-      "category": [
-        "en:body-lotion"
       ],
       "source": "openbeautyfacts"
     },
@@ -2130,13 +4078,6 @@
       "source": "openbeautyfacts"
     },
     {
-      "id": "4067796183573",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
       "id": "4335619208278",
       "title": "Unknown Product",
       "text": "",
@@ -2251,13 +4192,6 @@
     {
       "id": "4068883000223",
       "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6295120060179",
-      "title": "2+1 antibac bar soap lavander soap",
       "text": "",
       "category": [],
       "source": "openbeautyfacts"
@@ -3014,15 +4948,6 @@
       "title": "Vanicream shampoo",
       "text": "purified water, lauryl glucoside, coco glucoside, acrylates copolymer, disodium cocoyl glutamate, sodium cocoyl glycinate, glycerin, sucrose cocoate, panthenol, pentylene glycol, 1,2-hexanediol, sodium cocoyl glutamate, disodium EDTA, caprylyl glycol, sodium hydroxide, sodium chloride",
       "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4008233177007",
-      "title": "Kneipp",
-      "text": "Zutaten: Glukosesirup, Zucker, Magnesiumcitrat, Wasser, Verdickungsmittel: Pektin; Säuerungsmittel: Citronensäure; Säureregulator: Natriumcitrate; Farbstoff: Anthocyane; pflanzliches Öl (Kokosnuss), Überzugsmittel: Carnaubawachs; natürliches Aroma, Cyanocobalamin.",
-      "category": [
-        "de:nahrungsergänzung"
-      ],
       "source": "openbeautyfacts"
     },
     {
@@ -4335,15 +6260,6 @@
       "title": "Unknown Product",
       "text": "",
       "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3770027500056",
-      "title": "PHYCOCYANINE",
-      "text": "de la phycocyanine S&You se fait par filtration tangentielle à froid, at a partir d'une spiruline fraîche. La phycocyanine est le principal e spruline dont la couleur bleue-rouge est naturelle. fabrication 100% françaises : Glycerine végétale, eau purifiée, extrait de spiruline fraîche 200 mg/l en Phycocyanine. filisation (DIR): caté par jour (10 ml), pures ou diluées. de de spiruline (Spirulina Platensis) : 3 ml Nutritionnelles (10 ml): ie C 20 mg SPORT PROTECT spart, expri 250ml",
-      "category": [
-        "fr:complement-alimentaire"
-      ],
       "source": "openbeautyfacts"
     },
     {
@@ -6174,1901 +8090,6 @@
       "text": "",
       "category": [],
       "source": "openbeautyfacts"
-    },
-    {
-      "id": "6111266082175",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4061462231322",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4033082021225",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8714789810348",
-      "title": "Colgate Fluoride Toothpaste - Cavity Protection",
-      "text": "",
-      "category": [
-        "en:hygiene",
-        "en:toothpastes"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8714789376783",
-      "title": "Palmolive Naturals",
-      "text": "Aqua. Sodium C12-13 Pareh Sulfate (*A) / Sodium Laureth Sulfate (*B). Sodium Chloride,  \r\n Cocamidopropyl Betaine. Cocamide MEA, Parfum. Sodium Salicylate. Sodium Benzoate, Polyquatermium-7, Citric Acid,\r\n Styrene/’Acrylates Copolymer. Tetrasodium EDTA, Sine Adipe Lac, Olea Europaea Fruit Oil, ljmonene,Linalool. fr:vgredlems-lngredqenle,fr:pa-mo-ive-olive-lait-contient-de-l-extrait-d-olive-teste-dermatologiquement-doux-pouf-les-mains,Green Dot",
-      "category": [
-        "en:hygiene",
-        "en:soaps",
-        "en:liquid-soaps"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3401397163618",
-      "title": "Bioderma Gel Moussant ABCDerm",
-      "text": "AQUA/WATER/EAU, SODIUM LAURETH SULFATE, COCO-BETAINE, METHYLPROPANEDIOL, SODIUM CHLORIDE, PENTYLENE GLYCOL, PEG-90 GLYCERYL ISOSTEARATE, LAURETH-2, CITRIC ACID, DISODIUM EDTA, SODIUM CITRATE, FRAGRANCE (PARFUM).",
-      "category": [
-        "en:open-beauty-facts"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3660005415093",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3178041362429",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6414751093244",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6224008059844",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "06893834",
-      "title": "TUMS ANTACID",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "9300641001246",
-      "title": "Unknown Product",
-      "text": "Aqua, Potassium Alum, Aloe Vera Juice (aloe barbadensis), Hydroxyethylcellulose (cellulose derived), Natural Benzoic Acid (plant derived), Parfum, PEG-40 Hydrogenated Castor Oil.",
-      "category": [
-        "en:hygiene",
-        "en:deodorants"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0192742926462",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0075724005129",
-      "title": "Scalp Refresh",
-      "text": "AQUA/WATER/EAU, GLYCERIN, CETEARYL ALCOHOL, CAPRYLIC/CAPRIC TRIGLYCERIDE, BUTYROSPERMUM PARKII (SHEA) BUTTER, PRUNUS AMYGDALUS DULCIS (SWEET ALMOND) OIL, STEARYL ALCOHOL, LANOLIN OIL, ALOE BARBADENSIS LEAF JUICE, GLYCERYL STEARATE, PEG-100 STEARATE, PARFUM (FRAGRANCE), COCOS NUCIFERA (COCONUT) OIL, CETRIMONIUM CHLORIDE, RICINUS COMMUNIS (CASTOR) SEED OIL, BUTYLENE GLYCOL, CETEARETH-20, KERATIN AMINO ACIDS, MEL/HONEY/MIEL, MENTHA PIPERITA (PEPPERMINT) OIL, MENTHOL, PANTHENOL, TOCOPHERYL ACETATE, LIMONENE, BENZYL ALCOHOL, PHENOXYETHANOL",
-      "category": [
-        "en:hair",
-        "en:hair-care"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6920354838705",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8692730508103",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3178041364096",
-      "title": "Liquide vaisselle dégraissant - Secret de Japon",
-      "text": "Contient entre autres composés : Règlement Détergents (CE) n° 648/2004\n* De 5% à moins de 15% : agents de surface anioniques.\n* Moins de 5% : agents de surface amphotères, agents de surface non-ioniques.\nAutres ingrédients : Parfums, agents de conservation, sodium benzoate Triman",
-      "category": [
-        "fr:liquide-vaisselle"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8019238062478",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0035000989680",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [
-        "en:hygiene",
-        "en:soaps",
-        "en:liquid-soaps"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8901288020501",
-      "title": "Vajradanti Tooth Powder",
-      "text": "Not tested on animals,Vegan",
-      "category": [
-        "en:oral-care-tooth-powder-ayurvedic-medicine"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4010355559036",
-      "title": "sun dance 30 transparentes sonnenspray",
-      "text": "Alcohol, Octocrylene, Octyldodecanol, C12-15 Alkyl Benzoate, Glycerin, Butyl Methoxydibenzoylmethane, Ethylhexyl Salicylate, Dibutyl Adipate, Aqua, Diethylhexyl Butamido Triazone, Acrylates/Octylacrylamide Copolymer, Parfum, Tocopheryl Acetate, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Limonene, Alpha-Isomethyl Ionone, PPG-12 Dimethicone.",
-      "category": [
-        "en:suncare",
-        "en:in-sun-protections",
-        "en:sunscreen"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8999999009595",
-      "title": "Dengan multivitamin bodywash",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "5054563104144",
-      "title": "Unknown Product",
-      "text": "ars Lance B34OLSK Lizenzgeber chädigt ist./ allage est ouvert hiper yor Karton Recycling - fähige Tube BEFOLGEN SIE STETS DIE ANWENDUNGSHINWEISE. 2x bis max. 3x pro Tag Zähneputzen, dann ausspucken, Schlucken vermeiden. Außerhalb der Reichweite von Kindern aufbewahren. Nicht für Kinder unter 7 Jahren geeignet. Bel Unverträglichkeit absetzen. TOUJOURS SUIVRE LES INSTRUCTIONS. Se brosser les dents 2x par jour, ne pas dépasser 3x. Evitez d'avaler le dentifrice et recrachez-le après brossage. Tenir hors de portée des enfants. Usage déconseillé chez l'enfant de moins de 7 ans. En cas d'irritation, arrêter l'utilisation. Ingredients: Aqua, Sorbitol, Hydrated Silica, Glycerin, Pentasodium Triphosphate, Sodium Lauryl Sulfate, Alumina, Aroma, Xanthan Gum, Cocamidopropyl Betaine, Carrageenan, Sodium Fluoride, Sodium Saccharin, Sodium Hydroxide, Limonene, CI 73360, CI 74160. 5 Enthält: Natriumfluorid/ Contient: Sodium fluoride (1450 ppm F&quot;). 75 ml e 12 M",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8906129572317",
-      "title": "Naked & Raw Coffee Body Scrub",
-      "text": "Vegan,Not tested on animals,Without paraben,Without SLS SLES,Without silicon,Without mineral oil",
-      "category": [
-        "en:body",
-        "en:body-scrubs"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7702031293194",
-      "title": "shampoo hidratacion intensa",
-      "text": "",
-      "category": [
-        "en:shampoos"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8906157900762",
-      "title": "Anti-Dandruff Shampoo",
-      "text": "Purified Water, Sodium Lauroyl Methyl Isethionate, Cocamidopropyl Betaine, Propanediol, Glycerin, Dimethiconol, TEA-Dodecylbenzenesulfonate, Acrylates Copolymer, Perfume, Piroctone Olamine, Salicylic Acid, Epilobium Angustifolium Extract, Panthenol, Rosmarinus Officinalis (Rosemary) Leaf Extract, Nasturtium Officinale Extract, Salvia Officinalis (Sage) Leaf Extract, Niacin, Biotin, Aloe Barbadensis Leaf Extract, Menthol, Cocos Nucifera (Coconut) Milk Protein, Stearamidopropyl Dimethylamine, Glycol Stearate, Guar Hydroxypropyltrimonium Chloride, Mica, Titanium Dioxide, Tin Oxide, PEG-45M, Sodium Chloride, Citric Acid, Phenoxyethanol, Sodium Benzoate, Disodium EDTA. Without paraben,Vegan,Without phthalates,Not tested on animals",
-      "category": [
-        "en:hair",
-        "en:shampoos"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7702018494149",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "2200289788936",
-      "title": "Best Mommy Creme-Öl Dusche",
-      "text": "AQUA, SODIUM COCO-SULFATE, COCO-GLUCOSIDE, COCAMIDOPROPYL BETAINE GLYCERIN, POLYGLYCERYL-3 COCOATE, POLYGLYCERYL-4 CAPRATE, POLYGLYCERYL-6 CAPRYLATE, POLYGLYCERYL-6 RICINOLEATE, HYDROXYPROPYL GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE, GLYCERYL OLEATE, PANTHENOL, OLEA EUROPAEA FRUIT OIL, TOCOPHEROL, PARFUM, GLYCOL DISTEARATE HYDROGENATED PALM GLYCERIDES CITRATE, SODIUM BENZOATE, POTASSIUM SORBATE, SODIUM CHLORIDE CITRIC ACID, SODIUM HYDROXIDE",
-      "category": [
-        "en:body-wash"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8906129572201",
-      "title": "Green Tea Body Wash",
-      "text": "Cocamidopropyl Betaine (and) Sodium Methyl Cocoyl Taurate (and) Disodium Cocoy Glutamate (and) Sodium Cocoyl Isethionate (and) Glycerin (and) Sodium Benzoate (and) Phenoxyethanol, Aqua (water), Lactic Acid, Triethanolamine, Glycolic Acid, Sodium Hydroxide, Caffeine, Camellia Sinensis (Green Tea) leaf extract, PEG-150 Distearate, Sodium Lauroyl Lactylate, Methoxycinnamidopropyl Hydroxysultaine, Sodium Gluconate, CI 19140, CI 42090, Fragrance. Vegan,Not tested on animals",
-      "category": [
-        "en:body-wash"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "9556589003303",
-      "title": "Balinese Shower Scrub Lemongrass & Frangipani",
-      "text": "Water, Sodium Laureth Sulfate, Cocamidopropyl Betaine, Acrylates Copolymer, Glycerin, Plumeria Alba Flower Extract, Cymbopogon Schoenanthus Extract, Leuconostoc/Radish Root Ferment Filtrate, Propylene Glycol, Fragrance, Sodium Hydroxide, Backhousia Citriodora Leaf Oil, Tocopheryl Acetate, Hydrated Silica, Synthetic Wax, Mannitol, Microcrystalline Cellulose, Acrylates/Ammonium Methacrylate Copolymer, Hydroxypropyl Methylcellulose, Mica, Talc, Sodium Chloride, Triethyl Citrate, Disodium EDTA, Phenoxyethanol, Methylchloroisothiazolinone, Methylisothiazolinone, CI 19140, CI 47005, CI 77289, CI 77491, CI 77492, CI 77891",
-      "category": [
-        "en:body-wash"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8906129573888",
-      "title": "mCaffeine Pumpkin Spice Latte Body Wash:",
-      "text": "Aqua (Purified Water), Cocamidopropyl Betoine, Glycrerin, Sodium Lauroyl Sarcosinate, Caprylyl/Capryl Glucoside, Glycol Distecrate, Fragrance, Sodium Methyl Cocoyl Taurate, Sodium Cocoyl Apple Amino Acids, Caffeine, Cucurbita Pepo (Pumpkin) Fruit Extract, Avena Sativa (Oat) Milk, Coffee Arabica Seed Oil, Tocopheryl acetate (Vitamin E), Polyquaternium-7, Citric Acid, Benzophenone-4, Sodium Gluconate, PEG-150 Distearate, Sodium Benzoate, Ethylhexylglycerin, Phenoxyethanol, CI 15985. Vegan,Not tested on animals,Without SLS SLES,Without silicon,Without mineral oil",
-      "category": [
-        "en:body-wash"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4009175962935",
-      "title": "Unknown Product",
-      "text": "en:eu-ecolabel",
-      "category": [
-        "en:non-open-products-facts"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7611916153600",
-      "title": "Weleda",
-      "text": "WATER (AQUA)\n\nALCOHOL\n\nDISODIUM COCOYL GLUTAMATE\n\nCOCO-GLUCOSIDE\n\nGLYCERIN\n\nXANTHAN GUM\n\nFRAGRANCE (PARFUM)\n\nSODIUM COCOYL GLUTAMATE\n\nLACTIC ACID\n\nCITRIC ACID\n\nTOCOPHEROL\n\nLECITHIN\n\nGLYCERYL OLEATE\n\nHYDROGENATED PALM GLYCERIDES CITRATE\n\nASCORBYL PALMITATE\n\nLIMONENE, LINALOOL, GERANIOL, CITRAL, COUMARIN. Certified B Corporation",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6111245597263",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8901030868719",
-      "title": "Argan Oil & Lavender Smooth and Serene Conditioner",
-      "text": "Water, Cetearyl Alcohol, Behentrimonium Chloride (and) Dipropylene Glycol, Dimethicone (And) Amodimethicone (and) PEG-7 Propylheptyl Ether (and) Cetrimonium Chloride, Cocos Nucifera (Coconut) Oil, Perfume, L-Lysine Monohydrochloride, Argania Spinosa (Argan) Kernel Oil, Lavandula Angustifolia (Lavender) Oil^, Acrylates/Beheneth-25 Methacrylate Copolymer, Lactic Acid, Disodium EDTA, Benzyl Alcohol, 1, 2-Hexanediol, Sodium Hydroxide, Citronellol, Coumarin, Limonene, Linalool. \nPlant Based Ingredients. Vegetarian, Vegan, Not tested on animals, Without paraben, Plant, en:plant-based",
-      "category": [
-        "en:hair",
-        "en:hair-conditioners"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "2000029158520",
-      "title": "Pureen Kids Yogurt Head To Toe Wash",
-      "text": "Water, Ammonium Laureth Sulfate, Sodium Sodium Laureth Sulfate, Cocamidopropyl Betaine, PEG-7 Glyceryl Cocoate, Styrene/Acrylates Copolymer, Polyquaternium-10, Polyquaternium-7, Yogurt Powder, Guar Hydroxypropyltrimonium Chloride, Allantoin, Carbomer, Sodium Chloride, Tetrasodium EDTA, Sodium Hydroxide, Fragrance, Sodium Levulinate, Potassium Sorbate, CI 45100.",
-      "category": [
-        "en:kids-wash"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4056489764267",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8901030868702",
-      "title": "Argan Oil & Lavender",
-      "text": "Water, Sodium Methyl Cocoyl Taurate, Cocamidopropyl Betaine, Dimethicond (and Trideceth-10 (and) TEA Dodecylbenzenesulfonate, Perfume, L-Lysine Monohydrochloride, Cocos Nucifera (Coconut) Oil, Argania Spinosa (Argan) Kernel Oil Lavandula Angustifolia (Lavender) Oil, Stearamidopropy Dimethylamine, Glycol Distearate^, Laureth-4^, Citric Acid Monohydrate, Sodium Benzoate, Carbomer, Sodium Chloride, Polyquaternium-10, PPG-9, Disodium EDTA, Citronellol, Coumarin, Limonene, Linalool. Plant Based Ingredients. Without paraben,Vegan,Plant based,Not tested on animals",
-      "category": [
-        "en:hair",
-        "en:shampoos"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4066447492507",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8906005274069",
-      "title": "Cetaphil Gentle Skin Cleanser",
-      "text": "AQUA, GLYCERIN, CETEARYL ALCOHOL, PANTHENOL, NIACINAMIDE, PANTOLACTONE, XANTHAN GUM, SODIUM COCOYL ISETHIONATE SODIUM BENZOATE, CITRIC ACID. Without paraben,Hypoallergenic",
-      "category": [
-        "en:skin-cleaner"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8001120704955",
-      "title": "Crema viso Anti Rughe Intensiva Notte",
-      "text": "AQUA, GLYCERIN, COCO-CAPRYLATE/CAPRATE, PRUNIJS AMYGDALUS DULCIS OIL, ARACHIDYL ALCOHOL, GOSSYPIUM HERBACEUM SEED OIL. BIDENS PILOSA EXTRACT, LINUM USITATISSIMUM SEED OIL, BUTYROSPER-MUM PARKII BUTTER EXTRACT, CENTELLA ASIATICA LEAF EXTRACT, BACILLUS FERMENT, TOCOPHEROL, PALMITOYL DIPEPTIDE-5 DIAMINOBUTYROYL HYDROXYTHREONINE, PALMITOYL TRIPEPTIDE-5, TETRADECYL AMINOBUTYROYL-VALYLAMINOBUTYRIC UREA TRIFLUOROACETATE, ELAEIS GUINEENSIS OIL, BEHENYL ALCOHOL, ARACHIDYL GLUCOSIDE, BIJTYLENE GLYCOL, SILICA, MAGNESIUM CHLORIDE, SODIUM CARBOMER, CAPRYLYL GLYCOL, ETHYLHEXYLGLYCERIN, PHENOXYETHANOL, PARFUM",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4987176303721",
-      "title": "Premium Care Pants",
-      "text": "",
-      "category": [
-        "en:diaper"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6111266670358",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [
-        "fr:mouchoir"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8809634610881",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3800219795417",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0041507070080",
-      "title": "Witch Hazel Facial Toner Uncented",
-      "text": "Aqua, Glycerin, Hamamelis Virginiana Extract, Aloe Barbadensis Leaf Extract, Phenoxyethanol, Caprylyl Glycol, Ethylhexylglycerin, Citric Acid, Potassium Hydroxide",
-      "category": [
-        "en:facial-toner"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3549620050042",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4806515160767",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "07173608",
-      "title": "Unknown Product",
-      "text": "Capitol SOINS CHEVEUX C'est un shampoing anti-chute de cheveux qui fortifie la fibre et a mixtes, il lave le cuir chevelu en douceur et renforce vos longueurs. la perte capillaire. Elaboré pour les cheveux fins et/ou normaux مقوي الشعر الرقيق أو العادي إلى المختلط. وينظف جلد الرأس ويقوي طوله. ة الشامبو مضاد لتساقط الشعر يقوي الألياف ويعمل ضد تساقط الشعر. طريقة الإستعمال | MODE D'EMPLOI cuir chevelu pendant 2 min. Rincer. En cas de contact avec les yeux, Appliquer sur cheveux mouillés. Masser par mouvements circulaires le rincer immédiatement. وقع على الشعر المبلل مع جلد الرأس بحركات دائرية لمدة دقيقتين، ثم يشفط. في حلة ملامسة العينين يجب غسله على الفور. | المكونات | NGREDIENTS AQUA, COCAMIDOPROPYL BETAINE, SODIUM LAURETH SULFATE, GLYCER COCO-GLUCOSIDE, DECYL GLUCOSIDE, COCAMIDE DEA, PROPYLENE GUM GLYCERYL OLEATE, STYRENE/ACRYLAMIDE COPOLYMER, SODIUM BENZD URTICA DIOICA LEAF EXTRACT, CITRIC ACID, ROSMARINUS OFFICINALIS LEAF OL LAVANDULA ANGUSTIFOLIA OIL, SALVIA OFFICINALIS LEAF EXTRACT, CITRONEL BENZOIC ACID, HYDROGENATED PALM GLYCERIDES CITRATE, TOCOPHEROL MADE IN MOROCCO FABRIQUÉ PAR: IRCOS - laboratoires N126 LOT AL MASSAR QI 40000 Marrakech www.ircoslaboratoires.com PRODUIT PAR IRCOS YOUR LE COMPTE DE BIM STORES Parc Logistica, Route Ain Harrouda C9-C12 Casablanca. Tel +212 05 22 67 74 80 Fax +212 05 22 66 09 42 LOT 2793 EXP 07 28 Distribué par New South Hub contact@newsouth.ma Tél +212 702 000 030 12 M 6 అది 111250476676",
-      "category": [
-        "en:hair",
-        "en:shampoos"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "5000167022667",
-      "title": "e45",
-      "text": "aqua, petrolatum, isopropyl palmitate, paraffinum liquidum, glyceryl stearate, ceteareth-20, lanolin, phenoxyethanol, ethylparaben, methylparaben, hydroxyethylcellulose, carbomer, ethylhexylglycerin, sodium hydroxide, bht 12 health hygiene home for help and advice contact us at: reckitt benckiser, dansom lane, hull, hu8 7ds, uk rb nl brands b.v. schiphol boulevard 207, 1118 bh schiphol, nl o 2019. reckitt benckiser pharmaceuticals (pty) ltd. 8 jet park road, elandsfontein, 1601 uk - 0333 2005345 rol - 01 630 5420 ८. Green Dot",
-      "category": [
-        "en:non-food-products",
-        "en:open-beauty-facts"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "5038581148441",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3346020044042",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6932511215168",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0667556130249",
-      "title": "You're the one",
-      "text": "Alcohol Denat., Water (Aqua, Eau). Fragrance (Parfum), Propylene Glycol, Ethylhexyl Methoxycinnamate, Ethylhexyl Salicylate, Butyl Methoxydibenzoylmethane, Benzyl Salicylate, Hydroxycitronellal, Citronellol, Linalool, Alpha-isomethyl lonone, Coumarin, Limonene, Geraniol. CAUTION: Flammable. Keep away from flame or high heat Not for underarm use. / ATTENTION : Inflammable. Tenira l'écart de toute flamme ou d'une source de chaleur élevée. Ne pas utiliser sur les aisselles. / PRECAUCION: Inflamable. Mantenga lejos de la llama o de temperaturas altas. تنبيه قابل للاشتعال. يحفظ بعيدا / .No usar en las axilas عن اللهب أو الحرارة العالية. ليس للإستخدام على الإبط Bath & Body Works, Distr. Reynoldsburg, Ohio 43068 USA London EC2R 6PJ, UK - Dublin 2, D02C953 - 1-888-684-64122 www.bathandbodyworks.com/international Made in USA of US and non-US Parts Fabriqué aux E.-U. à partir de composants américains et non américains. Hecho en EE. UU. con partes hechas en EE.UU y fuera de EE.UU. صنع في الولايات المتحدة من أجزاء أمريكية وغير أمريكية 30605619 0667556 131949 12M",
-      "category": [
-        "en:body-mist"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0316864000231",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4030571004554",
-      "title": "Artelac Complete MDO Augenbefeuchtungsmittel",
-      "text": "Ohne Konservierungsmittel 0,24 % Natriumhyaluronat, Carbomer, Glycerol, Lipid - komponente(mittelkettige Triglyceride), Natriumhydroxid und Wasser für Injektionszwecke",
-      "category": [
-        "de:augentropfen"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3517360022469",
-      "title": "Dentifrice à croquer fraicheur menthol bio",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3517360022452",
-      "title": "Dentifrice à croquer blancheur bicarbonate",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8718951481336",
-      "title": "Sanex Douche Essentiel Peau Sèche",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4066447097795",
-      "title": "Hydrostay Silky Serum Foundation",
-      "text": "Aqua, Dimethicone, Talc, PEG-10 Dimethicone, C13-15 Alkane, Titanium Dioxide (Nano), Trimethylsiloxysilicate, Undecane, C12-15 Alkyl Benzoate, Bis-Ethylhexyloxyphenol Methoxyphenyl Triazine, Glycerin, Tridecane, Cetyl PEG/PPG-10/1 Dimethicone, Silica, Tocopheryl Acetate, Sodium Hyaluronate, Panthenol, Niacinamide, Pyridoxine HCl, Thiamine HCl, Calcium Pantothenate, Sodium Chloride, Sodium Ascorbate, Biotin, Disteardimonium Hectorite, Hydrogen Dimethicone, Propylene Carbonate, Sodium Phytate, Polyhydroxystearic Acid, Polysorbate 20, Aluminium Hydroxide, Phenoxyethanol, Ethylhexylglycerin, Parfum [+/- CI 77891, CI 77491, CI 77492, CI 77499]",
-      "category": [
-        "en:makeup",
-        "en:face-makeup"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8699296625923",
-      "title": "Shampooing",
-      "text": "en:green-dot",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6111744688189",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "5023716137667",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7791274199516",
-      "title": "Jabón Líquido Citrus Splash",
-      "text": "Water (Aqua), Sodium Laureth Sulfate, Sodium Chloride, Cocamide DEA, Cocamidopropyl Betaine, Fragrance (Parfum), Tetrasodium EDTA, Limonene, Citric Acid, Amyl Cinnamal, Linalool, Methylchloroisothiazolinone, Methylisothiazolinone, Yellow 5 (CI 19140), Red 40 (CI 16035). en:Silicon free,en:Paraben-free,en:Propylene glycol free,en:Not tested on animals,en:Made in Argentina,Punto Verde",
-      "category": [
-        "en:hygiene",
-        "en:soaps",
-        "en:liquid-soaps"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3600524000028",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8699514355717",
-      "title": "Hametan",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8683318505423",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3337871320980",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3600541970533",
-      "title": "Shampoo",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6111263601447",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0603084267682",
-      "title": "garnier leave in",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3014230021237",
-      "title": "Brut a/r 100 original",
-      "text": "Alcohol Denat., Aqua, Glycerin, Parfum, PEG-40 Hydrogenated Castor Oil, Propylene Glycol, Ethylhexyl Methoxycinnamate, Butyl Methoxydibenzoylmethane, Ethylhexyl Salicylate, Benzyl Alcohol, Benzyl Salicylate, Citral, Citronellol, Coumarin, Geraniol, Hydroxycitronellal, Limonene, Linalool, CI 15985, CI 42090, CI 47005. en:green-dot",
-      "category": [
-        "en:shaving",
-        "en:aftershaves"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8809913830047",
-      "title": "B5 cream",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3662217010691",
-      "title": "Vernis à ongle - Taupe",
-      "text": "Butyl acetate, ethyl acetate, nitrocellulose, adipic acid/neopentyl glycol/trimellitic anhydride copolymer, acetyl tributyl citrate, alcohol, butyl acetate, staralkonium bentonite, isopropyl alcohol, n-butyl alcohol, phosphoric acid, diacetone alcohol, diatomaceous earth, ethyl acetate,",
-      "category": [
-        "en:makeup",
-        "en:nail-makeup",
-        "en:nail-polish"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4005808310715",
-      "title": "Nivea men shaving cream",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8711700634342",
-      "title": "Brut Déodorant Homme Spray Sport Style",
-      "text": "en:green-dot",
-      "category": [
-        "en:hygiene",
-        "en:deodorants"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0144142787761",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [
-        "en:skin-care"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7702018620180",
-      "title": "After shave splash",
-      "text": "Alcohol Denat., Aqua, Parfum, PEG-60 Hydrogenated Castor Oil, Limonene, Hexyl Cinnamal, Benzyl Salicylate, Linalool, Coumarin, Alpha-Isomethyl Ionone, Benzyl Alcohol, Eugenol, Eucalyptus Globulus Leaf Oil, Benzyl Benzoate, Geraniol.",
-      "category": [
-        "en:shaving",
-        "en:aftershaves"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0381370036029",
-      "title": "aveeno body lotion",
-      "text": "Dimethicone 1.2%, Water, Glycerin, Distearyldimonium Chloride, Petrolatum, Isopropyl Palmitate, Cetyl Alcohol, Avena Sativa (Oat) Kernel Flour, Benzyl Alcohol, Sodium Chloride With soothing oat and Rich emollients",
-      "category": [
-        "en:moisturizing-cream"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8410757001090",
-      "title": "Crema Manos",
-      "text": "Aqua, Glycerin, Isodecyl Oleate, Cetearyl Alcohol, Dimethicone, Cetyl Alcohol, Sodium Lauryl Sulfate, Sodium Cetearyl Sulfate, Parfum, Amyl Cinnamal, Benzyl Salicylate, Geraniol, Linalool, Citronellol, Eugenol, Benzyl Cinnamate, Hydroxycitronellal, Benzyl Alcohol, Propylene Glycol, Diazolidinyl Urea, Citric Acid, Methylparaben, Ethylparaben, Tocopherol",
-      "category": [
-        "en:creams",
-        "en:non-food-products",
-        "en:open-beauty-facts"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4068134100061",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [
-        "en:hair",
-        "en:shampoos",
-        "en:2-in-1-shampoos"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3274271000053",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6111242925540",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3600524070762",
-      "title": "L'oréal Men Expert",
-      "text": "AQUA/WATER GLYCERIN DIMETHICONE HEXYL LAURATE GLYCERYL STEARATE SE C12-13 PARETH-23 C12-13 PARETH-3. ARACHIDYL ALCOHOL ARACHIDYL GLUCOSIDE TOCOPHERYL ACETATE. ASCORBYL GLUCOSIDE HYDROXYPALMITOYL SPHINGANINE PHENOXYETHANOL •BEHENYL ALCOHOL AMMONIUM POLYACRYLDIMETHYLTAURAMIDE/ AMMONIUM POLYACRYLOYLDIMETHYL TAURATE DIMETHICONOL LIMONENE. XANTHAN GUM MENTHA PIPERITA EXTRACT/PEPPERMINT LEAF EXTRACT LINALOOL 2-OLEAMIDO-1,3-OCTADECANEDIOL CAPRYLYL GLYCOL DISODIUM EDTA BUTYROSPERMUM PARKII BUTTER/SHEA BUTTER. DIVINYLDIMETHICONE/DIMETHICONE COPOLYMER PARFUM/FRAGRANCE. (F.I.L B49865/1).",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6111267090100",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8719134205473",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0614464023019",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0670729301100",
-      "title": "Nick Chavez Beverly Hills",
-      "text": "",
-      "category": [
-        "en:hair",
-        "en:hair-care"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8001090582133",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [
-        "en:hair",
-        "en:hair-care"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0000571660012",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "9556163101197",
-      "title": "Premium Baby Wipes",
-      "text": "Purified Water, Phenoxyethanol, Polysorbate 20, Polyaminopropyl Biguanide, Tocopheryl Acetate, Aloe Barbadensis Leaf Juice, Perfume No alcohol,Vitamin E source",
-      "category": [
-        "en:accessories",
-        "en:moist-wipes",
-        "en:baby-wipes"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6932511220063",
-      "title": "Aloe Vera Scrub Cream",
-      "text": "nxbxnxbx hx bnh xn",
-      "category": [
-        "en:body",
-        "en:body-creams",
-        "en:body-scrubs"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8720181300547",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0500912036543",
-      "title": "Brume et crème sol de Janeiro 62",
-      "text": "Fabriqué aux États-Unis à partir d'ingrédients de différentes provenances",
-      "category": [
-        "en:perfumes",
-        "en:women-perfumes"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8700216002479",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0063806273825",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3614272623644",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [
-        "fr:lancome"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3606000569232",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0178449927520",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6287026170427",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7350001700335",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8901030971921",
-      "title": "Vaseline Cocoa Glow",
-      "text": "WATER, PETROLATUM, GLYCERIN, PALMITIC ACID (AND) STEARIC ACID, ISOPROPYL PALMITATE, GLYCOL STEARATE (AND) STEARAMIDE AMP DIMETHICONE, TRIETHANOLAMINE, GLYCERYL STEARATE, THEOBROMA CACAO (COCOA) SEED BUTTER, BUTYROSPERMUM PARKII (SHEA) BUTTER, CETYL ALCOHOL, PERFUME, MAGNESIUM ALUMINUM SILICATE, PHENOXYETHANOL METHYLPARABEN, CARBOMER, PROPYLPARABEN, DISODIUM EDTA, CARAMEL, TITANIUM DIOXIDE (AND) HYDRATED SILICA (AND) ALUMINUM HYDROXIDE (AND) ALGINIC ACID, BENZYL ALCOHOL, BENZYL BENZOATE, CITRONELLOL, COUMARIN, HEXYL CINNAMAL, HYDROXYCITRONELLAL, LIMONENE, LINALOOL. BODY LOTION. MADE IN INDIA. MKTD. BY LIC. USER HINDUSTAN UNILEVER LIMITED (HUL).HUL 2023. ® VASELINE IS THE REGISTERED TRADE MARK OF UNILEVER PLC. MFG. BY HINDUSTAN UNILEVER LTD., UNIT - 8, PLOT NO. 1-(1-H), SEC.-1A, SIDCUL, RANIPUR, HARIDWAR 249 403, UTTARAKHAND. M 1/C/UA/2010. HUL REGN. NO. BO-13-000-07-AAACH1004N-22. MINIMUM THICKNESS OF THE PACKAGING IS 500 MICRON. *MRP (INCL. OF ALL TAXES), USP, #MFD.& B. NO.: SEE ABOVE. EXPIRY 36 MONTHS FROM MANUFACTURED",
-      "category": [
-        "en:moisturiser"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3610340670282",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8436622274932",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [
-        "es:cosmetica"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6111103001154",
-      "title": "Unknown Product",
-      "text": "aqua, sodium laureth sulfate, sodium chloride, cocamide dea, coco glucoside, parfum, peg-7 glyceryl cocoate, chamomilla recutita extract, citric acid, sodium benzoate, benzyl alcohol, geraniol, hexyl cinnamal",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6192492704819",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4015100812916",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8718951679269",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6132223000858",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8006540947203",
-      "title": "Extra Frisch Clean",
-      "text": "Aqua, Sorbitol, Hydrated Silica, Sodium Lauryl Sulfate, Cellulose Gum, Aroma, Trisodium Phosphate, Carbomer, Sodium Fluoride, Sodium Saccharin, Sodium Hydroxide, Limonene, Polysorbate 80, Glycerin, CI 74160",
-      "category": [
-        "en:toothpastes"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0194356189875",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4066447580211",
-      "title": "Total Power",
-      "text": "",
-      "category": [
-        "en:hygiene",
-        "en:mouthwash"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "5010123730215",
-      "title": "Listerine total care",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8909106048294",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8017596138224",
-      "title": "Crema Mani Rapido Assorbimento con Estratto di Menta Acquatica e Aloe Vera",
-      "text": "AQUA (WATER), ETHYLHEXYL STEARATE, GLYCERIN, CAPRYLIC/CAPRIC TRIGLYCERIDE, POLYSORBATE 20, PARFUM (FRAGRANCE), ALOE BARBADENSIS LEAF JUICE, MENTHA AQUATICA LEAF EXTRACT, CARBOMER, ACRYLATES/C10-30 ALKYL ACRYLATE CROSSPOLYMER, POLYSORBATE 80, C13-14 ISOPARAFFIN, DISODIUM EDTA, ETHYLHEXYLGLYCERIN, LAURETH-7, CITRIC ACID, SODIUM HYDROXIDE, POLYACRYLAMIDE, SODIUM BENZOATE, POTASSIUM SORBATE, PHENOXYETHANOL, BENZYL ALCOHOL, ALPHA-ISOMETHYL IONONE, LIMONENE, AMYL CINNAMAL, GERANIOL",
-      "category": [
-        "it:crema-mani"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6111041189020",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0600529997517",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "1210000801777",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3522930003618",
-      "title": "Vinotherapist",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8411135008724",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8720181230585",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6111103023200",
-      "title": "Herbal heart",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0745314818018",
-      "title": "Advanced Detox eye",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3574660533286",
-      "title": "Intense Repair",
-      "text": "Aqua, Paraffinum Liquidum, Glycerin, Hydrogenated Palm Glycerides, Allantoin, Panthenol, Cetyl Alcohol, Caprylyl Glycol, Potassium Cetyl Phosphate, Carbomer, Sodium Polyacrylate, Sodium Hydroxide, Citric Acid, Phenoxyethanol, Parfum.",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8800241501784",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0037836033742",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "06979692",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6954842276533",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4006000083315",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6221155206251",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4007965015717",
-      "title": "elmex gelée",
-      "text": "100g Dentalgel enthalten: Aminfluorid Dectaflur: 0,287 g Aminfluorid Olaflur: Natriumfluorid: entsprechend einem Fluoridgehalt von 1,25%, gereinigtes Wasser, Propylenglycol, Hyetellose, Saccharin, Apfel-Ároma, Pfefferminz - Aroma, Krauseminzöl, Menthon - Aroma, Bananen-Aroma. Enthält Pfefferminz-Aroma und Krauseminzöl. Enthält Propylenglycol.",
-      "category": [
-        "en:hygiene",
-        "en:toothpastes",
-        "en:non-food-products",
-        "en:open-beauty-facts"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4015100185294",
-      "title": "Original",
-      "text": "",
-      "category": [
-        "en:hygiene",
-        "en:toothpastes"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "5054563231673",
-      "title": "Sensivität & Zahnfleisch",
-      "text": "INGREDIENTS Glycerin, PEG-8, Hydrated Silica, Pentasodium Triphosphate, Aroma, Sodium Lauryl Sulfate, Carbomer, Stannous Fluoride, Cocamidopropyl Betaine, Silica, Sodium Saccharin, Sodium Fluoride, Anethole, Carvone, Limonene, Mentha Piperita Oil, Mentha Viridis Leaf Oil, Menthol, Methyl Salicylate, CI 42090. Enthält/Contient: Zinnfluorid/ Fluorure Stanneux 0,454 % w/w, Natriumfluorid/Sodium fluoride 0,0721 % w/w (1450 ppm Fluorid). Haleon. Levice 934 01. SK",
-      "category": [
-        "en:hygiene",
-        "en:toothpastes"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3661467000728",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "2200281300792",
-      "title": "Cremeseife Carribean dream",
-      "text": "AQUA, SODIUM LAURETH SULFATE, SODIUM CHLORIDE, COCAMIDOPROPYL BETAINE, GLYCERIN, PARFUM, SODIUM BENZOATE, POTASSIUM SORBATE, CITRIC ACID, SODIUM SULFATE, CI 42090, LINALOOL, HEXYL CINNAMAL.",
-      "category": [
-        "en:hygiene",
-        "en:soaps",
-        "en:liquid-soaps"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8720181683329",
-      "title": "Gencives Fortes",
-      "text": "Aqua, Hydrated Silica, Xylitol, Glycerin, Potassium Nitrate, Hydrogenated Starch Hydrolysate, Steareth-30, Disodium Pyrophosphate, Disodium Phosphate, Sorbitol, Aroma, Xanthan Gum, Carrageenan, Sodium Fluoride, Sodium Benzoate, Amyloglucosidase, Sodium Saccharin, Zinc Gluconate, Glucose Oxidase, Potassium Thiocyanate, Colostrum, Lysozyme, Lactoferrin, Lactoperoxidase, Citric Acid, Eugenol, Limonene. CONTIENT DES PROTÉINES D'ŒUF ET DE LAIT. NE PAS UTILISER SI VOUS ÊTES ALLERGIQUE AUX CEUFS OU AU LAIT.",
-      "category": [
-        "en:hygiene",
-        "en:toothpastes"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "1197916000015",
-      "title": "Woolcare lessive laine",
-      "text": "5-&lt;15% agents de surface non ioniques, &lt;5% agents de surface anioniques, &lt;5% phosphonates, enzymes, BENZISOTHIAZOLINONE, SODIUM PYRITHIONE, parfums, LINALOOL",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "2760244085000",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7290102251469",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [
-        "en:cosmetics"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8901030824630",
-      "title": "Dove cream bar",
-      "text": "",
-      "category": [
-        "en:non-food-products",
-        "en:open-beauty-facts"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "9415991002314",
-      "title": "Toothpaste",
-      "text": "Calcium carbonate, water, glycerin, hydrated silica, xylitol, dolomite, bentonite, lauryl glucoside, Mentha piperita (Peppermint) oil, menthol, sodium cocoyl glutamate, xanthan gum, Eucalyptus globulus leaf oil, Illicium verum (Anise) fruit/seed oil, stevioside, sea salt, Totarol. Manufactured for Red Seal by Endeavour Consumer Health Ltd. New Zealand: 14-18 Lovell Ct, Rosedale, Auckland 0632. Tel: 0800 RED SEAL (0800 733 732) Email:  Australia: Tel: 1300 430 611 Email:  www.redseal.global STORE Below 30°C/86°F",
-      "category": [
-        "en:hygiene",
-        "en:toothpastes"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6111246200414",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8721073626363",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4005900581341",
-      "title": "Nivea",
-      "text": "Aqua, Paraffinum Liquidum, Glycerin, Isododecane, Isopropyl Palmitate, PEG-40 Sorbitan Perisostearate, Cera Microcristalina, Polyglyceryl-3 Diisostearate, Prunus Amygdalus Dulcis Olí, Sodium Hyaluronate, tocopherol, Magnesium Sulfate, Sodium Citrate, Potassium Sobrante, Citric Acid, BHT, Tocopheyl Acetate, Parfum",
-      "category": [
-        "es:crema-corporal"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3490570200905",
-      "title": "Vinckel",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8000903826570",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "2010002085033",
-      "title": "хлебцы с гречневой крупой",
-      "text": "Мука ржаная хлебопекарная обдирная, мука пшеничная хлебопекарная 1 сорт, крупа кукурузная мелкая, крупа гречневая ядрица 1 сорт, солод ржаной сухой, соль. Не содержит ГМО. Продукт питания. Продукт готов к употреблению Может быть использован для бутербродов, тостов или как самостоятельное блюдо. Пищевая ценность в 100 г продукта (средние значення): белки 11 г; жиры - 1,5 г; углеводы 72 г. Энергетиче ценность (калорийность): 1470 кДж (350 ккал). Условия хранения: хранить в чистых, сухих, хорошо вентилируемых помещениях, не зараженных вредителями хлебных запасов, и защищенных от прямых солнечных лучей, при темпер не выше 20°С и относительной влажности воздуха не более 75%. СРОК ГОДНОСТИ: 9 МЕСЯЦЕВ. CM H en:no-gmos",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3600542572545",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3606000537743",
-      "title": "daily moisturizing cream",
-      "text": "",
-      "category": [
-        "en:lotion"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7702026032036",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0035000988713",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "01000272",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3282770396881",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [
-        "en:suncare",
-        "en:in-sun-protections",
-        "en:sunscreen"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8410757001007",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6111255614837",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7798142350468",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8718951686885",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [
-        "es:gel-de-ducha"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3282770393477",
-      "title": "Vitamin c activCg",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8008970061276",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4056489916093",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6111271523489",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3015810608817",
-      "title": "Crème à raser classique",
-      "text": "Aqua, Stearic Acid, Glycerin, Potassium Hydroxyde, Fatty Acid C12-18, Cocos Nucifera Oil, Sodium Hydroxyde, Parfum, Sodium Silicate, Potassium Chloride, Cocos Nucifera Fruit Extract, Hexyl Cinnamal, Limonene, Linalool, CI 19140, CI 42090. Point Vert",
-      "category": [
-        "en:shaving",
-        "en:shaving-foam"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0079400482327",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3450601040153",
-      "title": "dentifrice",
-      "text": "AQUA (WATER), HYDROGENATED STARh HYDROLYSATE, HYDRATED SILICA, GLYCERIN, XANTHAN Gum SODIUM METHYL COCOYL TAURATE, AROMA, ALOE BARBADENsis LEAF JUICE POWDER, BETAINE, SODIUM SACCHARIN, SODium CHLORIDE, SODIUM LEVULINATE, PROPANEDIOL, MENTHol POTASSIUM SORBATE, SODIUM BENZOAte",
-      "category": [
-        "en:open-beauty-facts"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3600524074708",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8052219624692",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3140100394368",
-      "title": "Shampooing fortifiant",
-      "text": "AQUA/WATER/EAU, AMMONIUM LAURYL SULFATE, COCAMIDOPROPYL BETAINE, SODIUM CHLORIDE, ALOE BARBADENSIS LEAF POWDER, GLYCERIN, PARFUM (FRAGRANCE), SODIUM BENZOATE, POTASSIUM SORBATE, CITRIC ACID, GUAR HYDROXYPROPYLTRIMONIUM CHLORIDE, BENZOIC ACID, PANAX GINSENG ROOT EXTRACT&quot;. ingrédients issus de l'Agriculture Biologique 98% du total est d'origine naturelle. 10% du total des ingrédients sont issus de l'Agriculture Biologique. COSMOS ORGANIC certifié par Ecocert Greenlife selon le référentiel COSMOS",
-      "category": [
-        "en:hair",
-        "en:shampoos"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0027186084808",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3600524078249",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4000735369188",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3178041361743",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8902456000059",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3600542486941",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4005900420664",
-      "title": "nivea",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7775005001729",
-      "title": "Jabón Líquido Antibacterial Floral",
-      "text": "Sodium Laureth-2-Sulfate, Cocamidopropyl Betaine, Sodium Chloride, Glycerin, Disodium EDTA, Xolol, 2-Bromo-2-Nitropropane-1.3-Diol, CI 19140, CI 42090, Parfum, Aqua. With glycerine",
-      "category": [
-        "en:hygiene",
-        "en:soaps",
-        "en:liquid-soaps"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "05031201",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8717163746677",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "9021962902158",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0758011654315",
-      "title": "Unknown Product",
-      "text": "AQUA, PROPYLENE GLYCOL, GLYCERIN, CARRAGEENAN, ALOE BARBADENSIS EXTRACT, 1,2-HEXANEDIOL, GLUCOMANNAN, XANTHAN GUM, HYDROXYACETOPHENONE, ALLANTOIN, POTASSIUM CHLORIDE, METHYLCELLULOSE, CI 77288, SODIUM HYALURONATE, CAPRYLYL GLYCOL, ETHYLHEXYLGLYCERIN, CI 77891, PEG-40 HYDROGENATED CASTOR OIL, CALCIUM ALUMINUM BOROSILICATE, PARFUM, ALUMINUM HYDROXIDE, TIN OXIDE, CITRIC ACID, SODIUM CITRATE, PHENOXYETHANOL",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7709522594839",
-      "title": "Protector solar",
-      "text": "Officinalis Chamomilla Recutita Flower Water, Cucumis Sativus Fruit Water, Olea Europaea Fruit Oil, (*) Titanium Dioxide (8%)/Alumina/Stearic Acid, Aloe Barbadensis Leaf Extract, Cetyl Alcohol, (*) Butyrospermum Parkii Butter, Isopropyl Myristate, Cetearyl Alcohol/Sodium Cetearyl Sulfate, Calendula Chamomilla Recutita Flower Oil, Stearic Acid, Flower Oil, Calendula Officinalis Flower Extract, Chamomilla Recutita Flower Extract, Equisetum Arvense Leaf Extract, Triticum Vulgare Germ Oil, Tocopherol, Hydrolyzed Collagen, Stearyl Alcohol, Phenethyl Alcohol/Caprylyl Glycol (*) Materia prima con certificación Cosmos y/o Ecocert para cosmética natural.",
-      "category": [
-        "en:suncare",
-        "en:in-sun-protections"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8904281900368",
-      "title": "Shinol sarson Hair oil",
-      "text": "",
-      "category": [
-        "en:hair-oil"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7791293049694",
-      "title": "Tresemme",
-      "text": "AQUA, GLYCERIN, PROPYLENE GLYCOL, SORUML OMETHICONE, POLYSORBATE 20, CETRIMONIUM CHLORIDE HEXYL METHOXYCINNAMATE, ALPHA-ISOMETHYL IONONE CRIME AL HYDROXYCITRONELLAL, LINALOOL. FABRICADO POR: UNILIN 4191 (81605BNA), MUNRO, V. LOPEZ, BS.AS.-ANGRA MPORTADO Y",
-      "category": [
-        "es:pelo"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7509552874204",
-      "title": "elvive",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3770010951032",
-      "title": "Baume barbe fabuleuse Le Conquérant",
-      "text": "Butyrospermum Parkii Butter*, Helianthus Annuus Seed Oil*, Sesamum Indicum Seed Oil*, Hydrogenated Vegetable Oil, Argania Spinosa Kemel Oil*, Cera Alba, Cocos Nucifera Oil*, Olea Europaea Fruit Oil*, Simmondsia Chinensis Seed Oil*, Parfum, Tocopherol, Linalyl Acetate, Limonene, Lavandula Oil/Extract, Pinene, Linalool, Juniperus Virginiana Oil, Hexamethylindanopyran, Acetylcedrene, Citrus Limon Peel Oil, Beta-Caryophyllene, Eugenol, Eucalyptus Globulus Oil, Camphor, Terpineol, Citrus Aurantium Flower Oil, Coumarin, Citral, Alpha-Terpinene, Terpinolene",
-      "category": [
-        "fr:baume-a-barbe"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6111271140167",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6071148999253",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4068134094391",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6903072470495",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8432225096568",
-      "title": "revlon der Angler spray",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "5901350490280",
-      "title": "gel facial exfoliante",
-      "text": "",
-      "category": [
-        "en:cosmetic-products"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4006000057811",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7622202313042",
-      "title": "Milka",
-      "text": "sugar, glucose syrup, sweetened condensed skimmed milk, vegetable fats (palm, shea), cocoa butter, cocoa mass, milk solids, whey powder, hazelnuts, skimmed milk powder, milk fat, emulsifiers (E442, E476, soy lecithin), salt, artificial caramel flavour, artificial vanilla flavour, artificial butter flavour, artificial hazelnut flavour, artificial chocolate flavour, artificial cream flavour, artificial milk flavour, artificial toffee flavour, artificial almond flavour, artificial coconut flavour, artificial coffee flavour, artificial fruit flavour, artificial nut flavour, artificial orange flavour, artificial strawberry flavour, artificial raspberry flavour, artificial lemon flavour, artificial pineapple flavour, artificial banana flavour, artificial apple flavour, artificial cherry flavour, artificial grape flavour, artificial peach flavour, artificial apricot flavour, artificial plum flavour, artificial pear flavour, artificial melon flavour, artificial watermelon flavour, artificial mango flavour, artificial papaya flavour, artificial passion fruit flavour, artificial guava flavour, artificial lychee flavour, artificial kiwi flavour, artificial pomegranate flavour, artificial date flavour, artificial fig flavour, artificial prune flavour, artificial raisin flavour, artificial currant flavour, artificial blueberry flavour, artificial blackberry flavour, artificial cranberry flavour, artificial elderberry flavour, artificial gooseberry flavour, artificial mulberry flavour, artificial loganberry flavour, artificial boysenberry flavour, artificial cloudberry flavour, artificial huckleberry flavour, artificial lingonberry flavour, artificial rowanberry flavour, artificial sea buckthorn flavour, artificial sloe flavour, artificial bilberry flavour, artificial chokeberry flavour, artificial serviceberry flavour, artificial juneberry flavour, artificial marionberry flavour, artificial olallieberry flavour, artificial salmonberry flavour, artificial thimbleberry flavour, artificial wineberry flavour, artificial yumberry flavour, artificial other natural and artificial flavours, artificial colour (E150c), artificial colour (E160a), artificial colour (E160e), artificial colour (E160b), artificial colour (E161b), artificial colour (E162), artificial colour (E163), artificial colour (E170), artificial colour (E171), artificial colour (E172), artificial colour (E174), artificial colour (E175), artificial colour (E180), artificial colour (E181), artificial colour (E182), artificial colour (E200), artificial colour (E201), artificial colour (E202), artificial colour (E203), artificial colour (E210), artificial colour (E211), artificial colour (E212), artificial colour (E213), artificial colour (E214), artificial colour (E215), artificial colour (E216), artificial colour (E217), artificial colour (E218), artificial colour (E219), artificial colour (E220), artificial colour (E221), artificial colour (E222), artificial colour (E223), artificial colour (E224), artificial colour (E225), artificial colour (E226), artificial colour (E227), artificial colour (E228), artificial colour (E230), artificial colour (E231), artificial colour (E232), artificial colour (E233), artificial colour (E234), artificial colour (E235), artificial colour (E236), artificial colour (E237), artificial colour (E238), artificial colour (E239), artificial colour (E240), artificial colour (E241), artificial colour (E242), artificial colour (E243), artificial colour (E244), artificial colour (E245), artificial colour (E246), artificial colour (E247), artificial colour (E248), artificial colour (E249), artificial colour (E250), artificial colour (E251), artificial colour (E252), artificial colour (E253), artificial colour (E254), artificial colour (E255), artificial colour (E256), artificial colour (E257), artificial colour (E258), artificial colour (E259), artificial colour (E260), artificial colour (E261), artificial colour (E262), artificial colour (E263), artificial colour (E264), artificial colour (E265), artificial colour (E266), artificial colour (E267), artificial colour (E268), artificial colour (E269), artificial colour (E270), artificial colour (E271), artificial colour (E272), artificial colour (E273), artificial colour (E274), artificial colour (E275), artificial colour (E276), artificial colour (E277), artificial colour (E278), artificial colour (E279), artificial colour (E280), artificial colour (E281), artificial colour (E282), artificial colour (E283), artificial colour (E284), artificial colour (E285), artificial colour (E286), artificial colour (E287), artificial colour (E288), artificial colour (E289), artificial colour (E290), artificial colour (E291), artificial colour (E292), artificial colour (E293), artificial colour (E294), artificial colour (E295), artificial colour (E296), artificial colour (E297), artificial colour (E298), artificial colour (E299) en:pure-cocoa-butter",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0001130038038",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0300653610183",
-      "title": "Opti free puremoist",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8901030868689",
-      "title": "Love beauty and planet shampoo",
-      "text": "Vegan",
-      "category": [
-        "en:shampoo"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0110635002185",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3760269771413",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4015400636649",
-      "title": "Lingettes",
-      "text": "483 بروكتر و جامبيل للتوزيع بالمغرب دار البيضاء برج إيفوار 3 مبنى الطابق السابع الدار البيضاء المـ المستهلكين في المغرب - الرقم المجاني: 0800095095 ww.pg.com/contactMEA use Jelgill Fabriqué en Espag ICE: 001539397000005 Partida della Seg Service Procter & Gamble Pakistan(Pvt.) Ltd, Toll Free Number: Espanha. Fabrica Website:www.pg.com/contactMEA المستورد فى مصر شركة بوكت محاميا ، م ا Segre, 50170 Mec NZ 38 22/23 2/90/5188 خلال سي / as to esteril contle stérilis Acid, PEG-40 Ingredients: Aqua, Citric Acid, Hydrogenated Castor Oil, Sodium Benzoate, Sorbitan Caprylate, Sodium Citrate, Disodium EDTA, Isoamyl Laurate, Xanthan Gum de 0% | المكونات (كريم): أكوا، حمض الستريك، 40-PEG زيت الخروع المهدرج، بنزوات الصوديوم، كابريلات السوربيتان، سترات الصوديوم ثنائي الصوديوم EDTA ، يزواميل لوريت صمغ الزانثان. Limpez Feito co 100% p Toalhote Fibre Composition: Cellulose, Synthetic fibres Wipe Dimensions (L x W): 167 mm x 161 mm 21222836 $15112845",
-      "category": [
-        "ar:كل-شيئ"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0618041441302",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6111043006073",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8809928135892",
-      "title": "Tirtir Mask Fit Red Cushion",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8809968130277",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4005900133342",
-      "title": "NIVEA CREME DARK SPOT REDUCTION",
-      "text": "NIVEAⓇ MEN DARK SPOT# REDUCTION CREME A breakthrough in skincare specifically developed for men's skin. It contains UV filters and licorice extracts that reduce dark spots. It is extra light, non-greasy and fast absorbing. SKIN COMPATIBILITY DERMATOLOGICALLY APPROVED SKIN CREAM. INGREDIANTS: Aqua, Glycerin, Isopropyl Palmitate, Cetearyl Alcohol, Alcohol Denat. 3.7% v/v, C12-15 Alkyl Benzoate, Butyl Methoxydibenzoyl - methane, Distarch Phosphate, Glyceryl Stearate, Octocrylene, Glycyrrhiza Glabra Root Extract, Polyglyceryl-10 Stearate, Dimethicone, Carbomer, Acrylates/C10-30 Alkyl Acrylate Crosspolymer, Trisodium EDTA, Sodium Hydroxide, Phenoxyethanol, Ethylhexylglycerin, Limonene, Linalool, Coumarin, Alpha-Isomethyl Ionone, Parfum. Imported by: NIVEA India Pvt Ltd, 4th Floor, AGH, Phoenix Market City, Kurla (W), Mumbai, Maharashtra - 400070. RC No. COS052/13. Query/Feedback: Contact NIVEA CARE Executive at above address or :(022)62487999, care@beiersdorf.com.For Batch No., MFD. (P) & Use Before (E): See Pack. Manufactured by: Beiersdorf Manufacturing Hamburg GmbH, Troplowitzstraße 10, 22529 Hamburg, Germany. MRP (Incl. of all Taxes): *255.00, USP: *3.40/ml Net Content #Dark spots accumulated from dirt & residues. (When Packed): Beiersdorf 75ml (75.2g) 12M 4 005900133342 Hamburg =reg. tm. of Beiersdorf AG Beiersdorf AG, D-20245 Hamburg ALU www.NIVEAMEN.IN Art. No. 83927 83927.498.DB.01",
-      "category": [
-        "en:non-food-products",
-        "en:open-beauty-facts",
-        "en:face-care"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4005808278350",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8718951236790",
-      "title": "Colgate",
-      "text": "",
-      "category": [
-        "en:hygiene",
-        "en:toothpastes"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8902456619992",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8410751094425",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8904281900863",
-      "title": "Hair revitalizer oil",
-      "text": "",
-      "category": [
-        "en:hair",
-        "en:hair-care"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8904281900467",
-      "title": "Herbal Hair Oil",
-      "text": "",
-      "category": [
-        "en:hair",
-        "en:hair-care"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4005808890576",
-      "title": "Nivea soft",
-      "text": "Store below 25°C Skin compatibility dermatologically approved www.NIVEA.com hgredients: Aqua, Glycerin, Myristyl Alcohol, Alcohol Denat Myristyl Myristate, Cetearyl Glucoside, Coco-Caprylate Caprate, Glyceryl Stearate, Palmitic Acid, Stearic Acid Hydrogenated Coco-Glycerides, Simmondsia Chinensis Seed O, Tocopheryl Acetate, Prunus Amygdalus Dulcis O egetable Oil, Cetyl Ricinoleate, Triisostearin, Sorbito Searate, Hydroxypropyl Starch Phosphate, Sodium ydroxide, Cetearyl Alcohol, Gellan Gum, Xanthan Gum yristic Acid, Arachidic Acid, Oleic Acid, Lauric Acid, Disodium tearyl Sulfosuccinate, Phenoxyethanol, Linalool, Citroneld pha-Isomethyl Ionone, Acetyl Cedrene, Citrus Aurantium Feel Oil, Limonene, Terpineol, Lavandula Oil/Extract, Lino cetate, Parfum DOPE 12M t-No. 89057 890576 CAP ON Recycle 75 mle Beiersdorf Beiersdorf AG, D-20245 Hamburg Beiersdorf UK Ltd Birmingham, B37 TES Beiersdorf Australia Ltd. artoum Rd. North Ryde NSW",
-      "category": [
-        "en:cosmetic-products",
-        "fr:creme-de-soin-hydratante"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3616306361546",
-      "title": "Glow it up",
-      "text": "AQUA/WATER/EAU, DICAPRYLYL ETHER DICAPRYLYL CARBONATE, GLYCERIN, TRIMETHYLSILOXYSILICATE, ETHYLHEXYL METHOXYCINNAMATE SODIUM CHLORIDE, ALUMINUM STARCH OCTENYLSUCCINATE ZINC OXIDE (NANO), TRI(POLYGLYCERYL-3/LAURYL) HYDROGENATED TRILINOLEATE, STEARALKONIUM BENTONITE, SUCA, CETYL-PEG/PPG-10/1 DIMETHICONE, MICA, PROPYLENE CARBONATE, TOCOPHEROL, PANTHENOL, SODIUM BENZOATE, TRIETHOXYCAPRYLYLSILANE, CHLORPHENESIN, ALOE BARBADENSIS LEAF JUICE, METHICONE, PANTOLACTONE, BHT, PENTAERYTHRITYL TETRA-DI-T-BUTYL HYDROXYHYDROCINNAMATE (MAY CONTAIN/PEUT CONTENIR/+/- TITANIUM DIOXIDE (CI 77891), IRON OXIDES (CI 77491, CI 77492, CI 77499)] WWW.RIMMELLONDON.COM 306 361546&quot;&gt; ES Al Amarillo பர் HDPE 18M",
-      "category": [
-        "en:moisturising-skin-tint"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0716237187864",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0602551046065",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3610340670893",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4056489939863",
-      "title": "Floralys",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8680512634362",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3700221302590",
-      "title": "Expret collagen marin",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7640260490086",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3600550995053",
-      "title": "Déo Angeline",
-      "text": "",
-      "category": [
-        "en:non-open-products-facts"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6223012631145",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [
-        "en:body",
-        "en:body-creams"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "7777777777777777777777777777777777777777",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8680731423211",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4600240632243",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0045611001701",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [
-        "en:cream"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8718951652644",
-      "title": "Elmex anti-caries original toothpaste",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "0337875789875",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3337875789875",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "5201143725606",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [
-        "en:hair",
-        "en:shampoos"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6281006602700",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6111031005446",
-      "title": "pack merendina",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "4009175971579",
-      "title": "Assouplissant peaux sensibles",
-      "text": "S—15%agentsde surface cationiques,urée",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8901088150729",
-      "title": "Parachute Advansed Gold Coconut Hair Oil",
-      "text": "Vegetable Oil including Coconut Oil (79 4% v/v). Paraffinum liquidum (20% v/v). Vitamin E. TBHQ. Perfume. With vitamin E",
-      "category": [
-        "en:hair-oil"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8904281900474",
-      "title": "Toothpaste",
-      "text": "",
-      "category": [
-        "en:toothpaste"
-      ],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8809568741934",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3760211483050",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "3760211483067",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "8906133401610",
-      "title": "Unknown Product",
-      "text": "",
-      "category": [],
-      "source": "openbeautyfacts"
-    },
-    {
-      "id": "6001067066613",
-      "title": "Colgate Maxi",
-      "text": "100 ml",
-      "category": [],
-      "source": "openbeautyfacts"
     }
-  ],
-  "total": 1000
+  ]
 }
