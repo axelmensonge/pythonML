@@ -24,7 +24,6 @@ from core.config import (
     KEYWORDs_FILE,
     CLEANED_DATA_DIR,
 )
-from core.analyzer import compute_text_length, get_top_words, kpi_by_source, save_top_words_csv, update_summary_json
 from core.model import Model
 from core.viz import generate_visualizations
 
@@ -263,6 +262,21 @@ def do_pipeline(fetcher, cleaner, features, model, analyzer):
             step_train(model, features, force=True)
 
         print("Pipeline complet terminé.")
+        
+        # Générer les visualisations à la fin du pipeline
+        print("\nGénération des visualisations...")
+        try:
+            clean_df = features.load_clean_dataframe()
+            viz_results = generate_visualizations(df=clean_df)
+            successful = sum(1 for p in viz_results.values() if p)
+            print(f"[OK] Visualisations générées: {successful} fichiers créés")
+            for name, path in viz_results.items():
+                if path:
+                    print(f"  * {name}: OK")
+        except Exception as e:
+            logger.exception(f"Erreur génération visualisations: {e}")
+            print(f"Erreur lors de la génération des visualisations: {e}")
+            
     except Exception as e:
         logger.exception(f"Erreur inattendue dans pipeline complet: {e}")
         print(f"Erreur inattendue pendant le pipeline: {e}")
@@ -322,7 +336,20 @@ def main_menu():
             elif choice == "5":
                 do_pipeline(fetcher, cleaner, features, model, analyzer)
             elif choice == "6":
-                print_summary(SUMMARY_FILE)
+                print_summary(SUMMARY_FILE)    
+                # Génération des visualisations - charger le DataFrame
+                print("\nGénération des visualisations...")
+                try:
+                    clean_df = features.load_clean_dataframe()
+                    viz_results = generate_visualizations(df=clean_df)
+                    successful = sum(1 for p in viz_results.values() if p)
+                    print(f"[OK] Visualisations générées: {successful} fichiers créés")
+                    for name, path in viz_results.items():
+                        if path:
+                            print(f"  * {name}: OK")
+                except Exception as e:
+                    logger.exception(f"Erreur génération visualisations: {e}")
+                    print(f"Erreur lors de la génération des visualisations: {e}")
             elif choice == "7":
                 print("Quitter...")
                 break
@@ -331,14 +358,6 @@ def main_menu():
         except Exception as e:
             logger.exception(f"Erreur lors de l'exécution de l'option {choice}: {e}")
             print(f"Erreur lors de l'exécution : {e}")
-
-    # Génération des visualisations
-    print("\nGénération des visualisations...")
-    viz_results = generate_visualizations()
-    print(f"✓ Visualisations générées: {len(viz_results)} fichiers créés")
-    for name, path in viz_results.items():
-        if path:
-            print(f"  • {name}: {path}")
 
 if __name__ == "__main__":
     main_menu()

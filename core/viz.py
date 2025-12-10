@@ -18,14 +18,25 @@ except OSError:
 sns.set_palette("husl")
 
 class Visualizer:
-    def __init__(self, summary_path=SUMMARY_FILE, keywords_path=None):
+    def __init__(self, df=None, summary_path=SUMMARY_FILE, keywords_path=None):
+        """
+        Initialise le Visualizer avec le DataFrame des produits.
+        
+        Args:
+            df: DataFrame avec colonnes [id, title, text, category, source]
+            summary_path: Chemin vers summary.json
+            keywords_path: Chemin vers keywords.csv
+        """
+        self.df = df
         self.summary_path = Path(summary_path)
         self.keywords_path = Path(keywords_path or REPORTS_DIR / "keywords.csv")
         self.reports_dir = Path(REPORTS_DIR)
         self.reports_dir.mkdir(parents=True, exist_ok=True)
+        
         self.summary_data = self._load_summary()
         self.keywords_df = self._load_keywords()
-        logger.info("Visualizer initialisé")
+        
+        logger.info("Visualizer initialisé avec DataFrame" + (f" ({len(df)} lignes)" if df is not None else ""))
 
     def _load_summary(self) -> dict:
         """Charge les données du fichier summary.json"""
@@ -52,16 +63,22 @@ class Visualizer:
             return pd.DataFrame()
 
     def plot_volume_by_source(self) -> str:
-        """Figure 1: Volume par source (bar chart)"""
+        """Figure 1: Volume par source (bar chart) - données réelles"""
+        if self.df is None or self.df.empty:
+            logger.warning("DataFrame vide pour Figure 1")
+            return ""
+        
         fig, ax = plt.subplots(figsize=(10, 6))
         
-        sources = self.summary_data.get("sources", {})
-        if not sources:
-            logger.warning("Aucune donnée de source disponible")
+        # Compter les produits par source
+        sources = self.df['source'].value_counts().sort_values(ascending=False)
+        
+        if len(sources) == 0:
+            logger.warning("Aucune source trouvée dans DataFrame")
             return ""
 
         colors = sns.color_palette("Set2", len(sources))
-        bars = ax.bar(sources.keys(), sources.values(), color=colors, alpha=0.8, edgecolor='black', linewidth=1.5)
+        bars = ax.bar(sources.index, sources.values, color=colors, alpha=0.8, edgecolor='black', linewidth=1.5)
         
         # Ajouter les valeurs sur les barres
         for bar in bars:
@@ -113,41 +130,41 @@ class Visualizer:
         return str(output_path)
 
     def plot_latency_distribution(self) -> str:
-        """Figure 3: Distribution des latences (box plot + histogram)"""
-        # Générer des données de latence simulées basées sur les sources
-        sources = list(self.summary_data.get("sources", {}).keys())
-        latencies_data = {}
+        """Figure 3: Distribution des longueurs de texte (box plot + histogram)"""
+        if self.df is None or self.df.empty:
+            logger.warning("DataFrame vide pour Figure 3")
+            return ""
         
-        # Latences réalistes en ms pour chaque source
-        np.random.seed(42)
-        for i, source in enumerate(sources):
-            mean_latency = 50 + i * 20  # 50ms, 70ms, etc.
-            latencies = np.random.normal(mean_latency, 15, 200)
-            latencies = np.clip(latencies, 10, 500)  # Limiter entre 10 et 500ms
-            latencies_data[source] = latencies
+        # Calculer la longueur des textes
+        df_temp = self.df.copy()
+        df_temp['text_length'] = df_temp['text'].fillna("").apply(len)
         
         fig, axes = plt.subplots(1, 2, figsize=(15, 6))
         
+        # Grouper par source pour box plot
+        sources = sorted(df_temp['source'].unique())
+        length_by_source = [df_temp[df_temp['source'] == src]['text_length'].values for src in sources]
+        
         # Box plot
-        bp_data = [latencies_data[source] for source in sources]
-        bp = axes[0].boxplot(bp_data, labels=sources, patch_artist=True)
+        bp = axes[0].boxplot(length_by_source, labels=sources, patch_artist=True)
         
         colors = sns.color_palette("Set2", len(sources))
         for patch, color in zip(bp['boxes'], colors):
             patch.set_facecolor(color)
             patch.set_alpha(0.7)
         
-        axes[0].set_ylabel('Latence (ms)', fontsize=12, fontweight='bold')
-        axes[0].set_title('Distribution des latences par source (Box Plot)', fontsize=13, fontweight='bold')
+        axes[0].set_ylabel('Longueur du texte (caractères)', fontsize=12, fontweight='bold')
+        axes[0].set_title('Distribution des longueurs par source (Box Plot)', fontsize=13, fontweight='bold')
         axes[0].grid(axis='y', alpha=0.3)
         
-        # Histogram
+        # Histogram global
         for source, color in zip(sources, colors):
-            axes[1].hist(latencies_data[source], bins=30, alpha=0.6, label=source, color=color, edgecolor='black')
+            data = df_temp[df_temp['source'] == source]['text_length']
+            axes[1].hist(data, bins=30, alpha=0.6, label=source, color=color, edgecolor='black')
         
-        axes[1].set_xlabel('Latence (ms)', fontsize=12, fontweight='bold')
+        axes[1].set_xlabel('Longueur du texte (caractères)', fontsize=12, fontweight='bold')
         axes[1].set_ylabel('Fréquence', fontsize=12, fontweight='bold')
-        axes[1].set_title('Distribution des latences (Histogramme)', fontsize=13, fontweight='bold')
+        axes[1].set_title('Distribution des longueurs (Histogramme)', fontsize=13, fontweight='bold')
         axes[1].legend(fontsize=10)
         axes[1].grid(axis='y', alpha=0.3)
         
@@ -159,48 +176,72 @@ class Visualizer:
         return str(output_path)
 
     def plot_http_status_distribution(self) -> str:
-        """Figure 4: Répartition des statuts HTTP (pie chart + barres)"""
-        # Générer des données de statuts HTTP réalistes
-        np.random.seed(42)
-        status_codes = {
-            '200 OK': np.random.randint(800, 1200),
-            '201 Created': np.random.randint(200, 400),
-            '304 Not Modified': np.random.randint(100, 300),
-            '400 Bad Request': np.random.randint(20, 50),
-            '404 Not Found': np.random.randint(10, 40),
-            '500 Server Error': np.random.randint(5, 20),
-        }
+        """Figure 4: Distribution des catégories (top 15)"""
+        if self.df is None or self.df.empty:
+            logger.warning("Aucune donnée de catégories disponible")
+            return ""
         
-        fig, axes = plt.subplots(1, 2, figsize=(15, 6))
+        # Utiliser category_clean s'il existe et qu'il contient des strings
+        cat_col = None
+        if 'category_clean' in self.df.columns:
+            try:
+                # Vérifier si c'est du string
+                test_val = self.df['category_clean'].iloc[0]
+                if isinstance(test_val, str):
+                    cat_col = 'category_clean'
+            except:
+                pass
+        
+        # Sinon utiliser 'category' mais convertir les listes en strings
+        if cat_col is None:
+            if 'category' not in self.df.columns:
+                logger.warning("Colonnes category/category_clean introuvables")
+                return ""
+            cat_col = 'category'
+        
+        df_temp = self.df.copy()
+        
+        # Transformer les listes en premier élément (string)
+        def extract_category(val):
+            if isinstance(val, list):
+                return val[0] if len(val) > 0 else "Unknown"
+            elif isinstance(val, str):
+                return val if val else "Unknown"
+            else:
+                return str(val)
+        
+        df_temp[cat_col] = df_temp[cat_col].apply(extract_category)
+        category_counts = df_temp[cat_col].value_counts().head(15)
+        
+        fig, axes = plt.subplots(1, 2, figsize=(16, 6))
         
         # Pie chart
-        colors = sns.color_palette("husl", len(status_codes))
+        colors = sns.color_palette("husl", len(category_counts))
+        labels = [cat[:12] + '...' if len(cat) > 12 else cat for cat in category_counts.index]
         wedges, texts, autotexts = axes[0].pie(
-            status_codes.values(), 
-            labels=status_codes.keys(), 
+            category_counts.values, 
+            labels=labels,
             autopct='%1.1f%%',
             colors=colors,
             startangle=90,
-            textprops={'fontsize': 10, 'weight': 'bold'}
+            textprops={'fontsize': 9, 'weight': 'bold'}
         )
-        axes[0].set_title('Répartition des statuts HTTP (Pie Chart)', fontsize=13, fontweight='bold')
+        axes[0].set_title('Top 15 Catégories (Pie Chart)', fontsize=13, fontweight='bold')
         
-        # Bar chart
-        bars = axes[1].bar(range(len(status_codes)), list(status_codes.values()), 
-                          color=colors, alpha=0.8, edgecolor='black', linewidth=1.5)
+        # Bar chart (horizontal)
+        bars = axes[1].barh(range(len(category_counts)), category_counts.values, 
+                          color=colors, alpha=0.8, edgecolor='black', linewidth=1.2)
         
         # Ajouter les valeurs sur les barres
-        for bar in bars:
-            height = bar.get_height()
-            axes[1].text(bar.get_x() + bar.get_width()/2., height,
-                       f'{int(height)}',
-                       ha='center', va='bottom', fontsize=10, fontweight='bold')
+        for i, (bar, count) in enumerate(zip(bars, category_counts.values)):
+            axes[1].text(count, i, f' {int(count)}', va='center', fontsize=9, fontweight='bold')
         
-        axes[1].set_xticks(range(len(status_codes)))
-        axes[1].set_xticklabels(status_codes.keys(), rotation=45, ha='right', fontsize=10)
-        axes[1].set_ylabel('Nombre de requêtes', fontsize=12, fontweight='bold')
-        axes[1].set_title('Répartition des statuts HTTP (Barres)', fontsize=13, fontweight='bold')
-        axes[1].grid(axis='y', alpha=0.3)
+        axes[1].set_yticks(range(len(category_counts)))
+        labels_y = [cat[:25] + '...' if len(cat) > 25 else cat for cat in category_counts.index]
+        axes[1].set_yticklabels(labels_y, fontsize=9)
+        axes[1].set_xlabel('Nombre de produits', fontsize=11, fontweight='bold')
+        axes[1].set_title('Top 15 Catégories (Barres)', fontsize=13, fontweight='bold')
+        axes[1].grid(axis='x', alpha=0.3)
         
         plt.tight_layout()
         output_path = self.reports_dir / "fig4_http_status.png"
@@ -210,38 +251,55 @@ class Visualizer:
         return str(output_path)
 
     def plot_chronology(self) -> str:
-        """Figure 5: Chronologie - Volume par jour (line chart)"""
-        # Générer des données temporelles simulées
-        np.random.seed(42)
-        days = 30
-        base_date = datetime(2024, 1, 1)
-        dates = [base_date + timedelta(days=i) for i in range(days)]
+        """Figure 5: Distribution source × catégorie (heatmap)"""
+        if self.df is None or self.df.empty or 'source' not in self.df.columns:
+            logger.warning("Aucune donnée pour heatmap source/catégorie")
+            return ""
         
-        # Génération de volumes avec tendance
-        volumes = np.array([50 + i * 2 + np.random.randint(-10, 20) for i in range(days)])
-        volumes = np.clip(volumes, 10, 200)
+        # Copier le DataFrame et préparer les colonnes
+        df_temp = self.df.copy()
         
-        fig, ax = plt.subplots(figsize=(14, 7))
+        # Utiliser category_clean s'il existe et qu'il contient des strings
+        cat_col = None
+        if 'category_clean' in df_temp.columns:
+            try:
+                test_val = df_temp['category_clean'].iloc[0]
+                if isinstance(test_val, str):
+                    cat_col = 'category_clean'
+            except:
+                pass
         
-        # Ligne principale
-        ax.plot(dates, volumes, marker='o', linewidth=2.5, markersize=6, 
-               color='#2E86AB', label='Volume quotidien', alpha=0.8)
+        if cat_col is None:
+            cat_col = 'category'
         
-        # Remplissage sous la courbe
-        ax.fill_between(dates, volumes, alpha=0.3, color='#2E86AB')
+        # Transformer les listes en premier élément (string)
+        def extract_category(val):
+            if isinstance(val, list):
+                return val[0] if len(val) > 0 else "Unknown"
+            elif isinstance(val, str):
+                return val if val else "Unknown"
+            else:
+                return str(val)
         
-        # Ajouter une moyenne mobile
-        df_temp = pd.DataFrame({'date': dates, 'volume': volumes})
-        df_temp['ma7'] = df_temp['volume'].rolling(window=7, center=True).mean()
-        ax.plot(df_temp['date'], df_temp['ma7'], linewidth=2, linestyle='--', 
-               color='#A23B72', label='Moyenne mobile (7j)', alpha=0.8)
+        df_temp[cat_col] = df_temp[cat_col].apply(extract_category)
         
-        ax.set_xlabel('Date', fontsize=12, fontweight='bold')
-        ax.set_ylabel('Volume', fontsize=12, fontweight='bold')
-        ax.set_title('Chronologie du volume de produits', fontsize=14, fontweight='bold', pad=20)
-        ax.legend(fontsize=11, loc='upper left')
-        ax.grid(True, alpha=0.3)
-        plt.xticks(rotation=45, ha='right')
+        # Créer une table de contingence (top 12 catégories pour lisibilité)
+        top_cats = df_temp[cat_col].value_counts().head(12).index
+        df_filtered = df_temp[df_temp[cat_col].isin(top_cats)]
+        contingency_table = pd.crosstab(df_filtered['source'], df_filtered[cat_col])
+        
+        fig, ax = plt.subplots(figsize=(14, 6))
+        
+        # Heatmap
+        sns.heatmap(contingency_table, annot=True, fmt='d', cmap='YlOrRd', 
+                   cbar_kws={'label': 'Nombre de produits'}, ax=ax, 
+                   linewidths=0.5, linecolor='gray')
+        
+        ax.set_xlabel('Catégorie (Top 12)', fontsize=12, fontweight='bold')
+        ax.set_ylabel('Source', fontsize=12, fontweight='bold')
+        ax.set_title('Matrice Source × Catégorie', fontsize=14, fontweight='bold', pad=20)
+        plt.xticks(rotation=45, ha='right', fontsize=10)
+        plt.yticks(rotation=0, fontsize=10)
         
         plt.tight_layout()
         output_path = self.reports_dir / "fig5_chronology.png"
@@ -347,13 +405,13 @@ class Visualizer:
             info_text = f"""
             Résumé de l'analyse
             
-            Nombre total de produits: {self.summary_data.get('total_products', 'N/A')}
-            Longueur moyenne de texte: {self.summary_data.get('average_text_length', 'N/A')} caractères
+            Nombre total de produits: {self.summary_data.get('summary', {}).get('total_products', 'N/A')}
+            Longueur moyenne de texte: {self.summary_data.get('summary', {}).get('average_text_length', 'N/A')} caractères
             
             Sources:
             """
             
-            sources = self.summary_data.get('sources', {})
+            sources = self.summary_data.get('summary', {}).get('sources', {})
             for source, count in sources.items():
                 info_text += f"\n  • {source}: {count} produits"
             
@@ -432,7 +490,18 @@ class Visualizer:
 
 
 # Fonction utilitaire pour intégration dans main.py
-def generate_visualizations(y_test=None, y_pred=None, classification_report_dict=None):
-    """Fonction principale pour générer toutes les visualisations"""
-    viz = Visualizer()
+def generate_visualizations(df=None, y_test=None, y_pred=None, classification_report_dict=None):
+    """
+    Fonction principale pour générer toutes les visualisations.
+    
+    Args:
+        df: DataFrame avec colonnes [id, title, text, category, source]
+        y_test: Labels de test (pour ML)
+        y_pred: Prédictions (pour ML)
+        classification_report_dict: Rapport de classification sklearn (pour ML)
+    
+    Returns:
+        Dict avec chemins des fichiers générés
+    """
+    viz = Visualizer(df=df)
     return viz.generate_all_figures(y_test, y_pred, classification_report_dict)

@@ -1,7 +1,5 @@
 from pathlib import Path
 
-from nltk.corpus.reader import KEYWORD
-
 BASE_DIR = Path(__file__).parent.parent
 
 TIMEOUT = 10
