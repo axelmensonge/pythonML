@@ -34,6 +34,7 @@ def prompt_yes_no(prompt: str, default: str = "o") -> bool:
         return True
     return ans in ("o", "oui", "y", "yes")
 
+
 def step_fetch(fetcher: Fetcher, force: bool = False):
     try:
         if not force:
@@ -179,6 +180,7 @@ def step_train(model: Model, features: Features, force: bool = False):
         logger.exception(f"Erreur dans step_train: {e}")
         print(f"Erreur inattendue dans l'étape train: {e}")
 
+
 def print_summary(summary_path):
     if not summary_path.exists():
         print("summary.json introuvable.")
@@ -207,6 +209,7 @@ def print_summary(summary_path):
         print(f"Modèle : {ml.get('model_path', 'N/A')}")
     print("=================\n")
 
+
 def do_pipeline(fetcher, cleaner, features, model, analyzer):
     print("Pipeline complet — on te posera des choix pour réutiliser ou recréer les artefacts.")
     try:
@@ -220,7 +223,6 @@ def do_pipeline(fetcher, cleaner, features, model, analyzer):
         else:
             step_clean(cleaner, force=True)
 
-        # Analyzer KPIs
         try:
             clean_df = features.load_clean_dataframe()
             df_kpi = analyzer.compute_text_length(clean_df, text_column="text_clean")
