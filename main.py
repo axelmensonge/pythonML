@@ -36,12 +36,10 @@ def load_all_products(folder: str) -> pd.DataFrame:
             continue
         data = read_json(os.path.join(folder, filename))
         if "products" in data:
-            all_data.extend(data["products"])  # ajoute tous les produits
+            all_data.extend(data["products"]) 
 
     if not all_data:
-        return pd.DataFrame()  # pas de produits
-
-    # Transformation JSON imbriqué -> DataFrame
+        return pd.DataFrame()
     df = json_normalize(all_data)
     logger.info(f"{len(df)} produits chargés dans le DataFrame.")
     return df
