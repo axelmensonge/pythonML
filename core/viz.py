@@ -306,8 +306,8 @@ class Visualizer:
                 df_temp['fetch_time'] = pd.to_datetime(df_temp['fetch_time'], errors='coerce')
                 df_temp = df_temp.dropna(subset=['fetch_time'])
                 
-                # Grouper par source et par heure/minute
-                df_temp['fetch_time_grouped'] = df_temp['fetch_time'].dt.floor('5min')
+                # Grouper par source et par minute (granularité fine)
+                df_temp['fetch_time_grouped'] = df_temp['fetch_time'].dt.floor('1min')
                 
                 # Créer un pivot table
                 chronology = df_temp.groupby(['fetch_time_grouped', 'source']).size().unstack(fill_value=0)
@@ -316,18 +316,24 @@ class Visualizer:
                     logger.warning("Pas de données chronologiques valides")
                     return ""
                 
-                fig, ax = plt.subplots(figsize=(14, 6))
+                fig, ax = plt.subplots(figsize=(16, 6))
                 
                 # Line plot avec markers
                 for source in chronology.columns:
                     ax.plot(chronology.index, chronology[source], marker='o', label=source, 
-                           linewidth=2.5, markersize=6, alpha=0.8)
+                           linewidth=2.5, markersize=5, alpha=0.8)
                 
-                ax.set_xlabel('Temps (fetch_time)', fontsize=12, fontweight='bold')
+                # Formater l'axe des temps avec format heure:minute:seconde
+                from matplotlib.dates import DateFormatter, SecondLocator
+                ax.xaxis.set_major_locator(SecondLocator(interval=10))
+                ax.xaxis.set_major_formatter(DateFormatter('%H:%M:%S'))
+                ax.xaxis.set_minor_locator(SecondLocator(interval=2))
+                
+                ax.set_xlabel('Temps (fetch_time HH:MM:SS)', fontsize=12, fontweight='bold')
                 ax.set_ylabel('Nombre de produits', fontsize=12, fontweight='bold')
                 ax.set_title('Chronologie: Volume de produits par source et temps', fontsize=14, fontweight='bold', pad=20)
                 ax.legend(fontsize=11, loc='upper left')
-                ax.grid(alpha=0.3)
+                ax.grid(alpha=0.3, which='both')
                 plt.xticks(rotation=45, ha='right')
             except Exception as e:
                 logger.warning(f"Erreur traitement chronologie: {e}. Fallback heatmap.")
