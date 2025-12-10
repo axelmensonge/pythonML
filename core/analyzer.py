@@ -20,6 +20,7 @@ class Analyzer:
 
     @staticmethod
     def compute_text_length(df: pd.DataFrame, text_column="text") -> pd.DataFrame:
+        """Permet de calculer la longueur de chaque texte dans le DataFrame"""
         if text_column not in df:
             logger.error(f"Colonne '{text_column}' introuvable dans le DataFrame")
             return df
@@ -29,6 +30,9 @@ class Analyzer:
         return df
 
     def compute_text_statistics(self, df: pd.DataFrame, text_column="text") -> dict:
+        """Génération des statistiques globales sur les longueurs de tous les textes 
+        (texte le plus petit, texte le plus grand, médiane, 
+        écart-type et total de caractères dans tous les textes)"""
         if text_column not in df:
             logger.error(f"Colonne '{text_column}' introuvable")
             return {}
@@ -47,6 +51,7 @@ class Analyzer:
         return stats
 
     def get_top_words(self, df: pd.DataFrame, text_column="text", top_n=20):
+        """Permet d’identifier les mots les plus fréquents dans les textes"""
         if text_column not in df:
             logger.error(f"Colonne '{text_column}' introuvable dans le DataFrame")
             return {}
@@ -62,6 +67,7 @@ class Analyzer:
         return top_words
 
     def kpi_by_source(self, df: pd.DataFrame):
+        """Calcule les KPI selon différentes sources"""
         if "source" not in df:
             logger.error(f"Colonne 'source' introuvable dans le DataFrame")
             return {}
@@ -80,6 +86,7 @@ class Analyzer:
         return kpi
 
     def save_top_words_csv(self, top_words: dict):
+        """Permet de calculer la longueur de chaque texte dans le DataFrame"""
         try:
             df = pd.DataFrame(list(top_words.items()), columns=["word", "count"])
             df.to_csv(self.keywords_file, index=False)
@@ -88,6 +95,7 @@ class Analyzer:
             logger.error(f"Erreur lors de l'export de keywords.csv : {e}")
 
     def update_summary_json(self, summary_data: dict, source_kpis: dict):
+        """Récupère le résultat des fonctions et les enregistre dans summary.json"""
         final_payload = {
             "summary": summary_data,
             "kpi_by_source": source_kpis
@@ -102,32 +110,6 @@ class Analyzer:
         except Exception as e:
             logger.error(f"Erreur écriture summary.json : {e}")
             raise
-
-    def analyze_api_performance(self, df: pd.DataFrame) -> dict:
-        perf = {}
-
-        if "latency" in df.columns:
-            latencies = df["latency"].dropna()
-            if not latencies.empty:
-                perf["latency_stats"] = {
-                    "mean": float(latencies.mean()),
-                    "median": float(latencies.median()),
-                    "min": float(latencies.min()),
-                    "max": float(latencies.max()),
-                    "std": float(latencies.std())
-                }
-
-                if "source" in df.columns:
-                    perf["latency_by_source"] = df.groupby("source")["latency"].mean().round(3).to_dict()
-
-        if "status_code" in df.columns:
-            status_codes = df["status_code"].dropna()
-            if not status_codes.empty:
-                status_dist = status_codes.value_counts().to_dict()
-                perf["status_distribution"] = {int(k): int(v) for k, v in status_dist.items()}
-                perf["success_rate"] = float((status_codes == 200).mean() * 100)
-        logger.info("Performances API analysées")
-        return perf
 
     def run_full_analysis(self, df: pd.DataFrame) -> dict:
         """Exécute toutes les analyses et retourne un rapport complet"""
