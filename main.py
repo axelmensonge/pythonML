@@ -1,3 +1,5 @@
+import json
+
 from core.fetcher import Fetcher
 from core.cleaner import Cleaner
 from core.features import Features
@@ -177,6 +179,33 @@ def step_train(model: Model, features: Features, force: bool = False):
         logger.exception(f"Erreur dans step_train: {e}")
         print(f"Erreur inattendue dans l'étape train: {e}")
 
+def print_summary(summary_path):
+    if not summary_path.exists():
+        print("summary.json introuvable.")
+        return
+    with open(summary_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    print("\n=== SUMMARY ===")
+    print(f"Total produits : {data['summary']['total_products']}")
+    print(f"Longueur moyenne du texte : {data['summary']['average_text_length']:.1f}")
+    print("Produits par source :")
+    for src, count in data['summary']['sources'].items():
+        print(f"  - {src} : {count}")
+
+    print("\n=== KPI PAR SOURCE ===")
+    for src, kpi in data['kpi_by_source'].items():
+        print(f"  {src}: total={kpi['total_products']}, avg_length={kpi['avg_text_length']:.2f}")
+
+    if "ml_metrics" in data:
+        ml = data["ml_metrics"]
+        print("\n=== ML METRICS ===")
+        print(f"Accuracy : {ml.get('accuracy', 0):.4f}")
+        print(f"F1 macro : {ml.get('f1_macro', 0):.4f}")
+        print(f"Test samples : {ml.get('test_samples', 'N/A')}")
+        print(f"Pred samples : {ml.get('pred_samples', 'N/A')}")
+        print(f"Modèle : {ml.get('model_path', 'N/A')}")
+    print("=================\n")
 
 def do_pipeline(fetcher, cleaner, features, model, analyzer):
     print("Pipeline complet — on te posera des choix pour réutiliser ou recréer les artefacts.")
@@ -274,8 +303,9 @@ def main_menu():
         print("3) Features (TF-IDF + encoder)")
         print("4) Train (entraîner le modèle)")
         print("5) Pipeline complet (enchaîne toutes les étapes)")
-        print("6) Quitter")
-        choice = input("Choix (1-6) : ").strip()
+        print("6) Afficher un résumé de la pipeline")
+        print("7) Quitter")
+        choice = input("Choix (1-7) : ").strip()
 
         try:
             if choice == "1":
@@ -289,10 +319,12 @@ def main_menu():
             elif choice == "5":
                 do_pipeline(fetcher, cleaner, features, model, analyzer)
             elif choice == "6":
+                print_summary(SUMMARY_FILE)
+            elif choice == "7":
                 print("Quitter...")
                 break
             else:
-                print("Choix invalide, entrez un chiffre entre 1 et 6.")
+                print("Choix invalide, entrez un chiffre entre 1 et 7.")
         except Exception as e:
             logger.exception(f"Erreur lors de l'exécution de l'option {choice}: {e}")
             print(f"Erreur lors de l'exécution : {e}")
